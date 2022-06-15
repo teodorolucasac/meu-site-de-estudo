@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Estudo sobre Listas</title>
+<link rel="stylesheet" href="style.css">
+<script src="scrip.js"></script>
+</head>
+
+<header>
+    <nav>
+    </nav>
+    <a href="001HTML.html">Voltar</a>
+</header>
+
+<body>
+    <h1>Estudo sobre Listas</h1>
+    <p>As listas são um exemplo de tags que não precisam ser fechadas, mas se fechar não tem problema.</p>
+    <p>As Listas são formadas pelas tags: "UL", "OL" e "LI"</p>
+    <p><b>ul</b>: cria listas sem ordem (unordered list)</p>
+    <p><b>ol</b>: cria listas em ordem (ordered list)</p>
+    <p><b>li</b>: cria os itens da lista</p>
+    <h2>Listas Não Ordenadas:</h2>
+    <ul>
+        <li>Arroz</li>
+        <li>Feijão</li>
+        <li>Macarrão</li>
+    </ul>
+
+    <h3>Configuração das Listas Ordenadas:</h3>
+    <p>As listas não ordenadas tem outras opções de marcação, basta usar as tags "DISC", "CIRCLE" e "SQUARE". Exemplo:</p>
+    <ul type="disc">
+        <li>Arroz</li>
+        <li>Feijão</li>
+        <li>Macarrão</li>
+    </ul>
+
+    <ul type="circle">
+        <li>Arroz</li>
+        <li>Feijão</li>
+        <li>Macarrão</li>
+    </ul>
+
+    <ul type="square">
+        <li>Arroz</li>
+        <li>Feijão</li>
+        <li>Macarrão</li>
+    </ul>
+
+    <h2>Listas Ordenadas:</h2>
+    <ol>
+        <li>Arroz</li>
+        <li>Feijão</li>
+        <li>Macarrão</li>
+    </ol>
+
+    <h3>Configuração das Listas Ordenadas:</h3>
+    <p>Nas listas ordenadas, é possível começar a lista com um número diferente de 1 usando a tag "START". Exemplo:</p>
+    <ol start="3">
+        <li>Arroz</li>
+        <li>Feijão</li>
+        <li>Macarrão</li>
+    </ol>
+    <p>Também existem outras opções de lista que não seja númerica, basta usar as tags "A", "a" ou "I". Exemplo:</p>
+    <ol type="A">
+        <li>Arroz</li>
+        <li>Feijão</li>
+        <li>Macarrão</li>
+    </ol>
+    <ol type="a">
+        <li>Arroz</li>
+        <li>Feijão</li>
+        <li>Macarrão</li>
+    </ol>
+    <ol type="I">
+        <li>Arroz</li>
+        <li>Feijão</li>
+        <li>Macarrão</li>
+    </ol>
+
+    <h3>Podemos brincar e Aninhar as listas</h3>
+    <p>Exemplo:</p>
+
+    <h3>Linguagens favoritas:</h3>
+    <ol>
+        <li>Antigas</li>
+        <ol type="a">
+            <li>Clipper</li>
+            <li>Visual Basic</li>
+            <li>Fortran</li>
+            <li>Delphi</li>
+        </ol>
+        <li>Novas</li>
+        <ol type="a" start="5">
+            <li>PHP</li>
+            <li>Phyton</li>
+            <li>JavaScrip</li>
+            <li>Kotlin</li>
+        </ol>
+    </ol>
+
+    <h3>Meus jogos favoritos:</h3>
+    <ol>
+        <li>NES</li>
+        <ul type="square">
+            <li>Mario Bros</li>
+            <ul type="circle">
+                <li>Mario Bros 3</li>
+                <li>Mario: Lost Levels</li>
+            </ul>
+            <li>Ninja Gaiden</li>
+            <ul type="circle">
+                <li>Ninja Gaiden 2</li>
+                <li>Ninja Gaiden 3</li>
+            </ul>
+        </ul>
+        <li>SNES</li>
+        <ul type="square">
+            <li>Mario</li>
+            <li>Donkey Kong</li>
+        </ul>
+        <li>PlayStation</li>
+        <ul type="square">
+            <li>Final Fantasy</li>
+            <li>Castlevania</li>
+        </ul>
+    </ol>
+
+    <h3>Listas de Definição:</h3>
+    <p>A lista de definição é utilizada para fazer listas como um dicionário por exemplo, teremos um termo e em baixo a definição dele. </p>
+    <p>A lista de definição é representada pelas tags "DL", "DT" e "DD".</p>
+    <p><b>dl</b>: definition list, é a tag geral para a máquina entender que ali dentro terá uma lista de definição.</p>
+    <p><b>dt</b>: termo, aqui fica o item que terá uma descrição.</p>
+    <p><b>dd</b>: descrição do termo informado anteriormente.</p>
+    <p>Exemplo:</p>
+    <dl>
+        <dt>HTML</dt>
+        <dd>Linguagem de marcação para a criação de conteúdo de um site.</dd>
+        <dt>CSS</dt>
+        <dd>Linguagem de marcação para a criação do design de um site.</dd>
+        <dt>JavaScrip</dt>
+        <dd>Linguagem de programação para a criação de interatividade de um site.</dd>
+    </dl>
+</body>
+
+<footer>
+</footer>
+
+</html>

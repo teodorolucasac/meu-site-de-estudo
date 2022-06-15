@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Esse é meu primeiro site!">
+    <meta name="keywords" content="html,css,js,javascript,estudo">
+    <meta name="author" content="Teodoro Lucas">
+
+    <title>Estrutura Básica da Página</title>
+    <link rel="stylesheet" href="../meu-site-de-estudo/style.css">
+    <script src="../meu-site-de-estudo/scrip.js"></script>
+</head>
+
+<body>
+    <br>
+    <a href="001HTML.html">Voltar</a>
+    <h1>Estrutura Básica da Página</h1>
+    <p>Sempre começaremos nosso documento html com uma estrutura básica, contendo algumas configurações iniciais para o navegador ler melhor nossos códigos. Exemplo:</p>
+
+    <strong>
+    &lt!DOCTYPE html&gt <br>
+    &lthtml lang="pt-br"&gt <br>
+    <br>
+    &lthead&gt <br>
+    
+        &ltmeta charset="UTF-8"&gt <br>
+        &ltmeta http-equiv="X-UA-Compatible" content="IE=edge"&gt <br>
+        &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt <br>
+        <br>
+        
+        &ltmeta name="description" content="Esse é meu primeiro site!"&gt <br>
+        &ltmeta name="keywords" content="html,css,js,javascript,estudo"&gt <br>
+        &ltmeta name="author" content="Teodoro Lucas"&gt <br>
+        <br>
+
+        &lttitle&gtMeu Site de Estudos&lt/title&gt <br>
+        &ltlink rel="stylesheet" href="style.css"&gt <br>
+        &ltscript src="scrip.js"&gt&lt/script&gt <br>
+        &lt/head&gt <br>
+        <br>
+
+        &ltheader&gt <br>
+            &ltnav&gt<br>
+            &lt/nav&gt<br>
+            &lta href="001HTML.html">Voltar&lt/a><br>
+        &lt/header&gt<br>
+        <br>
+
+        &ltbody&gt<br>
+            &lth1&gt&lt/h1&gt<br>
+            &ltp&gt&lt/p&gt<br>
+        &lt/body&gt<br>
+        <br>
+
+        &ltfooter&gt<br>
+        &lt/footer&gt<br>
+        <br>
+
+        &lt/html&gt<br>
+        <br>
+    </strong>
+
+    <h1>Explicando:<br>
+        Estrutura Básica</h1>
+    <h2>01 tag "DOCTYPE html"</h2>
+    <p>essa tag é utilizada sempre no inicio do documento para informar à máquina que nosso documento está em linguagem HTML</p>
+    <h2>02 tag "html"</h2>
+    <p>Tag básica para colocar todo o conteúdo</p>
+    <h2>03 tag "head"</h2>
+    <p>Essa tag é a cabeça, tudo que está dentro não é mostrado pelo usuário. Só vai ser lido pelo navegador ou o programa que está interpretando nossa linguagem/site</p>
+    <h3>03.1 tag "meta"</h3>
+    <p>Essa tag coloca algumas configurações padrões no navegador como: linguagem, compatibilidade com navegadores diferentes, tamanho padrão dos conteúdos etc... Falaremos disso melhor em outra aula.</p>
+    <h3>03.2 tag "title"</h3>
+    <p>Essa tag mostra o título do site. Aquele título que aparece na aba do navegador, no canto superior do monitor.</p>
+    <h2>04 tag "header"</h2>
+    <p>Tag que representa o cabeçalho do seu site</p>
+    <h3>04.1 tag "nav"</h3>
+    <p>Essa tag representa uma navegação, muito utilizada para criar menus, onde terá links que direciona para outro documento, página ou conteúdo.</p>
+    <h2>05 tag "body"</h2>
+    <p>Essa tag representa o corpo do conteúdo.</p>
+    <h3>05.1 tag "h1"</h3>
+    <p>Essa tag representa um título de nível 1. Mas teremos uma aula mais profunda sobre isso.</p>
+    <h3>05.2 tag "p"</h3>
+    <p>Essa tag representa um parágrafo. Mas teremos uma aula mais profunda sobre isso.</p>
+    <h2>06 tag "footer"</h2>
+    <p>aqui fica nosso rodapé.</p>
+    <h3>02.1 /html</h3>
+    <p>Todas as tags devem ser fechadas, salvo raras exceções, mas aqui no final é onde fechamos a tag html, aberta lá no inicio do documento.</p>
+
+    <br>
+    <h1>Explicando:<br>
+        Meta Tags</h1>
+    <p>As Meta Tags estarão sempre na parte do "head" do nosso código.</p>
+    <p>As Meta Tags são dados e configurações iniciais que são lidas apenas pelos navegadores.</p>
+
+    <h2>Definindo Linguagem</h2>
+    <p>Fazendo um adendo, antes dos "head", abrimos uma tag "head" essa tag é fechada no final do nosso documento, depois do "footer". Dentro dessa tag, no inicio, nós cologamos a linguagem, representando pelo cod "land="linguagem""</p>
+
+    <h2>Meta Charset UTF-8</h2>
+    <p>Essa tag serve para definir o tipo de padronização e compatibilidade dos caracteres. No nosso caso, precisamos utilizara  tag "charset="UTF-8"", permitindo ao navegador ler acentos, que são muito utilizados na lingua Portuguesa.</p>
+
+    <h2>Meta XUACompatible e IEedge</h2>
+    <p>Essa tag permite que alguns navegadores como Internet Explorer fiquem compatíveis com o seu site.</p>
+
+    <h2>Meta ViewPort, Width=Device, Initial-Scale</h2>
+    <p>Essas tags servem para configurar a área visivel do conteúdo adapatável para cada tamanho de dispositivo. Isso impede de acontecer por exemplo de usar o celular e abrir um navegador bem pequeno como se estivesse usando PC.</p>
+
+    <h2>Meta Description</h2>
+    <p>Mostra aquela sinópse do seu site quando é visto na busca do Google por exemplo.</p>
+
+    <h2>Meta Keywords</h2>
+    <p>Contém palavras chaves que facilitam os mecanismos de busca encontrar seu site.</p>
+
+    <h2>Meta Author</h2>
+    <p>É praticamente a assinatura do Programador, aqui os mecanismos de buscas também vai entendendo e guardando as páginas que você escreve, e acabam relacionando seu nome aos conteúdos.</p>
+
+    <br>
+    <h1>Explicando: <br>
+        Cabeçalho e Parágrafo</h1>
+    <h2>Tag h1~h6</h2>
+    <p>As tags "H" são usadas para definir TÍTULOS, começando do h1 até o h6, que representa a ordem de hierarquia e relevancia do título. Mas NUNCA devemos usar tags "H" para fortalecer a letra ou como negrito... pois para cada função existe uma tag específica, veremos mais disso na aula de semântica.</p>
+    <h1>Título</h1>
+    <h2>Título</h2>
+    <h3>Título</h3>
+    <h4>Título</h4>
+    <h5>Título</h5>
+    <h6>Título</h6>
+
+    <h1>Tags "P"</h1>
+    <p>Parágrafos são representados pela tag "p".</p>
+</body>
+<a href="001HTML.html">Voltar</a>
+</html>
