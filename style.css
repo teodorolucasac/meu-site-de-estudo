@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+
+nav  {
+    background-color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Estudo sobre Semântica</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../scrip.js"></script>
+<style>
+
+    * {
+        box-sizing: border-box;
+    }
+
+    section{
+        background-color: rgb(203, 203, 203);
+        width: 100%;
+        margin: auto;
+    }
+
+    .topo {
+        background-color: gray;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .menu {
+        background-color: black;
+        overflow: hidden;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .menu a {
+        color: white;
+        padding-left: 15px;
+        margin: 5px;
+        float: left;
+        display: block;
+        text-decoration: none;
+    }
+
+    .coluna {
+        background-color: rgb(214, 214, 214);
+        float: left;
+        width: 50%;
+        padding: 10px;
+
+    }
+
+    footer {
+        margin: 10px;
+        text-align: center;
+    }
+</style>
+</head>
+
+<header>
+    <nav>
+    </nav>
+    <br>
+    <a href="001HTML.html">Voltar</a> <br>
+</header>
+
+<body>
+    <h1>Estudo sobre Semântica</h1>
+    <p>No HTML podemos criar uma página de muitas formas diferentes como, só usando divs ou até mesmo usando tabelas. No entando isso dificulta a leitura, manutenção do código, edição, interpretação e ainda facilita a existencia de bugs</p>
+    <p>Com isso surgiu a marcação semântica no HTML5, que basicamente são <b>Tags</b> que não são usadas para gerar um conteúdo visível inicialmente, mas sim organizar e informar "dar nome aos bois" sobre o que representa aquela item, bloco, etc...</p>
+
+    <p>Exemplo, no lugar de colocar uma tag <b>&ltdiv>&lt/div></b> para criar o cabeçalho, nos temos a tag <b>&ltheader>&lt/header></b> que faria praticamente a mesma coisa, mas informa e organiza, deixando explicito para o programador e a máquina interpretadora que aquilo é um cabeçalho.</p>
+
+   
+    <section>
+        <header class="topo">
+            <h1>Topo</h1>
+            <p>Aqui fica a parte do topo</p>
+        </header>
+        <nav class="menu">
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+        </nav>
+        <article class="coluna">
+            <h2>Coluna 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat porro, iure sint vitae tenetur molestiae culpa debitis voluptates neque deserunt quisquam earum dolore aliquam totam eveniet voluptate iusto tempore. Ullam?</p>
+        </article>
+
+        <article class="coluna">
+            <h2>Coluna 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure temporibus nostrum ratione nihil autem veniam voluptatum porro quidem sit repudiandae eius, velit harum quas doloremque deserunt molestiae consequuntur tempore minus.</p>
+        </article>
+    </section>
+    <br><br><br><br><br><br><br><br><br><br>
+    <h2> Exemplo de Tags Semânticas mais usadas:</h2>
+    <p>Aqui vemos um exemplo separado em 3 partes: <br>01 - Cabeçalho, Título, Parágrafo, Menu Navegação e Links <br>
+    02 - Corpo, Principal, Sessão, Divisão e Artigo <br>
+    03 - Rodapé</p>
+    <strong>
+    &ltheader&gt <br>
+    &ensp;&ensp;&lth1&gt&lt/h1&gt<br>
+    &ensp;&ensp;&ltp&gt&lt/p&gt<br>
+    &ensp;&ensp;&ltnav&gt<br>
+    &ensp;&ensp;&ensp;&ensp; &lta href=""></a><br>
+    &ensp;&ensp;&ensp;&ensp; &lta href=""></a><br>
+    &ensp;&ensp;&lt/nav&gt<br>
+    &lt/header&gt<br>
+    <br>
+
+    &ltbody&gt<br>
+    &ensp;&ensp;&ltmain&gt<br>
+    &ensp;&ensp;&ensp;&ensp;&ltsection&gt<br>
+    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ltdiv&gt<br>
+    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ltarticle&gt<br>
+    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&lt/article&gt<br>
+    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&lt/div&gt<br>
+    &ensp;&ensp;&ensp;&ensp;&lt/section&gt<br>
+    &ensp;&ensp;&lt/main&gt<br>
+    &lt/body&gt<br>
+    <br>
+
+    &ltfooter&gt<br>
+    &lt/footer&gt<br>
+    <br>
+    </strong>
+</body>
+
+<footer>
+    Todos os direitos reservados.
+</footer>
+
+</html>

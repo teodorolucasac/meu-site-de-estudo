@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Estudo sobre Formulários</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../scrip.js"></script>
+</head>
+
+<header>
+    <nav>
+    </nav>
+    <a href="001HTML.html">Voltar</a>
+</header>
+
+<body>
+    <h1>Estudo sobre Formulários</h1>
+    <p>Os formulário começam com a tag <b>&ltform>&lt/form></b>. Essa é a tag geral dos formulários, ela que organiza e informa que ali dentro contém um formulário. <br>
+    <h3>Atributos:</h3>
+        <b>type=""</b>: o atributo type sempre está presente nos formulários e diz qual é o tipo de formulário/preenchimento terá. <br>
+        <b>name=""</b>: serve para dizer que as questões são do mesmo conjunto e evitar a marcação de mais de 1 opção. <br>
+        <b>id=""</b>: define um id. <br>
+        <b>value=""</b>: define um valor. <br>
+        <b>placeholder=""</b>: escreve uma marca dágua na box. <br>
+        <b>selected</b>: inicia habilitado nesta opção<br>
+        <b>disabled</b>: desabilita a seleção desta opção<br>
+        <b>required</b>: coloca a opção como obrigatório<br></p>
+    <hr>
+    <h3>Labels</h3>
+    <p>label são tags que definem um título ao input do formulário, e usa o id do input para unir ao título. Neste caso, se eu clicar no título já é como se eu clicasse na box de texto. Exemplo:</p>
+    <b>
+        &ltlabel for="campoNome">Nome:&lt/label> <br>
+        &ltinput type="text" placeholder="Digite seu nome aqui" name="" id="campoNome">
+    </b> <br><br> <hr>
+
+    <form action="">
+        <p>Tag <b>&ltinput type="text"></b>: usada para informar textos pequenos. </p>
+        <label for="campoNome">Nome:</label>
+        <input type="text" placeholder="Digite seu nome aqui" name="" id="campoNome" required><br><br>
+
+        <p>Tag <b>&ltinput type="email"></b>: usada para informar emails. A tag específica vem com algumas pré configurações como: O campo obrigatóriamente deve conter um "@" e um "." </p>
+        <label for="campoEmail">Email:</label>
+        <input type="email" placeholder="Digite um email" name="" id="campoEmail" required><br><br>
+
+        <p>Tag <b>&ltinput type="password"></b>: usada para informar senhas. Pré configurada para não mostrar os caracteres. </p>
+        <label for="campoSenha">Senha:</label>
+        <input type="password" placeholder="Digite sua senha" name="" id="campoSenha" required><br><br>
+        <hr>
+        
+
+        <p>Tag <b>&ltinput type="radio"></b>: usada para criar questão de multipla escolha. <br>
+        Atributos mais usados: (<b>name="", id="" e value=""</b>)</p>
+
+        <h3>Animal de estimação</h3>
+        <input type="radio" name="animal" id="dog" value="cachorro">
+        <label for="dog">Cachorro</label> <br><br>
+
+        <input type="radio" name="animal" id="cat" value="gato">
+        <label for="cat">Gato</label> <br><br>
+
+        <input type="radio" name="animal" id="bird" value="passarinho">
+        <label for="bid">Passarinho</label> <br><br>
+        <hr>
+
+        <p>Tag <b>&ltinput type="checkbox"></b>: usada para criar caixas de marcação, onde o usuário selecionará quantas quiser. <br>
+            Igual o <i>type radio</i>, os atributos mais usados são: (<b>name="", id="" e value=""</b>)</p>
+        <h3>O que você tem em casa?</h3>
+        <input type="checkbox" name="itemTV" id="TV" value="TV">
+        <label for="itemTV">TV</label> <br><br>
+
+        <input type="checkbox" name="itemGeladeira" id="TV" value="TV">
+        <label for="itemGeladeira">Geladeira</label> <br><br>
+
+        <input type="checkbox" name="itemComputador" id="TV" value="TV">
+        <label for="itemComputador">Computador</label> <br><br>
+        <hr>
+        
+        <p>Tag select serve para criar uma seleção de opções em menu.<br><b>&ltselect><br>&ltoption>&lt/option><br>&lt/select></b>: </p>
+        <h3>Escolha uma cor:</h3>
+        <select name="cores" id="">
+            <option selected disabled value="">Selecione uma cor</option>
+            <option value="vermelho">Vermelho</option>
+            <option value="amarelo">Amarelo</option>
+            <option value="verde">Verde</option>
+            <option value="azul">Azul</option>
+            <option value="rosa">Rosa</option>
+        </select> <br><br>
+        <hr>
+
+        <p>Tag <b>&lttextarea></b>: serve para criar uma caixa de texto grande. Exemplo</p>
+        <b>&lttextarea name="mensagem" id="" cols="40" rows="10" placeholder="Digite aqui sua mensagem">&lt/textarea></b>
+
+        <h3>Digite sua mensagem:</h3>
+        <textarea name="mensagem" id="" cols="40" rows="10" placeholder="Digite aqui sua mensagem"></textarea>
+
+        <p>Tag <b>&ltinput type="submit"></b>: serve para criar um tipo de botão.</p>
+        <input type="submit" value="Enviar formulário"><br><br>
+
+        <p>Tag <b>&ltbutton type="submit"></b>: serve para criar um tipo de botão.</p>
+        <button type="submit">Clique aqui</button>
+        <br><br><br>
+    </form>
+
+</body>
+
+<footer>
+</footer>
+
+</html>

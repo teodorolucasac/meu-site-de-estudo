@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Estudo sobre Vídeos</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../scrip.js"></script>
+</head>
+
+<header>
+    <nav>
+    </nav>
+    <a href="001HTML.html">Voltar</a>
+</header>
+
+<body>
+    <h1>Estudo sobre Vídeos</h1>
+    <p>Vídeos são representados pelas tag <b>&ltvideo src="">&lt/video></b> e também <b>&ltiframe src="" frameborder="0">&lt/iframe></b> depende de como você quer colocar esse vídeo na sua página. <br>
+    Além disso existem alguns atributos obrigatórios: <b>(src="", type="" e controls)</b> <br>
+    Outros atributos muito utilizados: <b>(poster="", width="", disablepictureinpicture, controlsList="nodownload nofullscreen" e autoplay)</b></p>
+
+    <p>
+        <b>src=""</b>: é usado para apontar o diretório do nosso vídeo. <br>
+        <b>type=""</b>: usado para indicar o tipo do arquivo. <br>
+        <b>controls</b>: usado para exibir o conteúdo na página. <br>
+        <b>poster=""</b>: usado para inserir uma thumbnail. <br>
+        <b>width=""</b>: usado ajustar a largura. <br>
+        <b>disablepictureinpicture</b>: usado para remover a opção Picture in Picture. <br>
+        <b>controlsList="nodownload"</b>: usado para remover a opção de download. <br>
+        <b>controlsList="nofullscreen"</b>: usado para remover a opção de fullscreen. <br>
+        <b>autoplay</b>: usado para iniciar o vídeo automaticamente. <br>
+    </p> <br>
+
+    <h2>Vídeo de Arquivo Local:</h2>
+    <p>Usamos a tag video para arquivo local</p>
+    <video controlsList="nodownload nofullscreen" disablepictureinpicture  poster="imagem/amsterda.jpg" controls width="90%" src="video/01amsterdam.mp4" type="video/mp4"></video> <br><br><br>
+
+
+    <h2>Vídeo de Link Externo:</h2>
+    <p>geralmente usamos a tag iframe para links externos</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/yAlbT9n8uow" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body>
+
+<footer>
+</footer>
+
+</html>
