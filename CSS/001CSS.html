@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Página de Estudo CSS</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../scrip.js"></script>
+<style>
+    .exemplo p {
+        background-color: red;
+        color: #7df2f8;
+    }
+</style>
+</head>
+
+<header>
+<h1>Página de Estudo CSS</h1>
+<p>descrição</p>
+<nav>
+    <a href="002seletores.html">Seletores</a>
+    <a href="003propriedades.html">Propriedades</a>
+</nav>
+<br>
+<a href="../index.html">Voltar</a>
+</header>
+
+<body>
+    <abbr title="Cascading Style Sheets"><h1>CSS</h1></abbr>
+    <p>O CSS é a ferramente que define o estilo, as cores, fontes do site. Em outras palavras, é o altera a estética do site.</p>
+    <p>O CSS faz um casamento perfeito com HTML, pois o HTML vai cuidar do conteúdo e o CSS do estilo.</p>
+    <p>CSS significa: Cascading Style Sheets, traduzindo ao Português: Folha de Estilo em Cascata</p>
+    <p>O arquivo CSS possui um formato ".css"</p>
+    <hr>
+    <h2>CSS Inline</h2>
+    <p>CSS inline é quando eu passo código de estilo dentro de um Tag HTML. Em outras palavras, eu coloco um código de estilo dentro da linha de código HTML.</p>
+    <p>O CSS inline só vai funcionar exclusivamente para aquela Tag expecífica na qual ele foi inserido. <br>
+    Exemplo:</p>
+    <b>&lt;p style="background-color: yellow; color: blue; font-size: 25px;">Lorem...&lt;/p></b>
+
+    <p style="background-color: yellow; color: blue; font-size: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+    <h2>CSS Interno</h2>
+    <p>O CSS interno é inserido no inicio do documento HTML, mais precisamente antes do fechamento da tag &lt;/head>. Neste caso o CSS vai funcionar para todo aquele documento, se eu editar um parágrafos, todos os meus parágrafos também podem receber aquela configuração de estilo. <br>
+    Exemplo uma edição de todos os parágrafos de uma class exemplo:</p>
+    .exemplo p {<br>
+        background-color: red;<br>
+        color: #7df2f8;<br>
+    }
+
+    <div class="exemplo">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+
+    <h2>CSS Externo</h2>
+    <p>O CSS externo é uma documento de CSS separado do documento HTML, sendo que dento do arquivo HTML teremos um link direcionando/referenciando aquele arquivo externo CSS. Neste caso eu posso colocar vários arquivos HTML, ou seja, várias páginas de HTML direcionando para o mesmo arquivo CSS, fazendo com que páginas diferentes recebam a mesma configuração de estilo</p>
+    <p>Para configurarmos o CSS externo é preciso criar um arquivo CSS independente no formato ".css" <br>
+        Exemplo: <b>style.css</b> <br>
+    E dentro do arquivo HTML / dentro da tag &lt;head> eu faço um link para o arquivo CSS <br>
+    Exemplo: <b>&lt;link rel="stylesheet" href="../style.css"></b></p>
+
+    <p>Pronto, agora qualquer arquivo HTML que tiver o link para seu arquivo CSS receberá as devidas configurações de estilo.</p>
+
+    <h2>Hierarquia do CSS</h2>
+    <p>O estilo da página sempre vai priorizar primeiro o CSS Inline, depois CSS Interno e só depois o CSS Externo.</p>
+    <p>CSS Inline > CSS Interno > CSS Externo</p>
+    <br>
+</body>
+
+<footer>
+</footer>
+
+</html>

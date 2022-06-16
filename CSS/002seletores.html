@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Estudo sobre Seletores</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../scrip.js"></script>
+<style>
+    body {
+        background-color: antiquewhite;
+    }
+
+    .vermelho {
+        color: red;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    #paragrafo1 {
+
+    }
+    
+</style>
+</head>
+
+<header>
+<h1>Estudo sobre Seletores</h1>
+<p>Os seletores são a identificação do elemento HTML que o CSS quer modificar.</p>
+<p>OBS: o nome das atribuições class ou id nao podem começar com um valor númerico.</p>
+<nav>
+</nav>
+<br>
+<a href="001CSS.html">Voltar</a>
+</header>
+
+<body>
+    <h2>Seletor Global</h2>
+    <p>Os seletores globais usam as Tags para configurar o estilo, dessa forma todas as Tags do seu site vai ser configurada. <br>
+    Exemplo: <br> <br>    
+    html { <br>
+    <br>
+    } <br>
+    <br>
+    body {<br>
+    <br>
+    } <br></p>
+
+    <h2>Seletor por Classe</h2>
+    <p>Os seletores por classe é um seletor que vai aplicar o estilo apenas se você atribuiu determinada classe para determinada tag. É possível usar a mesma classe para várias tags. As classes são aplicadas com o simbolo de ".". <br>
+    Exemplo: <br><br>
+    .classeX { <br>
+    <br>
+    } <br>
+    <br>
+    .classeY {<br>
+    <br>
+    } <br> </p>
+
+    <h2>Seletor por Identificador</h2>
+    <p>O seletor por indentificador usa uma atribuição de id para aplicar um estilo. O ID é uma atribuição única, não sendo possível atribuir o mesmo id para duas ou mais tags. As classes são aplicadas com o simbolo de "#". <br>
+    Exemplo: <br><br>
+    #paragrafo1 { <br>
+    <br>
+    } <br></p>
+
+    <h2>Seletor Universal</h2>
+    <p>O seletor universal é representado pelo simbolo "*", o que for configurado nele vai alterar todo o seu documento, desde o primeiro <abbr title="Tag Pai ou Antecessor">Parent</abbr> até o último <abbr title="Tag Filho ou Sucessor">Child</abbr>. <br>
+    Exemplo: </p>
+    *{ <br><br>
+    } <br>
+    <p>OBS: o Seletor Universal está abaixo da hierarquia de um Seletor direto</p>
+
+    <h2>Hierarquia de Seletores</h2>
+    <p>Via de regra:<br>
+    01 Quanto maior o <i>parent</i> do Seletor, maior é na hierarquia, perdendo apenas para o último <i>child</i>. <br>
+    02 O último <i>child</i> é mais forte que qualquer <i>parent</i> sozinho. <br>
+    03 O seletor <i>parent</i> + <i>child</i> sucessores é mais forte que qualquer <i>parent</i> ou <i>child</i> sozinho.
+
+    <p>Obs: Podemos selecionar mais de um Seletor na mesma configuração, basta colocar uma "," entre eles <br>
+    Exemplo:</p>
+    <p>h1, h2, p {<br>
+        <br>
+    }<br></p>
+
+    <p>Obs: Para selecionar os <i>parents</i> e <i>childs</i>, basta coloca-los um na frente do outro em ordem ou usando o simbolo ">".<br>
+        Exemplo:</p>
+        <p>body section p {<br>
+            <br>
+        }<br><br>
+    OU <br><br>
+    <p>body > section > p {<br>
+    <br>
+    }<br></p>
+
+    <h2 class="center">Exemplo de Seletores (vide html)</h2>
+    <p class="center vermelho">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet, consequatur sit veritatis nihil quis eaque natus excepturi tempora, et quasi nulla vitae ipsam repellendus minus. Consectetur, illum. Consequuntur, accusamus debitis.</p>
+    <p id="paragrafo1">Alias dolorem dicta, rem nulla fuga natus culpa error! Cum pariatur omnis voluptatibus suscipit totam sit facilis non repellat eligendi deserunt quidem accusantium numquam, quis harum! Inventore commodi porro qui!</p>
+    <p class="vermelho">Iusto, atque architecto nemo ex incidunt quidem maiores vero perferendis ducimus repudiandae voluptas adipisci reprehenderit delectus laborum aliquid? Nihil dignissimos distinctio autem sapiente vero doloremque quibusdam laborum nobis vitae quis!</p>
+</body>
+
+<footer>
+</footer>
+
+</html>
