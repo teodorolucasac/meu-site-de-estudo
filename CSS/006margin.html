@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Estudo sobre Margin</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../scrip.js"></script>
+<style>
+    .a1, .a2, .a3 {
+        padding: 0;
+        margin: 0;
+    }
+    .a2 {
+        background-color: aqua;
+        margin: 20px;
+    }
+    .a3 {
+        background-color: aquamarine;
+        padding: 20px;
+    }
+</style>
+</head>
+
+<header>
+<h1>Estudo sobre Margin</h1>
+<p>Descrição</p>
+<nav>
+</nav>
+<a href="001CSS.html">Voltar</a>
+</header>
+
+<body>
+    <h1>Margin</h1>
+    <p>A propriedade margin do CSS define a área de margem nos quatro lados do elemento. <br>
+    A tag <b>&lt;margin></b> é uma abreviação que define todas as margens individuais de uma só vez:</p>
+
+    <p class="a1">Diferente do padding, a <b>&lt;margin></b> preenche a parte de fora do elemento.</p>
+    <p class="a2">Exemplo com <b>&lt;margin></b></p>
+    <p class="a3">Exemplo com <b>&lt;padding></b></p>
+    <p class="a1"><b>Ou seja, o background não acompanha.</b></p>
+
+    <p>As Margins podem ser configurada para os 4 lados do elemento. <br>
+    Veja o exemplo de sintaxe:</p>
+
+    <h2>Atributos</h2>
+    <p>O margin possui atributos indicando a direção dos 4 lados do elemento. <br>
+        Exemplo: <br>
+        <b>
+        padding-bottom: 10px; <br>
+        padding-left: 50%; <br>
+        padding-right: 2em; <br>
+        padding-top: auto; <br>
+        </b>
+    </p>
+
+    <h2>Shorhands</h2>
+    <p>/* Aplica para todos os quatro lados */ <br>
+    <b>margin: 1em;</b> <br>
+    <br>
+    /* vertical | horizontal */<br>
+    <b>margin: 5% auto;</b><br>
+    <br>
+    /* topo | horizontal | inferior */<br>
+    <b>margin: 1em auto 2em;</b><br>
+    <br>
+    /* topo | direita | inferior | esquerda */<br>
+    <b>margin: 2px 1em 0 auto;</b><br>
+    <br>
+    /* Valores globais */<br>
+    <b>
+        margin: inherit;<br>
+        margin: initial;<br>
+        margin: unset;
+    </b></p>
+    <p>Obs: A propriedade margin pode ser especificada usando um, dois, três ou quatro valores. Cada valor deve ser um &lt;length>, uma &lt;percentage>, ou a palavra-chave &lt;auto>. Cada valor pode ser positivo, zero ou negativo.</p>
+
+    <h2>Valores</h2>
+    <p><b>length</b><br>
+        O tamanho da margem como um valor fixo.</p>
+    <p><b>percentage</b><br>
+        O tamanho da margem como um percetual, relativo à largura do bloco em que o elemento está contido.</p>
+    <p><b>auto</b><br>
+        O navegador seleciona uma margem adequada para utilizar. Por exemplo, em alguns casos este valor pode ser utilizado para centralizar o elemento.</p>
+</body>
+
+<footer>
+</footer>
+
+</html>

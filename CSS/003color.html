@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Propriedades: Color e Background</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../scrip.js"></script>
+<style>
+    .hex {
+        background-color: darkblue;
+        color: #ffffff;
+    }
+
+    .back {
+        background-color: #00ffff;
+    }
+
+    .img {
+        height: 300px;
+        background-color: #00ffff;
+        background-image: url(imagem/01background.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .gradient {
+        height: 200px;
+        background-image: linear-gradient(90deg,  #0088ff, #00ffff 40%);
+    }
+</style>
+</head>
+
+<header>
+<h1>Propriedades: Color e Background</h1>
+
+<nav>
+</nav>
+<a href="001CSS.html">Voltar</a>
+</header>
+
+<body>
+    <h2>Propriedade Color</h2>
+    <p>A propriedade Color é basicamente utilizada para alterar a cor da letra/font. <br><b>(color: #ffffff;)</b>.</p>
+
+    <h2>Padrão de cores</h2>
+    <p>As máquinas não entende a cores como nós pelo visual normalmente, mas existem alguns padrões para identificação das cores pela máquina.
+    </p>
+    <h3>Valor Padrão</h3>
+    <p class="hex">background-color: darkblue;</p>
+    <h3><abbr title="Hexadecimal">HEX</abbr></h3>
+    <p class="hex">Exemplo: #0088ff </p>
+    <h3><abbr title="Red, Green e Blue">RGB</abbr></h3>
+    <p class="hex">Exemplo: rgb(0, 136, 255) </p>
+    <h3><abbr title="Hue (tom), Saturation (saturação) e Lightness (luminosidade)   ">HSL</abbr></h3>
+    <p class="hex">Exemplo: hsl(208, 100%, 50%) </p>
+    <h3><abbr title="Ciano, Magenta, Yellow, Black">CMYK</abbr></h3>
+    <p class="hex">Exemplo: 100, 47, 0, 0 </p>
+
+    <p>Obs: que o valor deve ser um solid color. Não pode ser um <gradient>, que na verdade é um tipo de <image>.</p>
+    <hr>
+
+
+</body>
+
+<footer>
+</footer>
+
+</html>

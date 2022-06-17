@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Meu Site de Estudos</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../scrip.js"></script>
+<style>
+    h1 {
+        border: 3px solid blue;
+    }
+
+    .exemplo p {
+        width: 70%;
+        text-align: center;
+        padding: 4px;
+    }
+
+    .b1 {
+        border: 7px dotted blue;
+    }
+    .b2 {
+        border: 7px dashed blue;
+    }
+    .b3 {
+        border: 7px double blue;
+    }
+    .b4 {
+        border: 7px groove blue;
+    }
+    .b5 {
+        border: 10px ridge blue;
+    }
+    .b6 {
+        border: 7px inset blue;
+    }
+    .b7 {
+        border: 7px outset blue;
+    }
+    .b8 {
+        border: 7px none blue;
+        border: 7px hidden blue;
+    }
+    .c1 {
+        font-size: 25px;
+        border-left: 5px solid red;
+    }
+    .c2 {
+        font-size: 25px;
+        border-left: 5px solid red;
+        border-top: 5px solid green;
+        border-right: 5px solid blue;
+        border-bottom: 5px solid gold;
+    }
+    .d1{
+        text-align: center;
+        font-size: 25px;
+        border: 5px solid rgb(136, 0, 255);
+        border-radius: 20px;
+    }
+    .d2{
+        color: white;
+        text-align: center;
+        font-size: 25px;
+        border: 5px solid rgb(255, 0, 187);
+        border-radius: 20px;
+        background-color: rgb(136, 0, 255);
+    }
+</style>
+</head>
+
+<header>
+<h1>Título</h1>
+<p>Descrição</p>
+<nav>
+</nav>
+<a href="001CSS.html">Voltar</a>
+</header>
+
+<body>
+    <h1>Bordas</h1>
+    <p>As bordas são representadas pelo seletor <b>(border: ;)</b> e dentro os parâmetros são <b>(largura, formato, cor)</b> <br>
+    Exemplo: <br>
+    <b>border: 3px solid blue;</b></p>
+
+    <h2>Veja os formatos de border</h2>
+    <div class="exemplo">
+        <p class="b1">Border 1: (border: 7px <b>dotted</b> blue;) pontilhado</p>
+        <p class="b2">Border 2: (border: 7px <b>dashed</b> blue;) traçado</p>
+        <p class="b3">Border 3: (border: 7px <b>double</b> blue;) dublicado</p>
+        <p class="b4">Border 4: (border: 7px <b>groove</b> blue;) 3D 1</p>
+        <p class="b5">Border 5: (border: 7px <b>ridge</b> blue;) 3D 2</p>
+        <p class="b6">Border 6: (border: 7px <b>inset</b> blue;) por dentro</p>
+        <p class="b7">Border 7: (border: 7px <b>outset</b> blue;) por fora</p>
+        <p class="b8">Border 8: (border: 7px <b>none/hidden</b> blue;) nenhum ou escondido</p>
+    </div>
+
+    <h2>Borda por lado específico</h2>
+    <p>Também é possível colocar borda só do lado que desejar. <br>
+    Exemplo: <br>
+    <b>border-left: 5px solid red;</b></p>
+    <div class="exemplo">
+        <p class="c1" style="text-align: left;">border 1</p>
+        <p class="c2">border 2</p>
+    </div>
+
+    <h2>Borda arredondada</h2>
+    <p>Também podemos arredondar os cantos das bordas. <br>
+    Exemplo: <br>
+    <b>border-radius: 20px;</b></p>
+    <p class="d1">Borda 1</p>
+    <p class="d2">Borda 1</p>
+
+    <hr>
+    
+</body>
+
+<footer>
+</footer>
+
+</html>

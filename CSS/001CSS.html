@@ -26,7 +26,15 @@
 <p>descrição</p>
 <nav>
     <a href="002seletores.html">Seletores</a>
-    <a href="003propriedades.html">Propriedades</a>
+    <a href="003color.html">Color</a>
+    <a href="004background.html">Background</a>
+    <a href="005border.html">Border</a>
+    <a href="006margin.html">Margin</a>
+    <a href="007padding.html">Padding</a>
+    <a href="008widthEHeight.html">Width e Height</a>
+    <a href="009text.html">Text</a>
+    <a href="010font.html">Font</a>
+    <a href="011links.html">Links</a>
 </nav>
 <br>
 <a href="../index.html">Voltar</a>
@@ -43,17 +51,19 @@
     <p>CSS inline é quando eu passo código de estilo dentro de um Tag HTML. Em outras palavras, eu coloco um código de estilo dentro da linha de código HTML.</p>
     <p>O CSS inline só vai funcionar exclusivamente para aquela Tag expecífica na qual ele foi inserido. <br>
     Exemplo:</p>
-    <b>&lt;p style="background-color: yellow; color: blue; font-size: 25px;">Lorem...&lt;/p></b>
+    <p><b>&lt;p style="background-color: yellow; color: blue; font-size: 25px;">Lorem...&lt;/p></b></p>
 
     <p style="background-color: yellow; color: blue; font-size: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
     <h2>CSS Interno</h2>
     <p>O CSS interno é inserido no inicio do documento HTML, mais precisamente antes do fechamento da tag &lt;/head>. Neste caso o CSS vai funcionar para todo aquele documento, se eu editar um parágrafos, todos os meus parágrafos também podem receber aquela configuração de estilo. <br>
     Exemplo uma edição de todos os parágrafos de uma class exemplo:</p>
-    .exemplo p {<br>
-        background-color: red;<br>
-        color: #7df2f8;<br>
-    }
+    <p>
+        .exemplo p {<br>
+            background-color: red;<br>
+            color: #7df2f8;<br>
+        }
+    </p>
 
     <div class="exemplo">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -72,7 +82,7 @@
 
     <h2>Hierarquia do CSS</h2>
     <p>O estilo da página sempre vai priorizar primeiro o CSS Inline, depois CSS Interno e só depois o CSS Externo.</p>
-    <p>CSS Inline > CSS Interno > CSS Externo</p>
+    <p><b>CSS Inline > CSS Interno > CSS Externo</b></p>
     <br>
 </body>
 

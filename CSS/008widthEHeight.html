@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Estudo sobre Width e Height</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../scrip.js"></script>
+<style>
+    .a1{
+        background-color: aqua;
+        width: 300px;
+        height: 150px;
+    }
+</style>
+</head>
+
+<header>
+<h1>Estudo sobre Width e Height</h1>
+<p>Descrição</p>
+<nav>
+</nav>
+<a href="001CSS.html">Voltar</a>
+</header>
+
+<body>
+    <h1>Width</h1>
+    <p>A <b>&lt;width></b> define a largura de um elemento. Por padrão, ele define a largura da área de conteúdo , mas se <b>&lt;box-sizing></b> estiver definido como <b>&lt;border-box></b>, ele define a largura da área da borda.</p>
+
+    <p>As propriedades <b>min-width</b> e <b>max-width</b> substituem <b>width</b>.</p>
+
+    <div class="a1">
+        <p class="">Exemplo: <br>
+            .a1{ <br>
+                background-color: aqua;<br>
+                width: 300px;<br>
+                height: 100px;<br>
+                text-align: center;<br>
+            }</p><br>
+    </div>
+
+    <hr>
+    <h2>Sintaxe</h2>
+    <p><b>
+        /* &lt;length> values */ <br>
+            width: 300px; <br>
+            width: 25em; <br>
+             <br>
+            /* &lt;percentage> value */ <br>
+            width: 75%; <br>
+             <br>
+            /* Keyword values */ <br>
+            width: max-content; <br>
+            width: min-content; <br>
+            width: fit-content(20em); <br>
+            width: auto; <br>
+             <br>
+            /* Global values */ <br>
+            width: inherit; <br>
+            width: initial; <br>
+            width: revert; <br>
+            width: revert-layer; <br>
+            width: unset; <br>
+    </b></p>
+
+    <hr>
+    <h2>Valores</h2>
+    <p>
+        <b>&lt;length></b> <br>
+        Define a largura como um valor absoluto. <br>
+        <br>
+        <b>&lt;percentage></b> <br>
+        Define a largura como uma porcentagem da largura do bloco que o contém. <br>
+         <br>
+         <b>&lt;auto></b> <br>
+        O navegador irá calcular e selecionar uma largura para o  <br>elemento especificado. <br>
+         <br>
+         <b>&lt;max-content></b> <br>
+        A largura intrínseca preferida. <br>
+         <br>
+         <b>&lt;min-content> <br></b>
+        A largura mínima intrínseca. <br>
+         <br>
+         <b>&lt;fit-content></b>(&lt;length-percentage>) <br>
+        Usa a fórmula fit-content com o espaço disponível substituído pelo argumento especificado, ou seja: <br> min(max-content, max (min-content, &lt;length-percentage>)). <br>
+    </p>
+
+    <hr>
+    <h1>Height</h1>
+    <p>Todas as específicações aplicadas no <b>&lt;width></b> também se aplica no <b>&lt;height></b> porém, agora estamos falando de <b>altura</b> e não largura como no width.</p>
+</body>
+
+<footer>
+</footer>
+
+</html>

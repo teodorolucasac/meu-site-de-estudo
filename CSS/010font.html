@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Estudo sobre Font</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../scrip.js"></script>
+</head>
+
+<header>
+<h1>Estudo sobre Font</h1>
+<p>Descrição</p>
+<nav>
+</nav>
+<a href="001CSS.html">Voltar</a>
+</header>
+
+<body>
+    <h1>Font</h1>
+    <p>Font é a estilização dos textos. Temos diversas propriedades para estilizar as fonts, veja:</p>
+
+    <h2>Font-Family</h2>
+    <p>
+        Font-family é a propriedade que altera a família das fonts. <br>
+        Podemos escolher a família por um nome de família ou um nome de família genérica. <br>
+        Exemplo: <br><br>
+        <b>/* Aqui temos o nome de família de fontes e nome de família genérica */</b> <br>
+        font-family: "Gill Sans Extrabold", sans-serif; <br>
+        font-family: "Goudy Bookletter 1911", sans-serif; <br>
+         <br>
+        <b>/* Aqui temos apenas o nome de família genérica */</b> <br>
+        font-family: serif; <br>
+        font-family: sans-serif; <br>
+        font-family: monospace; <br>
+        font-family: cursive, handwriting; <br>
+        font-family: fantasy, display; <br>
+        <br>
+        Podemos colocar o valor de varias famílias de font no <b>&lt;font-family></b> para evitar a incompatibilidade com alguns navegadores, além disso é um habito saudável colocar um nome de família genérica no final do valor. <br><br>
+        
+        Também é uma boa prática citar com aspas os nomes de família de fontes que contenham espaços em branco, dígitos ou caracteres de pontuação que não sejam hífens. <br><br>
+
+        Mais detalhes sobre <b>&lt;font-family></b> no <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-family">site da mozilla</a>.
+    </p>
+
+    <h2>Font-Size</h2>
+    <p>
+        Essa é a propriedade que define o tamanho da font. <br><br>
+        <b>/* Valores Absolutos */</b> <br>
+            <b>cm</b>: centímentro <br>
+            <b>mm</b>: milímetro <br>
+            <b>in</b>: polegada <br>
+            <b>px</b>: pixel <br>
+            <b>pt</b>: ponto <br>
+            <b>pc</b>: paica <br>
+            <br>
+            <b>/* Valores Relativos */</b> <br>
+            <b>em</b>: tamanho atual da font <br>
+            <b>ex</b>: altura X de uma font <br>
+            <b>rem</b>: altura X de uma font do root (configurado no body) <br>
+            <b>vw</b>: largura da View Width <br>
+            <b>vh</b>: altura da View Height <br>
+            <b>%</b>: porcentagem <br><br>
+
+            <b>OBS: Recomendação da W3C é sempre usar PX ou EM, evitar outras unidades de medida de tamanho da font.</b> <br>
+
+            Para saber mais sobre as propriedades e valores, confira no <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size">site do mozilla</a>.
+    </p>
+
+    <h2>Font-Style</h2>
+    <p>A propriedade font-style define se uma fonte deve ser estilizada com uma face normal, itálica ou oblíqua de sua família de fontes. <br>
+    Exemplo:</p>
+    <p>
+        <b>font-style: normal;</b> (estilo padrão) <br>
+        <b>font-style: italic;</b> (estilo itálico) <br>
+        <b>font-style: oblique;</b> (estilo semelhante ao itálico) <br>
+        <b>font-style: oblique 10deg;</b> (semelhante ao itálico podendo mudar o angulo) <br>
+
+    </p>
+
+    <h2>Font-Weight</h2>
+    <p>A propriedade CSS font-weight define o peso (ou negrito) da fonte. Os pesos disponíveis dependem da família de fontes que está definida no momento. <br>
+    Exemplo:</p>
+    <P>
+        <b>/* Keyword values */</b> <br>
+        font-weight: light; <br>
+        font-weight: normal; <br>
+        font-weight: bold; <br>
+        <br>
+        <b>/* Keyword values relative to the parent */</b> <br>
+        font-weight: lighter; <br>
+        font-weight: bolder; <br>
+        <br>
+        <b>/* Numeric keyword values */</b> <br>
+        font-weight: 100; <br>
+        font-weight: 200; <br>
+        font-weight: 300; <br>
+        font-weight: 400;// normal <br>
+        font-weight: 500; <br>
+        font-weight: 600; <br>
+        font-weight: 700;// bold <br>
+        font-weight: 800; <br>
+        font-weight: 900; <br>
+    </P>
+
+    <h2>Font Externa</h2>
+    <p>Para adicionar uma font externa é preciso fazer um "@import" no CSS, informando URL e propriedades da font (esse import tem que ser nas primeiras linhas do seu CSS). <br>
+    Exemplo:</p>
+    <p class="tamanho">
+        @import url('https://fonts.googleapis.com/css2?family=<b>Roboto</b>:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    </p>
+    <p>Depois é só usar a propriedade font-family normal com o nome da fonte, este que está em negrito no exemplo (nome apos a palavra "family=" do link). <br>
+    Exemplo:</p>
+    <p>
+        <b>font-family: 'Roboto', sans-serif;</b>
+    </p>
+
+    <h2>Font Interna</h2>
+    <p>Para inserir uma font interna, ou seja, uma font que está hospedada na sua máquina, é preciso primeiro baixa-la e coloca-la na devida pasta. Depois faremos um import da sua pasta. <br>
+    Exemplo: </p>
+    <p>
+        @font-face {<br>
+            font-family: '<b>nome da familia</b>';<br>
+            src: url('<b>local do arquivo</b>') format('<b>tipo do arquivo</b>');<br>
+        }<br>
+    </p>
+    <p>Obs: para cada valor da font (size, style, etc) você precisará fazer um import diferente pois será um arquivo de font diferente.</p>
+    <p>
+        <b> font-family: ' ' ;</b>: deve colocar o nome que desejar entre aspas. <br>
+        <b>src: url(' ')</b> local exato das pastas até o arquivo.<br>
+        <b>format(' ')</b>: Os principais tipos de arquivo de font são: <br>
+        Tipos de format() <br>
+        - opentype (otf) <br>
+        - truetype (ttf) <br>
+        - embedded-opentype <br>
+        - truetype-aat (Apple Advanced Typography) <br>
+        - svg <br>
+    </p>
+    
+</body>
+
+<footer>
+</footer>
+
+</html>

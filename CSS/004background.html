@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Meu Site de Estudos</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../scrip.js"></script>
+<style>
+     .hex {
+        background-color: darkblue;
+        color: #ffffff;
+    }
+
+    .back {
+        background-color: #00ffff;
+    }
+
+    .img {
+        height: 300px;
+        background-color: #00ffff;
+        background-image: url(imagem/01background.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .gradient {
+        height: 200px;
+        background-image: linear-gradient(90deg,  #0088ff, #00ffff 40%);
+    }
+</style>
+</head>
+
+<header>
+<h1>Título</h1>
+<p>Descrição</p>
+<nav>
+</nav>
+<a href="001CSS.html">Voltar</a>
+</header>
+
+<body>
+    <h2>Pripriedade Background-color</h2>
+    <p>A propriedade background é utilizada basicamente para colorir o fundo do elemento com uma cor sólida. <br><b>(background-color: #00ffff;)</b>.</p>
+    <section class="back">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis tempore voluptatibus magni? Nam nulla voluptates illum laboriosam officia ducimus quidem, iste vitae, nihil asperiores error, et magni? Aspernatur, facilis iusto.</p>
+    </section>
+    
+    <h2>Pripriedade Background-image</h2>
+    <p>O background-image serve para preencher o fundo de um elemento com uma determinada imagem</p>
+    <p>Atributos mais usados em background-image: <br>
+    <b>background-image: url(imagem/01background.jpg); </b>insere uma imagem.<br>
+    <b>background-size: contain;</b> ajusta a imagem no fundo. <br>
+    <b>background-repeat: no-repeat;</b> faz a imagem repetir para algum lado.<br>
+    <b>background-position: center;</b> ajusta o ponto de fixação da imagem</p>
+
+    <h3>Shorhand</h3>
+    <p>Shorhands são usados para fazer uma configuração com vários atributos em uma linha apenas. Neste caso podemos fazer assim.</p>
+    <p>Exemplo: <br>
+        <b>
+        background: #00ffff url(imagem/01background.jpg) no-repeat center;<br>
+        background-size: contain;</b> <br>
+    Obs: nesse caso o size não entra no shorhand.</p>
+        
+    
+    <div class="img">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ipsum voluptas omnis exercitationem esse ullam quaerat porro doloremque illum temporibus aliquid, quos vero similique aliquam veniam necessitatibus ut. Assumenda, repellat?</p>
+    </div>
+    <br>
+
+    <h2>Background Degradê</h2>
+    <p>Também é possível fazer um background em degradê usando o atributo background-image e passando o valor linear-gradient.</p>
+    <p>Exemplo: <br>
+    <b>background-image: linear-gradient(to right,  #0088ff, #00ffff 40%);</b><br>
+    Nesse caso estamos passando o valor de: <br>
+    linear-gradient(direção do degradê, primeiraCor, segundaCor %deOcupaçãoNaTela)
+    </p>
+    <p>Também podemos usar graus para informar a direção do degradê <br>
+    Exemplo: <br>
+    <b>background-image: linear-gradient(90deg,  #0088ff, #00ffff 40%);</b></p>
+    <div class="gradient">
+
+    </div>
+</body>
+
+<footer>
+</footer>
+
+</html>
