@@ -10,7 +10,7 @@
 <meta name="keywords" content="html,css,js,javascript,estudo">
 <meta name="author" content="Teodoro Lucas">
 
-<title>Estudo sobre Estilo de Links</title>
+<title>Estudo sobre Pseudo-Classes</title>
 <link rel="stylesheet" href="../style.css">
 <script src="../scrip.js"></script>
 <style>
@@ -55,14 +55,30 @@
     }
     a.botao3:hover {
         color: red;
-        border-bottom: 3px solid black;
+        border-bottom: 6px solid red;
+        font-weight: normal;
+    }
+
+    a.botao4 {
+        text-decoration: none;
+        color: blue;
+        font-size: 14px;
+    }
+
+    a.botao4:hover {
+        font-size: 16px;
+        font-weight: bolder;
+    }
+
+    a.botao5 {
+        cursor: wait; /* none, text, wait */
     }
 
 </style>
 </head>
 
 <header>
-<h1>Estudo sobre Estilo de Links</h1>
+<h1>Estudo sobre Pseudo-Classes</h1>
 <p>Descrição</p>
 <nav>
 </nav>
@@ -70,7 +86,24 @@
 </header>
 
 <body>
-    <h1>Estilização de Links</h1>
+    <h1>:Pseudo-classes</h1>
+    <p>Pseudo-classe é basicamente definir a propriedade com base em um estado de um determinado elemento. <br>
+    As pseudo-classes são definidas com o simplo ":" <br>
+    Veja um exemplo de sintaxe:</p>
+    <p><b>
+        seletor:pseudo-classe { <br>
+            propriedade: valor; <br>
+          } <br>
+    </b></p>
+    
+    <p>Alguns exemplos de pseudo-classe são: <br>
+    <b>:visited</b> historico de navegação<br>
+    <b>:checked</b> status do conteúdo<br>
+    <b>:hover</b> posição do mouse<br></p>
+
+    <h2>Criando Links com ":hover"</h2>
+    <p>Podemos fazer botões com a tag <b>&lt;a></b> estilizando com a pseudo-classe "<b>:hover</b>" para alterar as propriedades com o mouse em cima. <br> 
+    Veja alguns exemplos:</p>
 
     <a class="botao1" href="001CSS.html">Voltar para inicio</a><br>
     <a class="botao2" href="001CSS.html">Voltar para inicio</a><br>

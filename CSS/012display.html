@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Estudo sobre Display</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../scrip.js"></script>
+<style>
+    ul, ol {
+        margin-left: 30px;
+    }
+
+    li {
+        display: inline;
+    }
+
+    .blue {
+        background-color: blue;
+    }
+
+    .red {
+        background-color: red;
+    }
+
+    .green {
+        background-color: green;
+    }
+
+    .azul {
+        background-color: blue;
+    }
+    .vermelho{
+        background-color: red;
+    }
+    .verde {
+        background-color: green;
+    }
+    .azul, .vermelho, .verde {
+        display: inline-block;
+        height: 100px;
+        width: 100px;
+    }
+
+</style>
+</head>
+
+<header>
+<h1>Estudo sobre Display</h1>
+<p>Descrição</p>
+<nav>
+    
+</nav>
+<a href="001CSS.html">Voltar</a>
+</header>
+
+<body>
+    <h1>Display</h1>
+    <p>Display é uma das propriedades mais importantes do CSS quando se trata de controlar o layout. Ela especifica o tipo de caixa de um elemento e, SE ou COMO esse elemento vai ser exibido.</p>
+    <p>Cada elemento HTML já tem um valor de display padrão de acordo. Se ele vai ocupar a width toda,ou se ele vai ficar um do lado do outro...</p>
+
+    <h2>Tipos de display</h2>
+    <p>
+        <b>display: block;</b> ocupa toda a width <br>
+        (ex: div, h1~6, p) <br>
+        <b>display: inline;</b> alinhas uma ao lado da outra <br>
+        (ex: a, span, img) <br>
+        <b>display: inline-block;</b> alinhas uma ao lado da outra <br>
+        (nenhum elemento pré configurado com inline-block) <br>
+        <b>display: none;</b> desaparece com o elemento <br>
+        (muito usado para criar eventos de aparecer e desaparecer) <br>
+    </p>
+
+    <h2>Display Block</h2>
+    <p>O display block é basicamente um display que vai ocupar a largura (width) completa da página. Além disso, ele também vai obedecer todos as definições de largura e tamanho.</p>
+
+    <h2>Display Inline</h2>
+    <p>Como dito, o display inline alinha seus elementos de forma horizontal (lado a lado).</p>
+    <p>O inline comporta como se cada elemento fosse uma Palavra. Se eu der espaço no código ele vai criar um espaço como se fosse um texto, se eu não der espaço ele ficará colado. <br>
+    Exemplo:</p>
+
+        <ul>
+            <li class="blue">Primeiro item</li>
+            <li class="red">Segundo item</li>
+            <li class="green">Terceiro item</li>
+        </ul>
+        <ul>
+            <li class="blue">Primeiro item</li><li class="red">Segundo item</li><li class="green">Terceiro item</li>
+        </ul>
+
+    <p>O display inline, diferente do block não obedece propriedades que alteram os valores de altura (height) e largura (width). Ele vai obedecer apenas o tamanho do objeto que compoem</p>
+
+    <h2>Inline-Block</h2>
+    <p>O display inline-block é uma configuração que vai se comportar em geral como o display inline, posicionando seus elementos horizontalmente, porém vai respeitar as definições de altura e largura como no display block. <br>
+    Exemplo:</p>
+
+    <ul>
+        <li class="azul">Primeiro item</li>
+        <li class="vermelho">Segundo item</li>
+        <li class="verde">Terceiro item</li>
+    </ul>
+    <br><br>
+</body>
+
+<footer>
+</footer>
+
+</html>

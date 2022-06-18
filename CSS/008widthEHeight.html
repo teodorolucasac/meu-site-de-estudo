@@ -19,6 +19,16 @@
         width: 300px;
         height: 150px;
     }
+
+    .ex1 {
+        border: 1px solid red;
+        min-width: 800px;
+    }
+
+    .ex2 {
+        border: 1px solid purple;
+        max-width: 800px;
+    }
 </style>
 </head>
 
@@ -92,9 +102,22 @@
         Usa a fórmula fit-content com o espaço disponível substituído pelo argumento especificado, ou seja: <br> min(max-content, max (min-content, &lt;length-percentage>)). <br>
     </p>
 
+    <h2>Max-Width</h2>
+    <p>Max Width é utilizado para definir uma largura máxima para o elemento respeitando a largura mínima da tela, ou seja, se a tela for menor que a largura máxima do elemento, vai faze-lo diminuir e ajustar responsivamente sem criar barras de rolagem.</p>
+
+    <h2>Min-Width</h2>
+    <p>O min width por sua vez vai definir uma largura mínima e criar uma barra de rolagem caso a tela seja menor que a largura minima definida. Porém a largura vai acompanhar a tela se ela for maior que a largura mínima definida. <br>
+    Veja o exemplo:</p>
+
+    <div class="ex1">Conteúdo com 800px de largura mínima</div>
+
+    <div class="ex2">Conteúdo com 800px de largura máxima</div>
+
+    <br><br>
     <hr>
     <h1>Height</h1>
     <p>Todas as específicações aplicadas no <b>&lt;width></b> também se aplica no <b>&lt;height></b> porém, agora estamos falando de <b>altura</b> e não largura como no width.</p>
+    
 </body>
 
 <footer>
