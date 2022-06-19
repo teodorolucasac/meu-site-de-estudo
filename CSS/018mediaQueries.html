@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Estudo sobre Media Queries</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../scrip.js"></script>
+<style>
+    .cor{
+        
+        height: 100px;
+        position: relative;
+    }
+    .cor p{
+        text-align: center;
+        font-weight: bold;
+        position: absolute;
+        margin: 0px;
+        width: 100%;
+        
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+    }
+
+    /* Smartphones (600px para baixo) */
+@media only screen and (max-width: 600px) {
+    .cor{
+        background-color: blue;
+        color: white;
+    }
+}
+
+/* Dispositivos um pouco maiores, mas ainda pequenos (Pequenos Tablets e Smartphones + largos, 600px para cima) */
+@media only screen and (min-width: 600px) {
+    .cor{
+        background-color: red;
+        color: black;
+    }
+}
+
+/*Dispostivos Médios (Tablets deitados, 768px para cima) */
+@media only screen and (min-width: 768px) {
+    .cor{
+        background-color: yellow;
+        color: black;
+    }
+}
+
+/* Dispostivos Largos (laptops/desktops, 992px para cima) */
+@media only screen and (min-width: 992px) {
+    .cor{
+        background-color: green;
+        color: white;
+        
+    }
+}
+
+/* Super Largos (Telas maiores laptops, desktops e até TVs, 1200px para cima) */
+@media only screen and (min-width: 1200px) {
+    .cor{
+        background-color: violet;
+        color: black;
+    }
+}
+</style>
+</head>
+
+<header>
+<h1>Estudo sobre Media Queries</h1>
+<p>Descrição</p>
+<nav>
+</nav>
+<a href="001CSS.html">Voltar</a>
+</header>
+
+<body>
+    <h1>Media Queries</h1>
+    <p>Media Queries (consultas de mídia) são um módulo de CSS que permite ajustar visualizações a uma variedade específica de dispositivos/telas sem mudar o conteúdo.</p>
+
+    <div class="cor">
+        <p>Diminua/Almente o tamanho da tela <br>
+            para mudar de cor</p>
+    </div>
+
+    <h3>Sintaxe:</h3>
+    <p>Exemplo 1: <br>
+    <b>
+        @media only screen and (min-width: 600px) {<br>
+            .cor{<br>
+                background-color: red;<br>
+                color: black;<br>
+            }<br>
+        }<br> 
+    </b>
+    </p>
+
+    <p> Exemplo 2: <br>
+    <b>
+        @media screen and (max-width: 768px) and (min-width: 600px) {<br>
+    .cor{<br>
+        background-color: red;<br>
+        color: black;<br>
+    } <br>
+} <br>
+    </b>
+    </p>
+
+    <h2>Usando Media Queries</h2>
+    <p>Continua...</p>
+</body>
+
+<footer>
+</footer>
+
+</html>

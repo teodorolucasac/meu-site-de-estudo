@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Estudo sobre Hierarquia</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../scrip.js"></script>
+<style>
+    ol {
+        margin-left: 30px;
+    }
+</style>
+</head>
+
+<header>
+<h1>Estudo sobre Hierarquia</h1>
+<p>Descrição</p>
+<nav>
+</nav>
+<a href="001CSS.html">Voltar</a>
+</header>
+
+<body>
+    <h1>Hierarquia</h1>
+    <p>Digo hierarquia quando definimos o grau de importancia/prioridade que a máquina leitora do código enxerga os elementos.</p>
+
+    <h2>Hierarquia do documento CSS</h2>
+    <p>O estilo da página sempre vai priorizar primeiro o CSS Inline (estilo definido na linha de código HTML), depois CSS Interno (estilo definido no campo &lt;style> localizado no &lt;head> do documento HTML) e só depois o CSS Externo (estilo definido no documento .css externo no qual o documento HTML está linkado).</p>
+    <p><b>CSS Inline > CSS Interno > CSS Externo</b></p>
+
+    <h2>Hierarquia de Seletores</h2>
+    <p>Via de regra:<br>
+      
+    01 Quanto maior o <b>parent</b> do Seletor, maior é na hierarquia, perdendo apenas para o último <b>child</b>. <br>
+
+    02 O último <b>child</b> é mais forte que qualquer <b>parent</b> sozinho <br>
+    (obs: considera-se ultimo child o <b>id</b>, antes dele a <b>class</b> e só depois a <b>tag</b>). <br>
+    
+    03 O seletor <b>parent</b> + <b>child</b> sucessores é mais forte que qualquer <b>parent</b> ou <b>child</b> sozinho. <br>
+
+    04 O <b>CSS Inline é o mais forte</b> de todos ignorando qualquer regra.
+    </p>
+
+    <p>Exemplo:
+    <b>
+    <ol type="A">
+        <li>CSS Inline</li>
+        <li>CSS Interno</li>
+        <li>CSS Externo</li>
+        <ol>
+        <li>...tagParent + tagChild + class + id</li>
+        <li>tagChild + class + id</li>
+        <li>class + id</li>
+        <li>id</li>
+        <li>class</li>
+        <li>tagChild</li>
+        <li>tagParent</li>
+        <li>tagGlobal</li>
+        <li>tagUniversal</li>
+        </ol>
+    </ol>
+    </b>
+    Obs: Quando se trata da hierarquia, vai prevalecer o último código escrito.</p>
+
+    <h2>Regra !Important</h2>
+    <p>O !important é um valor, ou seja, você deve inserir junto com os valores das propriedades, e quando inserido ele ignora qualquer regra do exemplo anterior e passa a valer este.</p>
+    <p>O important é mais usado como medida paleativa ou como teste no código, tendo em vista que o uso excessivo do important não faz tanto sentido e gera muita desordem no código</p>
+</body>
+
+<footer>
+</footer>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Estudo sobre Overflow</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../scrip.js"></script>
+<style>
+    .exemplo1 {
+        background-color: gray;
+        color: black;
+        height: 65px;
+        overflow: visible;
+    }
+
+    .exemplo2 {
+        background-color: gray;
+        color: black;
+        height: 90px;
+        overflow: scroll;
+    }
+
+    .exemplo3 {
+        background-color: gray;
+        color: black;
+        height: 120px;
+        overflow: auto;
+    }
+
+    .exemplo4 {
+        background-color: gray;
+        color: black;
+        height: 90px;
+        overflow: hidden;
+    }
+
+    
+    .caixa{
+        background-color: aqua;
+        width: 300px;
+        min-height: 120px;
+    }
+
+    .titulo{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .caixa:hover .titulo{
+        white-space: normal;
+    }
+</style>
+</head>
+
+<header>
+<h1>Estudo sobre Overflow</h1>
+<p>Descrição</p>
+<nav>
+</nav>
+<a href="001CSS.html">Voltar</a>
+</header>
+
+<body>
+    <h1>Overflow</h1>
+    <p>A propriedade overflow especifica quando o <b>conteúdo</b> de um <b>elemento</b> de nível de bloco deve ser cortado, exibido com barras de rolagem ou se transborda do elemento.</p>
+
+    <h2>overflow: visible;</h2>
+    <p>Visible é o valor padrão do overflow de qualquer elemento. Caso o elemento não tenha especificado o seu tamanho, ele vai adaptar conforme o conteúdo. No entando se o elemento estiver tamanho definido o conteúdo vai ser exibido mesmo se ultrapassar o tamanho definido ao elemento</p>
+
+    <h2>overflow: scroll;</h2>
+    <p>O valor scroll vai basicamente criar uma barra de scroll na lateral para navegar e visualizar o conteúdo excedente do tamanho do elemento. Lembrando que a barra de scroll vai ser visível mesmo que o conteúdo não ultrapasse o tamamnho do elemento para evitar de ficar aparecendo e desaparecendo com conteúdos dinâmicos</p>
+
+    <h2>overflow: auto;</h2>
+    <p>O valor auto vai fazer o conteúdo excedente criar uma barra de rolagem scroll, porém quando o conteúdo não for excedente ele vai desaparecer com a barra de rolagem.</p>
+
+    <h2>overflow: hidden;</h2>
+    <p>O valor hidden vai básicamente esconder/sumir com o conteúdo excedente, não mostrando nem criando barra de rolagem.</p>
+
+    <h2>text-overflow</h2>
+    <p></p>
+
+    <h2>Exercício</h2>
+    <div class="exemplo1">
+        <h3>Exemplo 1 (visible)</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non unde cupiditate officiis repellat omnis, iure voluptate aliquid exercitationem dicta in, iusto eligendi obcaecati quam deleniti tempore earum neque vitae pariatur.</p>
+    </div>
+    <br><br>
+    <div class="exemplo2">
+        <h3>Exemplo 2 (scroll)</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non unde cupiditate officiis repellat omnis, iure voluptate aliquid exercitationem dicta in, iusto eligendi obcaecati quam deleniti tempore earum neque vitae pariatur.</p>
+    </div>
+
+    <div class="exemplo3">
+        <h3>Exemplo 3 (auto)</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non unde cupiditate officiis repellat omnis, iure voluptate aliquid exercitationem dicta in, iusto eligendi obcaecati quam deleniti tempore earum neque vitae pariatur.</p>
+    </div>
+
+    <div class="exemplo4">
+        <h3>Exemplo 4 (hidden)</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non unde cupiditate officiis repellat omnis, iure voluptate aliquid exercitationem dicta in, iusto eligendi obcaecati quam deleniti tempore earum neque vitae pariatur.</p>
+    </div>
+
+    <h2>Efeitos de texto com Overflow</h2>
+    <p>Neste caso usamos um white-space para o texto não quebrar linha, depois overflow para esconder o conteúdo excedente do container, depois text-overflow para decidir o que acontece com o texto excedido, neste caso adicionamos reticências "...". Por fim colocamos um :hover com white-space: normal;<br>
+    
+    <b>
+        .titulo{ <br>
+            white-space: nowrap; <br>
+            overflow: hidden; <br>
+            text-overflow: ellipsis; <br>
+        } <br>
+     <br>
+        .caixa:hover .titulo{ <br>
+            white-space: normal; <br>
+        } <br>
+    </b>
+    </p>
+    <div class="caixa">
+        <h3 class="titulo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur non fugiat pariatur, sapiente iusto, atque provident nulla, molestias aliquid esse officia.</h3>
+        <p class="titulo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quae, quaerat animi sed modi odio autem incidunt aut expedita. Tenetur fuga nostrum ratione vitae nam. Mollitia iure eveniet cupiditate! Quia!</p>
+    </div>
+</body>
+
+<footer>
+</footer>
+
+</html>

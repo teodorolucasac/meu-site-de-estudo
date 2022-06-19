@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Estudos sobre Float</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../scrip.js"></script>
+<style>
+    .container {
+        border: 1px solid black;
+        overflow: auto;
+    }
+
+    img {
+        width: 200px;
+    }
+
+    div p {
+        margin: 10px 0px;
+    }
+
+    .container img{
+        float: left;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    .container2 {
+        border: 1px solid black;
+        overflow: auto;
+        
+    }
+
+    .container2 img{
+        float: left;
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+    .container2 p.p1{
+        clear: both;
+    }
+
+    ul{
+        background-color: black;
+        padding: 10px;
+    }
+    li{
+        display: inline-block;
+    }
+    li a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+    }
+    li a:hover {
+        background-color: #ccc;
+    }
+
+    .login{
+        float: right;
+    }
+
+    .login a:hover{
+        background-color: orangered;
+    }
+
+</style>
+</head>
+
+<header>
+<h1>Estudos sobre Float</h1>
+<p>Descrição</p>
+<nav>
+</nav>
+<a href="001CSS.html">Voltar</a>
+</header>
+
+<body>
+    <h1>Float</h1>
+    <p>A propriedade float do CSS determina que um elemento deve ser retirado do seu fluxo normal, ou seja, da ordem normal de arranjo, podendo ser colocado ao redor do seu lado direito ou esquerdo com demais outros elementos como, textos e elementos em linha.</p>
+
+    
+
+    <div class="container">
+        <img src="imagem/02montanha.jpg" alt="">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At repellat, libero voluptas doloribus mollitia quidem dolore quis nisi, nemo sit quaerat reprehenderit exercitationem ipsum? Odit debitis libero dolorum tenetur? Debitis?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At repellat, libero voluptas doloribus mollitia quidem dolore quis nisi, nemo sit quaerat reprehenderit exercitationem ipsum? Odit debitis libero dolorum tenetur? Debitis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. At repellat, libero voluptas doloribus mollitia quidem dolore quis nisi, nemo sit quaerat reprehenderit exercitationem ipsum? Odit debitis libero dolorum tenetur? Debitis?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At repellat, libero voluptas doloribus mollitia quidem dolore quis nisi, nemo sit quaerat reprehenderit exercitationem ipsum? Odit debitis libero dolorum tenetur? Debitis?</p>
+    </div>
+
+    <p>O float faz com que o elemento se desprenda do container, em outras palavras se desprenda da tag pai dela. <br>
+    Para que o container absorva e ou integre o elemento pai, podemos usar o (<b>overflow: auto;</b>) como no exemplo acima.</p>
+
+    <p>Caso precise que o texto pare de seguir ao longo da lateral do elemento em float, basta usar a propriedade (<b>clear: both;</b>), conforme exemplo abaixo:</p>
+
+    <div class="container2">
+        <img src="imagem/02montanha.jpg" alt="">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At repellat, libero voluptas doloribus mollitia quidem dolore quis nisi, nemo sit quaerat reprehenderit exercitationem ipsum? Odit debitis libero dolorum tenetur? Debitis?</p>
+        <p class="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At repellat, libero voluptas doloribus mollitia quidem dolore quis nisi, nemo sit quaerat reprehenderit exercitationem ipsum? Odit debitis libero dolorum tenetur? Debitis?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At repellat, libero voluptas doloribus mollitia quidem dolore quis nisi, nemo sit quaerat reprehenderit exercitationem ipsum? Odit debitis libero dolorum tenetur? Debitis?</p>
+    </div>
+
+    <h2>Exemplo de menu com float</h2>
+
+    <ul>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li class="login"><a href="#">Login</a></li>
+    </ul>
+    
+    <br>
+    <p>Neste exemplo nos usamos o <b>float: right;</b> para colocar o link de login no canto direito da tela, veja.</p>
+    <br>
+</body>
+
+<footer>
+</footer>
+
+</html>

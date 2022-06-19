@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Estudo sobre Position</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../scrip.js"></script>
+<style>
+
+    .container {
+        position: relative;
+        display: inline-block;
+        background-color: blue;
+        width: 95%;
+        height: 400px;
+    }
+
+    .div1 {
+        position: relative;
+        z-index: 2;
+        top: 50px;
+        left: 20px;
+        width: 30%;
+        height: 100px;
+        display: inline-block;
+        background-color: yellow;
+    }
+    
+    .div2 {
+        position: sticky;
+        z-index: 1;
+        top: 10px;
+        width: 30%;
+        height: 100px;
+        display: inline-block;
+        background-color: deeppink;
+    }
+
+    .div3 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 30%;
+        height: 100px;
+        display: inline-block;
+        background-color: red;
+    }
+    
+    .fixo {
+        background-color: #00bf00;
+        color: white;
+        width: 120px;
+        height: 45px;
+        border-radius: 5px;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .texto {
+        text-align: center;
+        font-weight: bolder;
+        position: absolute;
+        margin: 0px;
+        width: 100%;
+        
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+    }
+</style>
+</head>
+
+<header>
+<h1>Estudo sobre Position</h1>
+<p>Descrição</p>
+<nav>
+</nav>
+<a href="001CSS.html">Voltar</a>
+</header>
+
+<body>
+    <h1>Position</h1>
+    <p>A propriedade position, define como um elemento pode ser posicionado (renderizado) no documento (página). <br>
+    Existem 5 tipos de valores para a propriedade CSS position. <br>
+    Veja:</p>
+    <p>
+        <b>position: static;</b> <br>
+        <b>position: relative;</b> <br>
+        <b>position: fixed;</b> <br>
+        <b>position: absolute;</b> <br>
+        <b>position: sticky;</b> <br>
+    </p>
+
+    <p>OBS: o eixo central de um elemento vem padronizado como left/top, levando em conta a margem também. Caso queira alterar a posição do eixo use a propriedade: <b>(transform: translate(-50%, -50%);</b>)    </p>
+
+    <h2>Position: static;</h2>
+    <p>O valor static é o valor padrão dos elementos e se comporta em uma camada, não podendo avançar em cima da position de outros elementos.</p>
+
+    <h2>Position: relative;</h2>
+    <p>O valor relative libera camada do <b>eixo-Z (z-index: 0;)</b>, ou seja, coloca o elemento em camadas afrente ou atrás de outros elementos. E por isso trabalha o position do elemento ignorando a position (top, right, bottom, left)de outros elementos</p>
+
+    <h3>z-index: 0;</h3>
+    <p>O z-index é uma propriedade que altera ou define a camada de um elemento, podendo ser alterada apenas se o position for relative.</p>
+
+    <h2>Position: fixed;</h2>
+    <p>O valor fixed vai definir uma posição fixa de um determinado elemento com base na tela do usuário. Portanto não importa a rolagem da tela o elemento vai ficar preso naquela posição em relação a tela.</p>
+
+    <h2>Position: absolute;</h2>
+    <p>O valor absolute define a posição de um elemento com base ao parent dele (ancestral) no qual ele está contiudo. <br>
+    Porém o valor absolute só vai conseguir basear no elemento Pai se este elemento tiver qualquer valor de position que não seja static, caso contrário ele vai continuar procurando outro elemento Pai até encontrar um elemento final como body, ou o header por exemplo. </p>
+
+    <h2>Position: sticky;</h2>
+    <p>O valor sticky vai grudar o elemento na tela, caso a tela comece a sair das margens e posição definida. Muito usado para menus, caixa de loguin ou cabeçalho de tabelas para acompanhar a rolagem para baixo por exemplo.</p>
+
+    <h2>Exercício</h2>
+
+    <div class="container">
+        <div class="div1">Primeira Div (relative)</div>
+        <div class="div2">Segunda Div (sticky)</div>
+        <div class="div3">Terceira Div (absolute)</div>
+    </div>
+
+    <!-- TENTAR ENTENDER PORQUE O WHATS WIDTH TA SAINDO DO BORDA DO ELEMENTO PAI -->
+    <div class="fixo">
+        <p class="texto">WHATSAPP <br> <small>(fixed)</small></p>
+    </div>
+
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, repellat laboriosam odio tempore praesentium doloribus expedita provident corporis unde suscipit officiis in at ad? Dolorum dolor eum voluptatem ad atque!</p>
+    <p>Culpa quas molestiae consectetur hic dolorum! Quaerat delectus dolorem placeat sunt unde tempore, necessitatibus illo harum sequi quibusdam voluptatibus quidem repudiandae eum odit esse expedita doloribus quae! Perferendis, expedita cupiditate.</p>
+    <p>Consequuntur fuga repellat ipsa officiis voluptatibus? Facere laudantium quo eius nihil sapiente qui accusantium aut magnam, harum ex repudiandae? Quod, labore provident ea impedit odit debitis veniam fugit atque eius!</p>
+    <p>Facere laborum, inventore fugit nisi vel velit neque ut quae ab vitae perspiciatis quos accusamus? Aspernatur tenetur ad debitis, deserunt adipisci ipsa odit, quibusdam recusandae, assumenda totam dicta iste atque.</p>
+    <p>Ducimus accusantium ullam dolore aspernatur error! Necessitatibus asperiores pariatur alias delectus officia, explicabo error recusandae magni fuga ratione reprehenderit fugiat, animi cupiditate eius in earum tempora, nesciunt natus. Laborum, quis.</p>
+    <p>Eaque aspernatur ullam, voluptates mollitia dicta alias optio at fugiat delectus, facilis, nostrum exercitationem. Repellat ipsam architecto a minus. Omnis corporis earum cumque atque dolore quisquam molestiae voluptas similique dignissimos.</p>
+    <p>Exercitationem quae, corporis pariatur eos iure illo facere sint, dolorum libero quas voluptates sed. Officiis id nihil laborum autem eum numquam repudiandae, maiores porro ullam hic facere, veniam assumenda saepe!</p>
+    <p>Sit dolore necessitatibus, autem tenetur dolorem quis cum expedita nemo et voluptas, voluptatem libero at? Dolore, veritatis quas voluptate ullam odit ea dolorum, magnam incidunt ut eveniet deleniti, ratione dicta.</p>
+    <p>Architecto tempore labore ad odio rerum facere mollitia corporis quod itaque impedit necessitatibus sapiente laborum dolorem veniam, aperiam hic deserunt atque error? Voluptatibus, at quod consequatur in omnis ipsa eos!</p>
+    <p>Expedita officia cum excepturi, modi iste, optio facilis neque corporis fugit, rerum ad vel autem enim dolore quisquam harum! Fugiat numquam non animi officiis earum porro cumque quidem magni adipisci!</p>
+    <p>Officiis atque ullam consequuntur modi blanditiis excepturi iste ex enim? Voluptate, rem provident? Ea magni, deserunt minima aliquid porro recusandae officia quia excepturi fugit consequatur perspiciatis ipsa blanditiis eligendi iste!</p>
+    <p>Adipisci, quam. Labore debitis, fugit eum quaerat eius natus similique distinctio aliquid nisi obcaecati asperiores consectetur dolor ullam optio dolorum explicabo inventore enim itaque pariatur. Maxime, fuga nemo! Aspernatur, repellendus.</p>
+    <p>Enim consequuntur, alias reprehenderit voluptates ratione quasi eaque repellat eveniet a atque provident doloremque blanditiis velit, maiores ipsum quam nesciunt assumenda illo veritatis fugiat ut eius obcaecati? Iure, consequatur nobis.</p>
+    <p>Quisquam animi voluptatibus commodi quis impedit harum, laboriosam incidunt debitis culpa assumenda voluptas rem amet ex sapiente, facere iure pariatur repudiandae est, deleniti blanditiis! Voluptas sed ipsa sint dicta veniam?</p>
+    <p>Perferendis fugit consequatur modi officia neque aliquam nostrum laborum. Rerum at perferendis, ipsum, animi explicabo soluta distinctio eius ratione esse saepe nesciunt, porro qui odio tenetur ullam. A, quisquam incidunt?</p>
+
+</body>
+
+<footer>
+</footer>
+
+</html>

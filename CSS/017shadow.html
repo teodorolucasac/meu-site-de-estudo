@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Estudo sobre Shadow</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../scrip.js"></script>
+<style>
+    .text {
+        text-shadow: 3px 3px 5px red;
+        font-weight: bold;
+        font-size: 1.3em;
+    }
+    .multipla {
+        text-shadow: 0px 0px 5px yellow, 2px 2px 3px red;
+        font-weight: bold;
+        font-size: 1.3em;
+    }
+
+    .caixa{
+        float: left;
+        width: 200px;
+        height: 200px;
+        margin: 20px;
+        background-color: grey;
+        box-shadow: 5px 5px 15px black;
+    }
+    
+</style>
+</head>
+
+<header>
+<h1>Estudo sobre Shadow</h1>
+<p>Descrição</p>
+<nav>
+</nav>
+<a href="001CSS.html">Voltar</a>
+</header>
+
+<body>
+    <h1>Shadow</h1>
+    <p>Shadow é basicamente a sombra do nosso elemento. No CSS temos a propriedade text-shadow: ; e box-shadow: ;.</p>
+
+    <h2>text-shadow: ;</h2>
+    <p>A propriedade text-shadow tem 4 valores para ser atribuido. <br>
+    Primeiro: sombra horizontal <br>
+    Segundo: sombra vertical <br>
+    Terceiro: blur da sombra (desfoque) <br>
+    Quarto: cor <br>
+    Exemplo: <b>text-shadow: 3px 3px 5px red;</b></p>
+    <p class="text">
+        Exemplo
+    </p>
+
+    <p>Também é possível misturar mais de um efeito colocando uma "," no último valor informado e informando o próximo valor. <br>
+    Exemplo: <b>text-shadow: 0px 0px 5px yellow, 2px 2px 3px red;</b></p>
+
+    <p class="multipla">
+        Exemplo
+    </p>
+
+    <h2>box-shadow: ;</h2>
+    <p>A box-shadow é muito semelhante ao text-shadow com os mesmos valores, porém se aplica em caixas. <br>
+    Exemplo: </p>
+
+    <div class="caixa">
+
+    </div>
+    <div class="caixa">
+        <img src="https://picsum.photos/200" alt="">
+    </div>
+    
+
+</body>
+
+<footer>
+</footer>
+
+</html>

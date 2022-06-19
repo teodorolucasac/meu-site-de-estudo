@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Estudo sobre Flexbox</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../scrip.js"></script>
+<style>
+    .flexPai{
+        background-color: blue;
+        display: flex;
+        /*
+        flex-direction: row;
+        flex-wrap: wrap;
+        */
+        flex-flow: row wrap;
+    }
+
+    @media screen and (max-width: 600px){
+        .flexPai {
+            flex-direction: column;
+        }
+    }
+
+    .flexPai div{
+        background-color: white;
+        border: 1px solid black;
+        padding: 30px;
+        text-align: center;
+    }
+</style>
+</head>
+
+<header>
+<h1>Estudo sobre Flexbox</h1>
+<p>Descrição</p>
+<nav>
+</nav>
+<a href="001CSS.html">Voltar</a>
+</header>
+
+<body>
+    <h1>Flexbox</h1>
+    <p></p>
+
+    <div class="flexPai">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>3</div>
+        <div>3</div>
+        <div>3</div>
+        <div>3</div>
+        <div>3</div>
+        <div>3</div>
+        <div>3</div>
+        <div>3</div>
+        <div>3</div>
+    </div>
+</body>
+
+<footer>
+</footer>
+
+</html>

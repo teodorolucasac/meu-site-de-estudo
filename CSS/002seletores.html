@@ -73,31 +73,40 @@
     <h2>Seletor Universal</h2>
     <p>O seletor universal é representado pelo simbolo "*", o que for configurado nele vai alterar todo o seu documento, desde o primeiro <abbr title="Tag Pai ou Antecessor">Parent</abbr> até o último <abbr title="Tag Filho ou Sucessor">Child</abbr>. <br>
     Exemplo: </p>
-    *{ <br><br>
-    } <br>
+    <p>
+        <b>
+            *{ <br><br>
+            } <br>
+        </b>
+    </p>
     <p>OBS: o Seletor Universal está abaixo da hierarquia de um Seletor direto</p>
 
+    <h2>Chamando um Seletor</h2>
+    <p>Podemos selecionar <b>mais de um Seletor na mesma configuração</b>, basta colocar uma "," entre eles <br>
+    Exemplo:</p>
+    <b>
+        <p>h1, h2, p {<br>
+            <br>
+        }<br></p>
+    </b>
+
+    <p>Para <b>selecionar os <i>parents</i> e <i>childs</i></b>, basta coloca-los um na frente do outro em ordem ou usando o simbolo ">".<br>
+        Exemplo:</p>
+        <b>
+            <p>body section p {<br>
+                <br>
+            }<br><br>
+                OU <br>
+                <p>body > section > p {<br>
+                <br>
+                }<br></p>
+        </b>
+    
     <h2>Hierarquia de Seletores</h2>
     <p>Via de regra:<br>
     01 Quanto maior o <i>parent</i> do Seletor, maior é na hierarquia, perdendo apenas para o último <i>child</i>. <br>
-    02 O último <i>child</i> é mais forte que qualquer <i>parent</i> sozinho. <br>
+    02 O último <i>child</i> é mais forte que qualquer <i>parent</i> sozinho (obs: considera-se ultimo child o id, antes dele a class e só depois a tag). <br>
     03 O seletor <i>parent</i> + <i>child</i> sucessores é mais forte que qualquer <i>parent</i> ou <i>child</i> sozinho.
-
-    <p>Obs: Podemos selecionar mais de um Seletor na mesma configuração, basta colocar uma "," entre eles <br>
-    Exemplo:</p>
-    <p>h1, h2, p {<br>
-        <br>
-    }<br></p>
-
-    <p>Obs: Para selecionar os <i>parents</i> e <i>childs</i>, basta coloca-los um na frente do outro em ordem ou usando o simbolo ">".<br>
-        Exemplo:</p>
-        <p>body section p {<br>
-            <br>
-        }<br><br>
-    OU <br><br>
-    <p>body > section > p {<br>
-    <br>
-    }<br></p>
 
     <h2 class="center">Exemplo de Seletores (vide html)</h2>
     <p class="center vermelho">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet, consequatur sit veritatis nihil quis eaque natus excepturi tempora, et quasi nulla vitae ipsam repellendus minus. Consectetur, illum. Consequuntur, accusamus debitis.</p>

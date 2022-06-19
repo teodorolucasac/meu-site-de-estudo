@@ -36,6 +36,24 @@
         height: 200px;
         background-image: linear-gradient(90deg,  #0088ff, #00ffff 40%);
     }
+    .radial {
+        height: 200px;
+        background-image: radial-gradient(#0088ff, #00ffff);
+    }
+
+    img{
+        margin: 10px;
+    }
+
+    .img1{
+        opacity: 0.9;
+    }
+    .img2{
+        opacity: 0.6;
+    }
+    .img3{
+        opacity: 0.3;
+    }
 </style>
 </head>
 
@@ -89,6 +107,25 @@
     <div class="gradient">
 
     </div>
+
+    <p>Também é possível fazer o grandient de forma circular, basta passar o valor radial no lugar de linear. <br>
+    Exemplo: <br>
+    <b>background-image: radial-gradient(#0088ff, #00ffff);</b></p>
+
+    <div class="radial">
+
+    </div>
+
+    <h2>Opacity</h2>
+    <p>Também podemos fazer alguns efeitos no background alterando a "opacity: 1.0;" do elemento, os valores variam de 0,0 até 1,0. <br>
+    Exemplo:</p>
+    
+    <img src="https://picsum.photos/200" alt="" class="img1">
+    <img src="https://picsum.photos/200" alt="" class="img2">
+    <img src="https://picsum.photos/200" alt="" class="img3">
+
+    <p>Obs: para criar as imagens usamos o site <a href="https://picsum.photos/" target="_blank">Lorem Picsum</a> que cria imagens aleatórias do tamanho determinado.</p>
+    <p>Lembrando que a propriedade opacity vai afetar todos os childs também.</p> <br>
 </body>
 
 <footer>
