@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Exercício Flexbox</title>
+<script src="../scrip.js"></script>
+<style>
+    body{
+        margin: 0px;
+    }
+
+    .header{
+        background-color: green;
+        color: white;
+        padding: 80px;
+        text-align: center;
+    }
+
+    .navbar{
+        display: flex;
+        justify-content: center;
+        background-color: black;
+    }
+
+    .navbar a {
+        color: white;
+        padding: 14px 20px;
+        text-decoration: none;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .navbar a:hover{
+        background-color: white;
+        color: black;
+        
+    }
+
+    @media screen and (max-width: 700px){
+        .navbar{
+            flex-direction: column;
+        }
+    }
+
+    .corpo{
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .card{
+        flex-grow: 1;
+        background-color: #ccc;
+        height: 350px;
+        margin: 1%;
+    }
+</style>
+</head>
+
+<header class="header">
+<h1>Exercício Flexbox</h1>
+<p>Este é um layout flexível</p>
+</header>
+<nav class="navbar">
+    <a href="019flexbox.html">Voltar</a>
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+    <a href="019flexbox.html">Voltar</a>
+</nav>
+
+
+<body>
+    <div class="corpo">
+        <div class="card">
+
+        </div>
+        <div class="card">
+
+        </div>
+    </div>
+</body>
+
+<footer>
+</footer>
+
+</html>

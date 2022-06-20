@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Estudo sobre Flexbox</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../scrip.js"></script>
+<style>
+    ol, ul{
+        margin-left: 30px;
+    }
+
+    .flexPai{
+        background-color: blue;
+        display: flex;
+        flex-flow: row wrap; 
+    }
+
+    @media screen and (max-width: 600px){
+        .flexPai {
+            flex-direction: column;
+        }
+    }
+
+    .flexPai div{
+        background-color: white;
+        border: 1px solid black;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .flexPai2{
+        background-color: blue;
+        height: 300px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .flexPai2 div{
+        background-color: white;
+        border: 1px solid black;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .flexPai3{
+        background-color: blue;
+        height: 300px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .flexPai3 div{
+        background-color: white;
+        border: 1px solid black;
+        padding: 30px;
+        text-align: center;
+        flex-grow: 1;
+    }
+
+    .flexPai4{
+        background-color: blue;
+        height: 300px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .flexPai4 div{
+        margin: 0px;
+        background-color: white;
+        border: 1px solid black;
+        padding: 25px;
+    }
+
+</style>
+</head>
+
+<header>
+<h1>Estudo sobre Flexbox</h1>
+<p>Descrição</p>
+<nav>
+</nav>
+<a href="001CSS.html">Voltar</a>
+</header>
+
+<body>
+    <h1>Flexbox</h1>
+    <p>A propriedade Flexbox provê ferramentas para criação rápida de layouts complexos e flexíveis, e características que se mostraram historicamente difíceis com CSS.</p>
+
+    <p>Por um longo tempo, as únicas ferramentas compatíveis entre browsers disponíveis para criação de layouts CSS eram coisas como floats e posicionamento. Estas são boas e funcionam, mas em alguns casos também são limitadas e frustrantes. Os requisitos de layouts a seguir são difíceis ou impossíveis de se conseguir com estas duas ferramentas:</p>
+    <small>
+    <ul style="font-family: 'Roboto', sans-serif;">
+        <li>Centralizar um bloco de conteúdo verticalmente dentro de seu pai.</li>
+        <li>Fazer com que os filhos de um container ocupe uma quantidade igual de largura/altura disponível, independente da quantidade de largura/altura disponível.</li>
+        <li>Fazer todas as colunas de um layout com múltiplas colunas adotem a mesma altura, mesmo que contenham uma quantidade diferente de conteúdo.</li>
+    </ul>
+    </small><br>
+
+    <p>Por sua vez, o flexbox faz muitas tarefas de layouts de maneira mais fácil. Vamos nos aprofundar!</p>
+
+    <h2>Termos do Flexbox</h2>
+    <img src="imagem/flexTerms.png" alt="imagem dos termos">
+    <p>O <b>main axis</b> é o eixo que corre na direção em que os flex items estão dispostos (por exemplo, as linhas da página, ou colunas abaixo da página.) O início e o fim do eixo é chamado <b>main start e main end</b>. <br><br>
+    O <b>cross axis</b> é o eixo perpendicular (interceptador) que corre na direção em que os flex items são dispostos. O início e o fim deste eixo são chamados de <b>cross start e cross</b> end. <br><br>
+    O elemento pai que possui display: flex configurado é chamado de <b>flex container</b>. <br><br>
+    Os itens iniciados como flexible boxes dentro do flex container são chamados <b>flex items</b>.</p>
+
+    <h2>flex-direction: ; (coluna ou linha)</h2>
+    <p>flex-direction especifica a direção do eixo principal / <b>main axis</b> (em qual direção os filhos da flexbox estarão arranjados) <br>
+    Exemplo:<b> flex-direction: column;</b></p>
+
+    <p>Por padrão seu valor é <b>row</b> (linha) o que significa que os itens estarão alinhando um ao lado do outro. O valor <b>column</b>(coluna) vai alinhar os itens como um bloco, tomando toda a área como uma coluna única. </p>
+
+    <p>O exemplo a seguir mostra um Flexbox <b>row</b> (linha) com Media Queries em <b>column</b> (coluna) para dispositivos menores como celulares. Veja: </p>
+
+    <div class="flexPai">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+
+    <p>Obs: Você também pode arranjar <b>itens flexíveis em direção reversa</b> usando os valores row-reverse e column-reverse. Experimente usar esses valores no seu exemplo também!</p>
+
+
+    <h2>flex-wrap: ;</h2>
+    <p>flex-wrap vem com o valor padrão "nowrap", ou seja, sempre que o conteúdo atingir as margens da tela ele continuará criando uma barra de rolagem. Já o valor "wrap" vai fazer com que o conteúdo quebre a linha para continuar sem criar barra de rolagem. <br>
+    Exemplo sintaxe: <br>
+    <b>flex-wrap: wrap;</b></p>
+
+    <h3>flex-flow: ;</h3>
+    <p>O <b>flex-wrap</b> e <b>flex-direction</b> podem fazer um shorthand utilizando a propriedade <b>flex-flow: ;</b> <br>
+    Exemplo sintaxe: <br>
+    <b>flex-flow: row wrap;</b></p>
+
+
+    <h2>Alinhamento flexbox</h2>
+    <h3>justify-content: flex-start;</h3>
+    <p>O justify-content é uma propriedade que vai permitir o alinhamento dos elementos em <b>row / linha / horizontal</b>.</p>
+    <p>Essa propriedade vem com o valor padrão :flex-start;, mas possui varios valores para se trabalhar como: <br>
+    <B>:left;</B> esquerda <br>
+    <B>:right;</B> direita<br>
+    <B>:center;</B> centro<br>
+    <B>:space-around;</B> espaçado em volta (espaço igual em torno dos elementos)<br>
+    <B>:space-between;</B> espaçado entre elementos (entre main start e main end)<br>
+    Obs: sempre na horizontal.
+    </p>
+
+    <h3>align-items: stretch;</h3>
+    <p>A propriedade align-items vai permitir o alinhamento dos elementos flex em <b>column / coluna / vertical</b>.</p>
+    <p>Essa propriedade vem com o valor padrão :stretch;, mas possui os valores: <br>
+    <b>:stretch;</b> esticado (do cross start ao cross end)<br>
+    <b>:flex-end;</b> ao final do pai<br>
+    <b>:flex-start;</b> no inicio do pai<br>
+    <b>:center;</b> no centro do pai<br>
+    Obs: sempre na vertical.</p>
+
+    <h3>align-content: ;</h3>
+    <p>A propriedade align-content desrespeita ao alinhamento de todo o conteúdo junto, diferente do align-items que trata do conteúdo individualmente.</p>
+    <p>Essa propriedade vem com o valor padrão :space-between;, mas possui outros valores: <br>
+        <b>:center;</b> centraliza<br>
+        <b>:flex-end;</b> ao final do pai<br>
+        <b>:flex-start;</b> no inicio do pai<br>
+        <b>:space-around;</b> margens iguais em torno<br>
+        <b>:space-between;</b> margens iguais entre os itens<br>
+        Obs: sempre na vertical.</p>
+
+    <div class="flexPai2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+    </div>
+
+    <h2>flex-grow: ;</h2>
+    <p>A propriedade flex-grow, desrespeita ao crescimento do item child conforme o tamanho da tela.</p>
+    <p>Veja os valores da propriedade flex-grow: <br>
+    <b>flex-grow: 1;</b> crescimento uniforme deacordo com a largura do pai <br>
+    <b></b></p>
+
+    <div class="flexPai3">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+    </div>
+
+    <h2>Propriedade flex:;</h2>
+    <p>A propriedade flex permite trabalhar com valores responsivos individuais para cada elemento</p>
+
+    <div class="flexPai4">
+        <div style="flex:15%">1</div>
+        <div style="flex:75%">2</div>
+        <div style="flex:10%">3</div>
+        <div style="flex:50%">4</div>
+        <div style="flex:50%">5</div>
+        <div style="flex:25%">6</div>
+        <div style="flex:25%">7</div>
+        <div style="flex:50%">8</div>
+    </div>
+
+    <H1>Exercício</H1>
+    <p>Veja o exercício clicando no <a href="019.1exercicioFlexbox.html">link</a>.</p>
+</body>
+
+<footer>
+</footer>
+
+</html>
