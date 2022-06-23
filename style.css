@@ -8,59 +8,32 @@
 
 /*font-family: 'Open Sans', sans-serif;*/
 
+
+/* CONFIGURAÇÕES GLOBAIS */
 :root{ 
     --fonte01: 'Roboto Mono', monospace;
     --fonte02: 'Roboto', sans-serif;
 }
 
-* {
+*{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     word-wrap: break-word;
-    
 }
 
-body {
+body{
     background-color: rgb(255, 246, 235);
 }
 
-header h1, header p {
+header{
     text-align: center;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6{
     font-family: var(--fonte01);
     font-weight: bold;
     margin: 25px 10px 10px 10px;
-}
-
-div {
-    margin: 20px 10px;
-}
-
-p {
-    font-family: var(--fonte02);
-    margin: 0px 10px 20px 10px;
-}
-
-nav  {
-    
-    background-color: black;
-    padding: 7px;
-}
-
-nav a {
-    font-family: var(--fonte01);
-    color: white;
-    padding: 5px;
-    text-decoration: none;
-    display: inline-block;
-}
-
-nav a:hover {
-    background-color: white;
-    color: black;
 }
 
 a {
@@ -68,4 +41,40 @@ a {
     font-weight: bold;
     padding: 10px;
     text-decoration: none;
+}
+
+p{
+    font-family: var(--fonte02);
+    margin: 0px 10px 20px 10px;
+}
+
+ol, ul{
+    font-family: var(--fonte02);
+    margin: 0px 10px 20px 30px;
+}
+
+div{
+    /* margin: 20px 10px; */
+}
+
+
+/* CONFIGURAÇÃO DO MENU NAVEGAÇÃO */
+nav{
+    background-color: black;
+    padding: 7px;
+}
+
+nav a{
+    font-family: var(--fonte01);
+    color: white;
+    padding: 5px;
+    margin: 3px;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid white;
+}
+
+nav a:hover {
+    background-color: white;
+    color: black;
 }

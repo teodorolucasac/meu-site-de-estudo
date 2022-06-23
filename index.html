@@ -14,14 +14,61 @@
     <title>Meu Site de Estudos</title>
     <link rel="shortcut icon" href="HTML/imagem/nerdFavicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <script src="scrip.js"></script>
+    <script src="script.js"></script>
+    <style>
+        .dropDown a:hover, .dropDown:hover .dropBotao{
+            background-color: white;
+            color: black;
+        }
 
+        .dropDown{
+            display: inline-block;
+        }
+        .dropDown a{
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+
+        div.dropContent{
+            display: none;
+            margin: 0;
+            position: absolute;
+            background-color: black;
+            width: 150px;
+            padding: 7px;
+        }
+
+        .dropDown:hover .dropContent{
+            display: block;
+            background-color: black;
+        }
+
+        .dropContent a{
+            display: block;
+            text-align: left;
+
+        }
+
+        li{
+            margin-bottom: 10px;
+        }
+        ol, ul{
+            list-style-type: none;
+        }
+
+        a{
+            color: black;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <header>
 
     <section>
-        <h1>Hello, World!</h1>
+        <h1>Hello, world!</h1>
         <small>
             <p>Pronto, já quebrei a maldição.</p>
         </small>
@@ -31,14 +78,92 @@
         <h1>Página de Estudos</h1>
         <p>Criado por <strong>Lucas Teodoro</strong></p>
     </section>
-
-    <nav>
-        <a href="HTML/001HTML.html">HTML</a>
-        <a href="CSS/001CSS.html">CSS</a>
-    </nav>
 </header>
 
+<nav>
+    <a href="HTML/001HTML.html">HTML</a>
+    <a href="CSS/001CSS.html">CSS</a>
+    <a href="JavaScript/001JavaScript.html">JavaScript</a>
+</nav>
+
 <body>
+    <h1>Cursos de programação</h1>
+    <h2><a href="https://www.cursoemvideo.com/cursos/" target="_blank">Curso em Vídeo</a></h2>
+    <ul>
+        <li>&#x274C;<a href="https://www.cursoemvideo.com/curso/curso-de-algoritmo/" target="_blank">Lógica de Programação</a></li>
+
+        <li>&#x2705;<a href="https://www.cursoemvideo.com/curso/html5-css3-modulo1/" target="_blank">HTML / CSS módulo 1</a></li>
+
+        <li>&#x2705;<a href="https://www.cursoemvideo.com/curso/curso-html5-e-css3-modulo-2-de-5-40-horas/" target="_blank">HTML / CSS módulo 2</a></li>
+            
+        <li>&#x274E;<a href="https://www.cursoemvideo.com/curso/curso-html5-e-css3-modulo-3-de-5-40-horas/" target="_blank">HTML / CSS módulo 3</a></li>
+
+        <li><b>&#x274C;<a href="#">HTML / CSS módulo 4</a></li>
+
+        <li>&#x274C;<a href="#">HTML / CSS módulo 5</a></li>
+
+        <li>&#x2705;<a href="https://www.youtube.com/watch?v=1-w1RfGIov4&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1" target="_blank">JavaScript</a></li>
+
+        <li>&#x274C;<a href="https://www.youtube.com/watch?v=xEKo29OWILE&list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA" target="_blank">Git / GithubYoutube</a></li>
+
+    </ul>
+
+    <h2><a href="https://www.youtube.com/c/DevAprender/playlists" target="_blank">Dev Aprender</a></h2>
+    <ul>
+        <li>&#x2705;<a href="https://www.youtube.com/watch?v=iF2MdbrTiBM" target="_blank">Lógica de Programação</a></li>
+
+        <li>&#x2705;<a href="https://www.youtube.com/watch?v=i6Oi-YtXnAU" target="_blank">JavaScript</a></li>
+    </ul>
+
+    <h2><a href="https://www.youtube.com/channel/UCwAa6VoM1GCg7n4s3u9FTAg/playlists" target="_blank">Programação Web</a></h2>
+    <ul>
+        <li>&#x2705;<a href="https://www.youtube.com/watch?v=sj0p9O85AIg&list=PL2Fdisxwzt_cajoGVWTx44wM6Ht09QJ3A" target="_blank">HTML</a></li>
+
+        <li>&#x2705;<a href="https://www.youtube.com/watch?v=HtVRRHoASes&list=PL2Fdisxwzt_f5C7Mv0kg1EAHhy2VJLf1c" target="_blank">CSS</a></li>
+
+        <li>&#x274E;<a href="https://www.youtube.com/watch?v=vEwPnjqWQ-g&list=PL2Fdisxwzt_d590u3uad46W-kHA0PTjjw" target="_blank">JavaScript</a></li>
+    </ul>
+
+    <h2><a href="https://www.origamid.com/cursos/" target="_blank">Origamid</a></h2>
+    <ul>
+        <li>&#x274C;<a href="https://www.origamid.com/curso/html-e-css-para-iniciantes/" target="_blank">HTML / CSS</a></li>
+        <li>&#x274E;<a href="https://www.origamid.com/curso/javascript-completo-es6/" target="_blank">JavaScript</a></li>
+    </ul>
+    
+    <h2><a href="https://www.youtube.com/c/Programadorbr/playlists" target="_blank">Programador BR</a></h2>
+    <ul>
+        <li>&#x2705;<a href="https://www.youtube.com/watch?v=HXddFUe6VPU&list=PLVzrOYTg7zYDNdLJbnmhPtPcDaNWoxYVT" target="_blank">Lógica de Programação</a></li>
+        <li>&#x274C;<a href="https://programadorbr.com/" target="_blank">HTML</a></li>
+        <li>&#x274C;<a href="https://programadorbr.com/" target="_blank">CSS</a></li>
+        <li>&#x274C;<a href="https://programadorbr.com/" target="_blank">JavaScript</a></li>
+    </ul>
+
+    <h2><a href="https://www.dio.me/" target="_blank">DIO</a></h2>
+    <ul>
+        <li>&#x274C;<a href="https://web.dio.me/home" target="_blank">Navegar e buscar bons cursos...</a></li>
+    </ul>
+
+    <h2><a href="https://www.freecodecamp.org/" target="_blank">FreeCodeCamp</a></h2>
+    <ul>
+        <li>&#x274C;<a href="" target="_blank">Responsive Web Design</a></li>
+        <li>&#x274C;<a href="" target="_blank">JS Algorithms and Data Structures</a></li>
+        <li>&#x274C;<a href="" target="_blank">Front End Development Libraries</a></li>
+    </ul>
+
+    <h2><a href="https://www.theodinproject.com/" target="_blank">The Odin Project</a></h2>
+    <ul>
+        <li>&#x274C;<a href="https://www.theodinproject.com/paths/full-stack-javascript" target="_blank">Full Stack JavaScript</a></li>
+    </ul>
+
+    <h2><a href="https://www.theodinproject.com/" target="_blank">The Odin Project</a></h2>
+    <ul>
+        <li>&#x274C;<a href="https://www.theodinproject.com/paths/full-stack-javascript" target="_blank">Full Stack JavaScript</a></li>
+    </ul>
+
+    <h2><a href="https://www.udemy.com/" target="_blank">Udemy Programação</a></h2>
+    <ul>
+        <li>&#x274C;<a href="https://www.udemy.com/home/my-courses/learning/" target="_blank">Desenvolvimento Web Completo 2022</a></li>
+    </ul>
     
 </body>
 
