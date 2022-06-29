@@ -10,13 +10,18 @@
 <meta name="keywords" content="html,css,js,javascript,estudo">
 <meta name="author" content="Teodoro Lucas">
 
-<title>Meu Site de Estudos</title>
+<title>Aprendendo JavaScript</title>
 <link rel="stylesheet" href="../style.css">
 <script src="../script.js"></script>
+<style>
+    body{
+        text-align: center;
+    }
+</style>
 </head>
 
 <header>
-<h1>Título</h1>
+<h1>Aprendendo JavaScript</h1>
 <p>Descrição</p>
 </header>
 
@@ -25,6 +30,34 @@
 <a href="001JavaScript.html">Voltar</a>
 
 <body>
+    <h1>Saídas</h1>
+    <p>saídas quer dizer a maneira que o JS tem para exibir uma informação ou um dado na tela</p>
+   
+    <h2>01 - innerHTML</h2>
+    <p>O innerHTML é usado quando você quer imprimir / mostrar um conteúdo HTML na tela. </p>
+    <p id="texto"></p>
+
+    <h2>02 - document.write</h2>
+    <p>Essa saída vai escrever algo no documento onde ela está localizada. Também responde quando usamos tags html e funções(mais usados para fazer testes)</p>
+    <p>
+        <script>
+            document.write('Oi <u>escrito com document.write</u>')
+        </script>
+    </p>
+
+    <h2>03 - alert</h2>
+    <p>Essa saída basicamente vai abrir um pop-up de alerta na página.</p>
+
+    <h2>04 - console.log</h2>
+    <p>Essa saída é mais discreta porque ela não vai mostrar algo na página em si, apenas vai mostrar a saída na aba console na area de desenvolvedor do navegador.</p>
+
+    <script>
+        document.getElementById('texto').innerHTML="Olá, Mundo! Este é meu primeiro texto <b>JavaScript</b>.";
+
+        /*alert(10+5);*/
+        
+        console.log('Oi, isso é um console.log')
+    </script>
 </body>
 
 <footer>
