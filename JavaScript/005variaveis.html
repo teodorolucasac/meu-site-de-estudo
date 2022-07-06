@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Estudo sobre Variáveis</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../script.js"></script>
+</head>
+
+<header>
+<h1>Estudo sobre Variáveis</h1>
+<p>Descrição</p>
+</header>
+
+<nav>
+</nav>
+<a href="001JavaScript.html">Voltar</a>
+
+<body>
+    <h1>Variáveis</h1>
+    <p>As variáveis são como recipientes onde podemos armazenar informações que podem varias.</p>
+    <p>Imagine um recipiente de vidro onde você pode colocar dentro dele qualquer coisa. canetas, moedas, bomboms... <br>
+    Eu posso chamar esse recipiente como eu quiser. Exemplo Pote <br> </p>
+
+    <p>Exemplo: <br>
+        var Pote="Bomboms" <br>
+    var é uma declaração para criar a variável; <br>
+    Pote é o nome do recipiente; <br>
+    Bomboms é o valor atribuido (o conteúdo do recipiente);</p>
+
+    <h2>Nome = Identificador</h2>
+    <p>
+        O nome de cada variável é o IDENTIFICADOR <br>
+        Regras dos Identificadores <br>
+        1. PODE começar com LETRA <br>
+        2. PODE começar com $ <br>
+        3. PODE começar com _ <br>
+        4. PODE usar letras seguidas de números <br>
+        5. PODE usar acentos e símbolos <br>
+        6. NÃO podem começar com NÚMEROS <br>
+        7. NÃO pode colocar espaço (substitui por _) <br>
+        8. NÃO pode ser palavras reservadas (palavras que o JS usa como comandos) <br>
+        9. Maiúsculas e Minúsculas fazem diferença <br>
+        Dica: Crie nomes coerentes das suas variáveis.
+    </p>
+
+    <h3>Funcionalidade da Variável</h3>
+    <p style="margin-bottom: 5px;">Exemplo: <br>
+        var a=2; <br>
+        var b=3; <br>
+        var c=a+b;</p>
+    <p style="margin-bottom: 5px;" id="resultado"></p>
+    <P>Ou seja, em um campo de entrada de uma página, o usuário pode digitar qualquer número, mesmo que o número vá variar, o resultado ficará correto porque a saída sempre será a + b independente do valor.</P>
+
+    <h3>Outra maneira de criar variáveis</h3>
+    <p>
+        var a,b,c; <br>
+        a=2; <br>
+        b=3; <br>
+        c=a+b; <br>
+        console.log(c) <br>
+        Resultado: 5
+    </p>
+
+    <h3>Valor Indefinido</h3>
+    <p>
+        var d; <br>
+        console.log(d) <br>
+        Resultado: undefined <br>
+        O recípiente foi criado mas o valor não foi definido.
+    </p>
+
+    <h3>Valor Not a Number (NaN)</h3>
+    <p>
+        var d,e,f; <br>
+        f=d+e <br>
+        console.log(f) <br>
+        Resultado: NaN <br>
+        Somar 2 variáveis indefinido a máquina não consegue entender que é um número e devolve NaN.
+    </p>
+
+    <h3>Concatenação</h3>
+    <p>Concaternar é basicamente juntar varias variáveis em uma só linha ou texto. <br>
+    Exemplo:</p>
+    <p>
+        nome="Lucas"; <br>
+        sobrenome="Teodoro"; <br>
+        nomeCompleto="nome+" "+sobrenome"; <br>
+        <br>
+        document.getElementById("<i>idDoElemento</i>").innerHTML=nomeCompleto; <br>
+        Resultado: Lucas Teodoro
+    </p>
+
+    <h3>Concaternar números e letras</h3>
+    <p>
+        var nome, sobrenome, nomeCompleto, idade;
+        nome="Lucas"; <br>
+        sobrenome="Teodoro"; <br>
+        idade=27; <br>
+        pessoa=idade+10+nome; <br>
+        <br>
+        document.getElementById("<i>idDoElemento</i>").innerHTML=pessoa; <br>
+        Resultado: 37Lucas <br>
+        <b>OBS</b>: Foi somado os número e concatenado com as letras. <br>
+        <br>
+        <br>
+        pessoa=nome+idade+10; <br>
+        document.getElementById("<i>idDoElemento</i>").innerHTML=pessoa; <br>
+        Resultado: Lucas2710 <br>
+        <b>OBS</b>: Foi concatenado tudo, tanto letras quanto números. Isso porque começou com palavras e foi interpretado tudo como palavras (strings). <br>
+    </p>
+    <p>O ideal é não misturar strings e numbers na concatenação, caso queira concaternar os 2 coloque o número em uma variável.</p>
+
+    <h2>Diferença entra var, let e const</h2>
+    <p>No JS nós temos 3 palavras-chaves para declarar uma variável: <br>
+        -> var <br>
+        -> let <br>
+        -> const
+    </p>
+    <p><b>01</b> - let e const não permite ser redeclarado. Diferente do var.</p>
+
+    <p><b>02</b> - o var é uma variável coringa, ela vai funcionar (e vazar) em todo o código, dentro e fora de um escopo/bloco (blocos são representados pelas chaves {}). <br>
+
+    <b>03</b> - Já o let não vaza para fora nem para dentro do escopo/bloco, mas pode ser redefinido em valores diferentes dentro de cada escopo/bloco.<br>
+
+    <b>04</b> - O const por sua vez é uma variável constante, ela nunca vai mudar, nunca pode ser redefinida independente se está fora ou dentro de um escopo/bloco.</p>
+
+
+    <script>
+        var Pote="Pote de Bomboms"
+
+        var a=2;
+        var b=3;
+        var c=a+b;
+        document.getElementById('resultado').innerHTML= "Resultado:"+" "+c;
+        console.log(c);
+
+    </script>
+</body>
+
+<footer>
+</footer>
+
+</html>
