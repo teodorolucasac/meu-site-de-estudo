@@ -25,7 +25,7 @@
 <a href="001JavaScript.html">Voltar</a>
 
 <body>
-    <h1>Arrays</h1>
+    <h1>Arrays (matrizes)</h1>
     <p>Arrays são variáveis onde você pode armazenar mais de um valor, mas diferente do objeto não pode passar nome a aos valores, ou melhor, os arrays não possuem propriedades. Se não pode passar nome, como é encontrado um valor de um array? Com base na posição que ele se encontra.</p>
     <p>
         <b>Exemplo array literal</b>: <br>
@@ -65,7 +65,14 @@
         const pessoa = {nome:"Lucas", sobrenome:"Teodoro", idade:30}; <- objeto <br>
         <br>
         pessoa.nome; <br>
-        pessoa[0];
+        pessoa[0]; <br>
+        <br>
+
+        console.log(pessoa.length); length retorna quantas valores possui o array <br>
+        console.log(pessoa[pessoa.length -1]); vai retornar o ultimo item do Array <br>
+        pessoa.push("Brasileiro"); vai acrescentar um valor a última posição do array <br>
+        Array.isArray(pessoa); vai retornar se é um array (true) ou não (false).
+
     </p>
 </body>
 
