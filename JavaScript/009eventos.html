@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Estudo sobre Eventos</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../script.js"></script>
+</head>
+
+<header>
+<h1>Estudo sobre Eventos</h1>
+<p>Descrição</p>
+</header>
+
+<nav>
+</nav>
+<a href="001JavaScript.html">Voltar</a>
+
+<body>
+    <h1>Eventos</h1>
+    <p>Eventos é uma das se não a parte mais importante para entender e dominar no JS.</p>
+    
+    <p>Eventos HTML são "coisas" que acontecem com elementos HTML.
+    Quando o JavaScript é usado em páginas HTML, o JavaScript pode "reagir" a esses eventos.</p>
+
+    <p>Um evento HTML pode ser algo que o navegador faz ou algo que um usuário faz. <br>
+    Aqui estão alguns exemplos de eventos HTML: <br>
+    <br>        
+    1- Uma página da Web HTML terminou de carregar <br>
+    2- Um campo de entrada HTML foi alterado <br>
+    3- Um botão HTML foi clicado</p>
+
+    <h3>Eventos mais comuns:</h3>
+    <b>
+        <p>
+    </b>
+        <b>onclick</b> -> dispara quando recebe click;<br>
+        <b>ondblclick</b> -> dispara com clique duplo;<br>
+        <b>onmouseover</b> -> dispara quando o mouse está sobre;<br>
+        <b>onmouseout</b> -> dispara quando o mouse é movido para fora;<br>
+        <b>onmousemove</b> -> dispara quando o mouse é movido no elemento;<br>
+        <b>onmousedown</b> -> dispara quando o clique do botão foi pressionado;<br>
+        <b>onmouseup</b> -> dispara quando o clique do botão é liberado;<br>
+        <b>onfocus</b> -> dispara quando o elemento recebe foco. Valido para input...;<br>
+        <b>onchange</b> -> dispara quando exite uma mudança no conteúdo "ao mudar";<br>
+        <b>onblur</b> -> dispara quando o elemento perde o foco;<br>
+        <b>onkeydown</b> -> dispara quando uma tecla é pressionada e solta;<br>
+        <b>onkeypress</b> -> dispara quando uma tecla é solta sobre um elemento;<br>
+        <b>onkeyup</b> -> dispara quando uma tecla é solta sobre um elemento;<br>
+        <b>onload</b> -> dispara quando uma página termonou o carregamento. Body;<br>
+        <b>onresize</b> -> dispara quando há um redimencionamento da janela.
+    </p>
+
+    <h2>Eventos de click</h2>
+    <p><b>Exemplo evento de click:</b> <br>
+    <button style="margin-left: 20px;" onclick="eventoClick()">Disparar Evento Click</button>
+    </p>
+
+    <p><b>Exemplo evento de double click:</b> <br>
+    <button style="margin-left: 20px;" ondblclick="eventoDblClick()">Disparar Evento Double Click</button>
+    </p>
+
+    <h2>Eventos de mouse</h2>
+    <p><b>Exemplo evento de mouse over, out e move:</b> <br>
+    <div id="teste" onmouseout="viraAzul()" onmouseover="viraVermelho()" onmousemove="adicionaTexto()" style="width: 80%; height: 200px; background-color: blue; margin: 20px; overflow: auto;"></div>
+
+    <p><b>Exemplo evento de mouse down e up:</b> <br>
+    <button style="margin-left: 20px;" onmousedown="alertaDown()">onmousedown aciona ao clicar</button> <br>
+    <br>
+    <button style="margin-left: 20px;" onmouseup="alertaUp()">onmouseup aciona ao soltar clique</button>
+    </p>
+
+    <h2>Eventos relacionados ao elemento input</h2>
+    <p><b>Exemplo evento onfocus e onblur</b> <br>
+    
+    <input onfocus="limpaTexto()" onblur="desfoque()" id="campoTexto" style="padding: 50px; font-size: 30px; text-align: center;" type="text" placeholder="Digite alguma coisa" value="Texto escrito no código">
+    </p>
+
+    <p><b>Exemplo evento onchange</b><br>
+    <br>
+    <select style="padding: 10px; margin-left: 10px; display: inline;" onchange="mudou()" id="itens">
+        <option value="1">Valor 1</option>
+        <option value="2">Valor 2</option>
+        <option value="3">Valor 3</option>
+        <option value="4">Valor 4</option>
+    </select></p> 
+    <p style="margin-left: 20px;" id="mudar">O texto vai mudar</p>
+    <br>
+    <br>
+
+
+</body>
+<script>
+function eventoClick(){
+    alert("Acinou um evento de click com um alert de retorno.");
+}
+
+function eventoDblClick(){
+    alert("Acinou um evento de double click com um alert de retorno.");
+}
+
+function viraVermelho(){
+    let div = document.getElementById('teste');
+    div.style.backgroundColor = "red";
+}
+
+function viraAzul(){
+    let div = document.getElementById('teste');
+    div.style.backgroundColor = "blue";
+}
+
+function adicionaTexto(){
+    let p = document.getElementById('teste');
+    p.append('O mouse moveu ');
+}
+
+function alertaDown(){
+    alert('Acionou evento onmousedown')
+}
+
+function alertaUp(){
+    alert('Acionou evento onmouseup')
+}
+
+function limpaTexto(){
+    document.getElementById("campoTexto").style.backgroundColor='red'
+}
+
+function mudou(){
+    document.getElementById('mudar').innerHTML="Mudou"
+}
+
+function desfoque(){
+    let des = document.getElementById('campoTexto');
+    des.style.backgroundColor = 'blue';
+}
+
+
+</script>
+
+<footer>
+</footer>
+
+</html>

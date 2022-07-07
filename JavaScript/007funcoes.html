@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Estudo sobre Funções</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../script.js"></script>
+</head>
+
+<header>
+<h1>Estudo sobre Funções</h1>
+<p>Descrição</p>
+</header>
+
+<nav>
+</nav>
+<a href="001JavaScript.html">Voltar</a>
+
+<body>
+    <h1>Funções</h1>
+    <p>Uma função é um bloco de código projetado para executar uma tarefa específica. Como se fosse uma pequena linha de produção, onde vai entrar uma informação e vai sair outra. <br>
+    Exemplo: uma esteira onde vai entrar madeira bruta e sair uma cadeira. <br>
+    <br>
+    OBS: As funções no JS só são executadas quando são invocadas/chamadas.</p>
+
+    <p><b>
+        function soma(valor1, valor2){ <br>
+        return valor1 + valor2; <br>
+    } <br>
+    document.getElementById("IdDoElemento").innerHTML = soma (10, 17) <br>
+    </b></p>
+    <p>
+        <b>function</b> - palavra-chave para criar uma função. <br>
+        <b>soma</b> - nome da função. <br>
+        <b>()</b> - parenteses servem para colocar parâmetros, valores de entrada ou deixar sem valor também. <br>
+        <b>(valor1, valor2)</b> - são 2 parâmetros, mas pode colocar quantos quiser. <br>
+        <b>return</b> - é a palavra chave para criar a saída da função. <br>
+        <b>valor1 + valor2</b> - é o calculo que a saída vai transmitir. <br>
+        <b>var total = soma(10,17)</b> - aqui foi a invocação/chamada da função. Neste caso o resultado vai aparecer no elemento com ID "IdDoElemento"
+    </p>
+    <p><b>
+        Também posso invocar de outras formas a função. Exemplo: <br>
+        var total = soma (10,17); <br>
+        alert(total);
+    </b></p>
+
+    <p>
+        Vamos fazer outra função <br>
+        <br> <b>
+        function realParaDolar(real, cotaDolar){  <br>
+        return real * cotaDolar; <br>
+        } <br>
+        <br>
+        var valorReal = 7.89; <br>
+        var cotacao = 5.08; <br>
+        var total = realParaDolar(valorReal, cotacao); <br>
+        alert ("O valor em real é: R$"+valorReal+"o valor em dólar é: U$ "+ total) <br>
+        Resultado: O valor em real é R$7.89 o valor em dólar é: U$40.08
+    </b>
+    </p>
+    <P>
+        01 Criamos a função: function <br>
+        02 Chamamos ela de "realParaDolar" <br>
+        03 Passamos 2 parâmetros, "real" e "cotaDolar" <br>
+        04 Criamos a saída: return <br>
+        05 Demos o cálculo/lógica da saída: real * cotaDolar <br>
+        06 Criamos 2 variáveis "valorReal" e "cotacao"<br>
+        07 Atribuimos valores fixos a elas "7.89" e "5.08" <br>
+        08 Criamos a variável "total" <br>
+        09 Atribuimos o valor da variável "total" como o retorno da função "realParaDolar" <br>
+        10 Passamos os valores calculados na função atráves das variáveis do item 06 <br>
+        11 Invocamos/chamamos a função em um alerta <br>
+        12 Resultado: O valor em real é R$7.89 o valor em dólar é: U$40.08
+    </P>
+    
+    <h3>Essas funções também podem ser invocadas através botões e de eventos</h3>
+    <p>
+        function alertaHello() { <br>
+            alert("Olá, Mundo!"); <br>
+        } <br>
+        &lt;button onclick="alertaHello()">Clique aqui!&lt;/button> <br>
+        <br>
+        <button style="margin-left: 20px;" onclick="alertaHello()">Clique aqui!</button>
+        <br>
+    </p>
+
+    <p>
+        01 Criamos a função <br>
+        02 Demos nome de "alertaHello" <br>
+        03 Definimos a saída como a palavra-chave "alert" <br>
+        04 Informamos qual é o valor do "alert" -> "Olá, Mundo!" <br>
+        05 Criamos um botão <br>
+        06 Configuramos o evento de click "onclick" <br>
+        07 Chamamos/invocamos a função "alertaHellow" quando for acionado o evento de click no botão.
+    </p>
+
+    <h3>Outro exemplo</h3>
+    <p>
+        function paraCelsius(valorFahrenheit){ <br>
+        return (5/9) * (valorFahrenheit - 32); <br>
+        }
+    <br>
+    var x - paraCelsius (77); <br>
+    <br>
+    alert("A temperatura é de " + x + "graus celsius.""); <br>
+    Resultado: A temperatura é de 25 graus celsius.
+    </p>
+
+    <h3>Observações</h3>
+    <p>01 Eu posso passar um valor da função como padrão mas ele pode receber outro. <br>
+    Exemplo: <br>
+    function multiplicando (n1=0, n2=0) <br>
+    Assim se não for informado outro valor, o valor padrão será 0</p>
+    
+    <p>02 Criar função no parâmetro de uma variável. <br>
+    Exemplo: <br>
+    let v = function (x){ <br>
+    return x*2 <br>
+    } <br>
+    console.log(v(5)) <br>
+    Então eu chamei uma variável e ela executou uma função.</p>
+
+
+    <h3>Sintaxe Arrow Function</h3>
+    <p>...</p>
+</body>
+<script>
+    function alertaHello() {
+        alert("Olá, Mundo!");
+    }
+</script>
+
+<footer>
+</footer>
+
+</html>

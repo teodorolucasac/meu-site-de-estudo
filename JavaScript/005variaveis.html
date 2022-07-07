@@ -27,6 +27,7 @@
 <body>
     <h1>Variáveis</h1>
     <p>As variáveis são como recipientes onde podemos armazenar informações que podem varias.</p>
+
     <p>Imagine um recipiente de vidro onde você pode colocar dentro dele qualquer coisa. canetas, moedas, bomboms... <br>
     Eu posso chamar esse recipiente como eu quiser. Exemplo Pote <br> </p>
 
@@ -35,6 +36,20 @@
     var é uma declaração para criar a variável; <br>
     Pote é o nome do recipiente; <br>
     Bomboms é o valor atribuido (o conteúdo do recipiente);</p>
+
+    <h2>Diferença entra var, let e const</h2>
+    <p>No JS nós temos 3 palavras-chaves para declarar uma variável: <br>
+        -> var <br>
+        -> let <br>
+        -> const
+    </p>
+    <p><b>01</b> - let e const não permite ser redeclarado. Diferente do var.</p>
+
+    <p><b>02.a</b> - o var é uma variável coringa, ela vai funcionar (e vazar) em todo o código, dentro e fora de um escopo/bloco (blocos são representados pelas chaves {}). <br>
+
+    <b>02.b</b> - Já o let não vaza para fora nem para dentro do escopo/bloco, mas pode ser redefinido em valores diferentes dentro de cada escopo/bloco.<br>
+
+    <b>02.c</b> - O const por sua vez é uma variável constante, ela nunca vai mudar, nunca pode ser redefinida independente se está fora ou dentro de um escopo/bloco.</p>
 
     <h2>Nome = Identificador</h2>
     <p>
@@ -118,21 +133,6 @@
         <b>OBS</b>: Foi concatenado tudo, tanto letras quanto números. Isso porque começou com palavras e foi interpretado tudo como palavras (strings). <br>
     </p>
     <p>O ideal é não misturar strings e numbers na concatenação, caso queira concaternar os 2 coloque o número em uma variável.</p>
-
-    <h2>Diferença entra var, let e const</h2>
-    <p>No JS nós temos 3 palavras-chaves para declarar uma variável: <br>
-        -> var <br>
-        -> let <br>
-        -> const
-    </p>
-    <p><b>01</b> - let e const não permite ser redeclarado. Diferente do var.</p>
-
-    <p><b>02</b> - o var é uma variável coringa, ela vai funcionar (e vazar) em todo o código, dentro e fora de um escopo/bloco (blocos são representados pelas chaves {}). <br>
-
-    <b>03</b> - Já o let não vaza para fora nem para dentro do escopo/bloco, mas pode ser redefinido em valores diferentes dentro de cada escopo/bloco.<br>
-
-    <b>04</b> - O const por sua vez é uma variável constante, ela nunca vai mudar, nunca pode ser redefinida independente se está fora ou dentro de um escopo/bloco.</p>
-
 
     <script>
         var Pote="Pote de Bomboms"

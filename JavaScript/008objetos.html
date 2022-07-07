@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Estudo sobre Objetos</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../script.js"></script>
+</head>
+
+<header>
+<h1>Estudo sobre Objetos</h1>
+<p>Descrição</p>
+</header>
+
+<nav>
+</nav>
+<a href="001JavaScript.html">Voltar</a>
+
+<body>
+    <h1>Objeto</h1>
+    <p>
+        Objetos são basicamente variáveis com muitos valores dentro. Os valores dentro do objeto são chamados de propriedades. <br>
+        Dentro dos objetos também pode ter métodos que é como se fosse uma função dentro de uma propriedade.
+    </p>
+
+    <p>Exemplo: <br>
+    <b>Objeto</b>: carro <br>
+    <br>
+    <b>Propriedades</b>: carro.marca = ford <br>
+    carro.modelo = ka <br>
+    carro.cor = branco <br>
+    <br>
+    <b>Métodos</b>: carro.partida() <br>
+    carro.acelerar() <br>
+    carro.freiar()</p>
+
+    <h3>Criando objeto:</h3>
+    <p><b>const carro = {marca:"ford", modelo:"ka", ano:2015, placa:"ABC-1234"};</b> <br>
+    <br>
+    carro é o objeto, <br>
+    marca, modelo, ano e placa é propriedade, <br>
+    ford, ka, 2015 e ABC-123 é o valor das propriedades.</p>
+
+    <p>É bem comum usar o const para criar objeto já que raramente iremos querer um valor variável nas propriedades do objeto.</p>
+    
+    <h3>Métodos no objeto:</h3>
+    <p><b>const carro = {marca:"ford", <br>
+        modelo:"ka", <br>
+        ano:2015, <br>
+        placa:"ABC-1234",<br>
+    buzina: function() {alert("Biiiiiiiiiii!")} <br>
+    completo: function() { <br>
+        return "A marca é: "+this.marca+" e o modelo é: "+this.modelo}; <br>
+    };
+    </b>
+
+    <p>console.log(carro); - vai mostrar o objeto com todos as propriedades e métodos <br>
+    console.log(carro.ano); - vai mostrar o valor específico nessa propriedade específica <br>
+    console.log(carro["marca"]); - outra forma de mostrar uma propriedade específica <br>
+    carro.buzina(); - vai chamar/invocar o método do objeto <br>
+    console.log(carro.completo()); - vai passar (A marca é: ford e o modelo é: ka)</p>
+
+
+</body>
+
+<footer>
+</footer>
+
+</html>

@@ -13,6 +13,17 @@
 <title>Estudo sobre Operadores</title>
 <link rel="stylesheet" href="../style.css">
 <script src="../script.js"></script>
+<style>
+    table{
+        margin-left: 10px;
+        text-align: center;
+    }
+
+    th, td {
+        border: 1px solid black;
+        width: 100px;
+    }
+</style>
 </head>
 
 <header>
@@ -29,12 +40,13 @@
     <p>Operadores são alguns sinais que usamos no nosso código para executar alguma determinada função simples.</p>
     <h3>Os operadores podem ser separados em 6 categorias:</h3>
     <p>
-    1. aritméticos (matemáticos) <br>
-    2. atribuição <br>
-    3. relacionais (de sequência) <br>
-    4. comparação (typeof) <br>
-    5. ternário (condicional)<br>
-    6. lógicos <br>
+    1. Aritméticos (matemáticos) <br>
+    2. Atribuição <br>
+    3. String (concatenação) <br>
+    4. Comparação (relacionais) <br>
+    5. Ternário (condicional)<br>
+    6. Lógicos <br>
+    7. Tipeof  <br>
     
     </p>
 
@@ -58,22 +70,119 @@
 
     <h3>02 Atribuição:</h3>
     <p>Os operadores de atribuição atribuem valores a variáveis JavaScript. <br>
-        = <br>
-        += <br>
-        -= <br>
-        *= <br>
-        /= <br>
-        %= <br>
-        <<= <br>
-        >>= <br>
-        >>>= <br>
-        &= <br>
-        ^= <br>
-        |= <br>
-        **= <br>
+         <table>
+            <tr>
+                <th>Operador</th>
+                <th>Exemplo</th>
+                <th>Igual a</th>
+            </tr>
+            <tr>
+                <td>=</td>
+                <td>x = y</td>
+                <td>x = y</td>
+            </tr>
+            <tr>
+                <td>+=</td>
+                <td>x += y</td>
+                <td>x = x + y</td>
+            </tr>
+            <tr>
+                <td>-=</td>
+                <td>x -= y</td>
+                <td>x = x - y</td>
+            </tr>
+            <tr>
+                <td>*=</td>
+                <td>x *= y</td>
+                <td>x = x * y</td>
+            </tr>
+            <tr>
+                <td>/=</td>
+                <td>x /= y</td>
+                <td>x = x / y</td>
+            </tr>
+            <tr>
+                <td>%=</td>
+                <td>x %= y</td>
+                <td>x = x % y</td>
+            </tr>
+            <tr>
+                <td>**=</td>
+                <td>x **= y</td>
+                <td>x = x ** y</td>
+            </tr>
+         </table>
     </p>
     
+    <h3>03 String (concatenação)</h3>
+    <p>
+        O operador "+" também pode ser usado para adicionar (concatenar) strings.
+    <br> <br>
+        let text1 = "John"; <br>
+        let text2 = "Doe"; <br>
+        let text3 = text1 + " " + text2; <br>
+        <b>Resultado:</b> John Doe
+    </p>
+
+    <p>
+        O +=operador de atribuição também pode ser usado para adicionar (concatenar) strings:
+        <br><br>
+        let text1 = "What a very ";  <br>
+        text1 += "nice day"; <br>
+        <b>Resultado:</b> What a very nice day
+    </p>
+    <p>
+        Adicionando Strings e Números <br>
+        Adicionar dois números retornará a soma, mas adicionar um número e uma string retornará uma string: <br>
+        <br>
+        
+        let x = 5 + 5; <br>
+        let y = "5" + 5; <br>
+        let z = "Hello" + 5; <br>
+        <b>Resultado de x , y e z:</b> <br>
+        10 <br>
+        55 <br>
+        Hello5
+    </p>
+
+    <h3>04 Comparação (relacionais)</h3>
+    <p>
+        == valor igual a <br>
+        === valor igual e tipo igual <br>
+        != valor não é igual <br>
+        !== valor diferente ou tipo diferente <br>
+        > maior que <br>
+        < menor que <br>
+        >= maior ou igual a <br>
+        <= menor ou igual a
+    </p>
+
+    <h3> 05 Ternário (condicional)</h3>
+    <p>
+        O operador ternário se chama ternário porque são compostos de 3 partes. São representados por 2 símbolos, interrogação "?" e dois pontos ":"<br>
+        <br>
+        Exemplos: <br>
+        01 - teste <b>?</b> true <b>:</b> false <br>
+        02 - média >= 7.0 <b>?</b> "Aprovado" <b>:</b> "Reprovado" <br>
+        03 - x % 2 == 0 <b>?</b> "Par" : "Impar"
+    </p>
     
+    <h3>06 Lógicos</h3>
+    <p>Os operadores lógicos é usando quando precisamos passar mais de uma condição para retornar um boolean.</p>
+    <p>
+        && e <br>
+        || ou <br>
+        ! não <br>
+        <br>
+        Exemplo: <br>
+        resultado = (idade > 60 && < 70);
+    </p>
+
+    <h3>07 Typeof</h3>
+    <p>
+        typeof - Retorna o tipo de uma variável <br>
+        instanceof - Retorna true se um objeto for uma instância de um tipo de objeto
+    </p>
 </body>
 
 <footer>
