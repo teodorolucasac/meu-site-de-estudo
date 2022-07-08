@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Estudo sobre setTimeout e SetInterval</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../script.js"></script>
+<style>
+    button{
+        margin: 20px;
+        padding: 20px;
+    }
+
+    #caixa, #caixa2{
+        margin-left: 10px;
+        margin-bottom: 20px;
+        width: 400px;
+        text-align: center;
+        background-color: azure;
+        border: 1px solid rgb(200, 237, 237);
+    }
+</style>
+</head>
+
+<header>
+<h1>Estudo sobre setTimeout e SetInterval</h1>
+<p>Descrição</p>
+</header>
+
+<nav>
+</nav>
+<a href="001JavaScript.html">Voltar</a>
+
+<body>
+    <h1>setTimeout e SetInterval</h1>
+    <p>Os eventos de tempo permitem a execução do código em untervalos de tempo espeificados. Esses intervalor de tempo são chamados de eventos de cronometragem.</p>
+
+    <p>Os dois métodos-chave para usar com JavaScript são:</p>
+
+    <p><b>setTimeout</b> (function, tempo em milisegundos) <br>
+    Executa uma função uma vez, depois de determinado milisegundos</p>
+
+    <p><b>setInterval</b> (function, tempo em milisegundos) <br>
+    Executa uma função sempre a cada intervalo de determinado milisegundos</p>
+    <div id="caixa">
+        <h3>Exemplo setTimeout</h3>
+        <h4 id="tempo">0</h4>
+        <button onclick="ativar()" id="botao1">Ativar Contagem</button>
+        <button onclick="desativar()" id="botao2">Parar Contagem</button>
+    </div>
+
+    <div id="caixa2">
+        <h3>Exemplo setInterval</h3>
+        <h4 id="tempo2">0</h4>
+        <button onclick="ativar2()" id="botao3">Ativar Contagem</button>
+        <button onclick="desativar2()" id="botao4">Parar Contagem</button>
+    </div>
+    
+    <div id="caixa2">
+        <h3>Exemplo setInterval Regressivo</h3>
+        <h4 id="tempo3">10</h4>
+        <button onclick="ativar3()" id="botao3">Ativar Contagem</button>
+        <button onclick="desativar3()" id="botao4">Parar Contagem</button>
+    </div>
+</body>
+
+<script>
+    function ativar(){
+        document.getElementById('tempo').innerHTML = "Começou a contagem de 3sec.";
+        timer = setTimeout(function(){
+            document.getElementById('tempo').innerHTML = "Executou o setTimeout";  
+        }, 3000);
+    }
+
+    function desativar(){
+        clearTimeout(timer);
+        document.getElementById("tempo").innerHTML="Parou a contagem"
+    }
+
+    function ativar2(){
+        timer2 = setInterval(function(){
+            var cronometro = document.getElementById('tempo2').innerHTML;
+            var soma = parseInt(cronometro) +1
+            document.getElementById('tempo2').innerHTML = soma; 
+        }, 1000);
+    }
+
+    function desativar2(){
+        clearInterval(timer2);
+    }
+
+    function ativar3(){
+        timer3 = setInterval(function(){
+            var cronometro = document.getElementById('tempo3').innerHTML;
+            var soma = parseInt(cronometro) -1
+
+            if (soma === 0){
+                document.getElementById('tempo3').innerHTML="Tempo esgotado";
+                desativar3()
+            } else {
+                document.getElementById('tempo3').innerHTML = soma; 
+            }
+            
+        }, 1000);
+    }
+
+    function desativar3(){
+        clearInterval(timer3);
+    }
+</script>
+<footer>
+</footer>
+
+</html>

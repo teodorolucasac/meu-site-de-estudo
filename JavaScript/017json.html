@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Estudo sobre JSON</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../script.js"></script>
+<style>
+    pre{
+        margin: 10px;
+    }
+</style>
+</head>
+
+<header>
+<h1>Estudo sobre JSON</h1>
+<p>Descrição</p>
+</header>
+
+<nav>
+</nav>
+<a href="001JavaScript.html">Voltar</a>
+
+<body>
+    <h1>JSON</h1>
+    <p><abbr title="JavaScript Object Notation">JSON</abbr> em português é algo semelhânte a Notação de Objto JavaScript. <br>
+    JSON é basicamente uma forma de você converter um objeto em texto e ou um texto em objeto. <br>
+    JSON é usado principalmente para transmitir dados entre sistema de forma simples, já que o formato em texto é praticamente lido por toda linguagem de programação.</p>
+
+    <p>Para trabalhar com JSON no JS utilizamos 2 métodos. <br>
+    JSON.parse() -> converte texto no padrão JSON em objeto. <br>
+    JSON.stringify() -> converte objetos em texto padrão JSON.</p>
+
+    <p> <b>Criando um objeto:</b> <br>
+        const carro = { <br>
+            marca: "Fiat", <br>
+            modelo: "Uno", <br>
+            ano: 2001, <br>
+            motor: ["1.6", "1.4", "1.0"], <br>
+        } <br>
+     <br>
+        <b>Convertendo texto para JSON:</b> <br>
+        let texto = JSON.stringify(carro); <br>
+     <br>
+        <b>Colocando o texto no HTML:</b> <br>
+        document.getElementById('area1').innerHTML = carro; <br>
+        document.getElementById('area2').innerHTML = texto; <br>
+        <pre id="area1"></pre>
+        <pre id="area2"></pre>
+    </p>
+     <br>
+     <p>
+        <b>Convertendo o texto em objeto:</b> <br>
+        let obj = JSON.parse(texto); <br>
+        <br>
+        <b>Pegando um valor do objeto:</b> <br>
+        console.log(obj.modelo); <br>
+        document.getElementById('area3').innerHTML = obj.modelo; <br>
+        <pre id="area3"></pre>
+    </p>
+
+    <p>
+        <b>Pegando um Array dentro do Objeto:</b> <br>
+        console.log(obj.motor[2]); <br>
+        document.getElementById('area4').innerHTML = obj.motor[2]; <br>
+        <pre id="area4"></pre>
+    </p>
+
+    <p> <b>Pedindo uma requisição de um site:</b> <br>
+        const ajax = new XMLHttpRequest(); <br>
+    ajax.open('GET', 'https://viacep.com.br/ws/38408792/json/'); <br>
+    ajax.send(); <br>
+ <br>
+    ajax.onload = function (){ <br>
+        document.getElementById('area5').innerHTML = this.responseText;        <br>
+    }
+        <pre id="area5"></pre>
+    </p>
+
+    <p>
+        <b>Puxando apenas um valor do objeto do site:</b> <br>
+        <pre id="area6"></pre> <br>
+        <pre id="area7"></pre> <br>
+    </p>
+    
+    <p><b>Puxando informação do site e selecionando qual passar:</b></p>
+    <input id="CEP" style="margin: 0px 0px 20px 20px;" type="text" placeholder="Digite o seu CEP">
+    <button onclick="buscaCEP()">Buscar</button>
+    <p id="area8"></p>
+    <p id="area9"></p>
+
+</body>
+
+<script>
+    const carro = {
+        marca: "Fiat",
+        modelo: "Uno",
+        ano: 2001,
+        motor: ["1.6", "1.4", "1.0"]
+    }
+
+    let texto = JSON.stringify(carro);
+
+    document.getElementById('area1').innerHTML = carro;
+    document.getElementById('area2').innerHTML = texto;
+
+    let obj = JSON.parse(texto);
+    console.log(obj.modelo);
+    document.getElementById('area3').innerHTML = obj.modelo;
+
+    console.log(obj.motor[2]);
+    document.getElementById('area4').innerHTML = obj.motor[2];
+
+    const ajax = new XMLHttpRequest();
+    ajax.open('GET', 'https://viacep.com.br/ws/38408792/json/');
+    ajax.send();
+
+    ajax.onload = function (){
+        document.getElementById('area5').innerHTML = this.responseText;
+        let obj2 = JSON.parse(this.responseText);
+        document.getElementById('area6').innerHTML = obj2.ddd
+        document.getElementById('area7').innerHTML = obj2.bairro  
+    }
+
+    function buscaCEP(){
+        let input = document.getElementById('CEP').value;
+
+        const ajax = new XMLHttpRequest();
+        ajax.open('GET', 'https://viacep.com.br/ws/'+input+'/json/');
+        ajax.send();
+
+        ajax.onload = function (){
+            document.getElementById('area8').innerHTML = this.responseText;
+
+            let obj3 = JSON.parse(this.responseText);
+
+            let rua = obj3.logradouro;
+            let cidade = obj3.localidade;
+            let estado = obj3.uf;
+
+            document.getElementById('area9').innerHTML = "Rua: " +rua+ "<br> Cidade: " +cidade+ "<br> Estado: " +estado;
+        }
+    }
+    
+</script>
+<footer>
+</footer>
+
+</html>

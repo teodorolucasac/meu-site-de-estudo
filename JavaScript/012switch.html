@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Estudo sobre Switch</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../script.js"></script>
+<style>
+    
+</style>
+</head>
+
+<header>
+<h1>Estudo sobre Switch</h1>
+<p>Descrição</p>
+</header>
+
+<nav>
+</nav>
+<a href="001JavaScript.html">Voltar</a>
+
+<body>
+    <h1>Switch</h1>
+    <p>Switch, assim como if e else, também é um tipo de declaração comparativa. O switch é utilizado para ter diferentes ações com base em diferentes condições no mesmo bloco de verificação.</p>
+
+    <p>Exemplo sintaxe: <br>
+    switch (expressão){ <br>
+    case a: <br>
+    //ação que vai acontecer <br>
+    break; <br>
+    case b: <br>
+    //ação que vai acontecer <br>
+    break; <br>
+    case c: <br>
+    //ação que vai acontecer <br>
+    break; <br>
+    default: <br>
+    //ação que vai acontecer <br>
+    }</p>
+
+    <p style="margin-left: 20px;" id="teste">Digite uma cor:</p>
+    <input id="cor"  type="exemploSwitch" style="padding: 50px; margin-left: 20px;" placeholder="azul, vermelho ou amarelo">
+    <button onclick="verificaCor()" style="padding: 20px;">Verificar</button>
+</body>
+
+<script>
+    function verificaCor(){
+        let cor = document.getElementById("cor").value;
+        cor = cor.toLowerCase();
+
+        switch (cor){ 
+    case "azul","Azul","AZUL": 
+        //ação que vai acontecer 
+        document.body.style.backgroundColor="blue";
+        break; 
+    case "vermelho": 
+        //ação que vai acontecer 
+        document.body.style.backgroundColor="red";
+        break; 
+    case "amarelo": 
+        //ação que vai acontecer 
+        document.body.style.backgroundColor="yellow";
+        break;
+    default:
+        //ação que vai acontecer
+        document.getElementById('teste').innerHTML="A cor "+cor+" não está disponível";
+    }
+    }
+</script>
+<footer>
+</footer>
+
+</html>

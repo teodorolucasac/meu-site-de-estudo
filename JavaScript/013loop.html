@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Estudo sobre Loop</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../script.js"></script>
+</head>
+
+<header>
+<h1>Estudo sobre Loop</h1>
+<p>Descrição</p>
+</header>
+
+<nav>
+</nav>
+<a href="001JavaScript.html">Voltar</a>
+
+<body>
+    <h1>Loop</h1>
+    <p>Os loops são utilizados para executar o mesmo código várias vezes, cada vez com um valor diferente. Muitas vezes, esse é o caso ao trabalhar com arrays.</p>
+
+    <h3>Diferentes tipos de Loop</h3>
+    <p>JavaScript suporta diferentes tipos de loops:</p>
+    <p>
+        <b>for</b> - percorre um bloco de código várias vezes <br>
+        <b>for/in</b> - percorre as propriedades de um objeto <br>
+        <b>for/of</b> - percorre os valores de um objeto iterável <br>
+        <b>while</b> - percorre um bloco de código enquanto uma condição especificada é verdadeira <br>
+        <b>do/while</b> - também percorre um bloco de código enquanto uma condição especificada for verdadeira
+    </p>
+
+    <h2>Loop For</h2>
+    <p>
+        for (let i=0; i&lt;=100; i++){ <br>
+        document.getElementById("teste").innerHTML += i +", "; <br>
+        }<br>
+    <br>
+    <b>for</b> - é o laço de repetição<br>
+    <b>()</b> dentro do for há 3 parâmetros<br>
+    <b>let i=0</b> - é o ponto inicial<br>
+    <b>i&lt;=100</b> - é a condição<br>
+    <b>i++</b> - é o que acontece depois da condição<br>
+    <b>{}</b> - bloco de código que vai ser executado se a <br>condição for verdadeira<br>
+    <br>
+    Neste caso, nós definimos que i é igual a 0. <br>
+    Depois definimos que para ser verdadeiro a condição, i deve ser menor ou igual a 100. <br>
+    Agora que verificou que é verdadeiro executa o bloco {}, no caso é escrever um texto. <br>
+    Então acrescenta +1 no valor de i. <br>
+    Desta forma vai executar cem vezes até i que era 0 chegar a 100. 
+    </p>
+    
+    <p id="teste"></p> 
+    <br>
+
+    <p>Outro exemplo: <br>
+    Aqui vamos usar o <b>for</b> para criar várias options dentro de um select</p>
+    <select style="margin: 0px 0px 50px 20px;" name="" id="ano">
+        <option selected disabled value="">Selecione o ano</option>
+    </select>
+
+    <p>Outro exemplo: <br>
+    Vamos usar o for para mostrar os valores de um array <br>
+    const carros = ["Gol","Fusca","Brasília","Chevette","Opala"];</p>
+    
+    <p id="teste2"></p>
+    <br>
+    
+    <p>Se eu só pedir para exibir o array eu não consigo personalizar, ele sempre mostrará o array completo na ordem e entre virgulas. Ficaria assim:</p>
+    <p id="teste3"></p>
+</body>
+
+<script>
+    
+    for (let i=0; i<=100; i++){ 
+    document.getElementById("teste").innerHTML += i+", "; 
+    }
+    
+
+    var ano = new Date().getFullYear();
+    for (let i = ano; i >= 1900; i--){
+        document.getElementById("ano").innerHTML += "<option value='" + i + "'>" + i + "</option";
+    }
+
+    const carros = ["Gol","Fusca","Brasília","Chevette","Opala"];
+    var tamanho = carros.length;
+    
+    for(let i=0; i<tamanho; i++){
+        document.getElementById("teste2").innerHTML += carros[i] + " -> ";
+    }
+
+    document.getElementById("teste3").innerHTML = carros;
+</script>
+<footer>
+</footer>
+
+</html>

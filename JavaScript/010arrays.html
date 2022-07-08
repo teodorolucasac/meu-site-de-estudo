@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Estudo sobre Array</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../script.js"></script>
+</head>
+
+<header>
+<h1>Estudo sobre Array</h1>
+<p>Descrição</p>
+</header>
+
+<nav>
+</nav>
+<a href="001JavaScript.html">Voltar</a>
+
+<body>
+    <h1>Arrays (matrizes)</h1>
+    <p>Arrays são variáveis onde você pode armazenar mais de um valor, mas diferente do objeto não pode passar nome a aos valores, ou melhor, os arrays não possuem propriedades. Se não pode passar nome, como é encontrado um valor de um array? Com base na posição que ele se encontra.</p>
+    <p>
+        <b>Exemplo array literal</b>: <br>
+        const lista = ["arroz", "feijão", "macarrão", "leite"] <br>
+        <b>Ou seja</b>: <br>
+        lista[0] vai ser arroz, <br>
+        lista[1] vai ser feijão, <br>
+        lista[2] vai ser macarrão, <br>
+        lista[3] vai ser leite. <br>
+    </p>
+
+    <p>
+        <b>Outra forma de criar array</b>: <br>
+        const lista = [] <br>
+        lista[0] = "arroz"; <br>
+        lista[1] = "feijão"; <br>
+        lista[2] = "macarrão"; <br>
+        lista[3] = "leite"; <br>
+    </p>
+
+    <p>
+        <b>Outra forma de criar array</b>: <br>
+        const lista = new Array ("arroz","feijão","macarrão","leite");
+    </p>
+
+    <p>Obs: Os valores de um array podem ser substituidos igual um var <br>
+    Exemplo: <br>
+    lista[0] = "café"; <br>
+    Agora o arroz foi substituido pelo café</p>
+
+    <h2>Mais funções de um Array</h2>
+    <p>Apesar de um array não ter propriedades igual objetos, ele pode contar muitas outras coisas dentro dele como, um outro array, uma função e até mesmo um objeto</p>
+
+    <h3>Diferenças do array e objeto</h3>
+    <p>
+        <span style="color: red;">
+            const pessoa = ["Lucas", "Teodoro", 30]; - array <br>
+            const pessoa = {nome:"Lucas", sobrenome:"Teodoro", idade:30}; - objeto <br>
+        </span>
+        <br>
+        Para selecionar valores: <br>
+        pessoa.nome; <br>
+        pessoa[0]; <br>
+        <br>
+    </p>
+
+    <h2>Métodos</h2>
+    <p>
+        <b>pessoa.length;</b> length retorna quantas valores possui o array <br>
+        <b>pessoa[pessoa.length -1];</b> vai retornar o ultimo item do Array <br>
+        <b>Array.isArray(pessoa);</b> vai retornar se é um array (true) ou não (false). <br>
+        <b>pessoa.join(" - ");</b> vai colocar - entre cada valor. <br>
+        <b>pessoa.push("Brasileiro");</b> vai acrescentar um valor a última posição do array <br>
+        <b>pessoa.shift();</b> vai acrescentar um valor na primeira posição do Array. <br>
+        <b>pessoa.pop();</b> vai remover o último valor do Array. <br>
+        <b>pessoa.shift();</b> vai remover o primeiro valor do Array. <br>
+        <b>delete pessoa[0];</b> vai excluir o valor informado, mas vai deixar a posição undefined, ou seja, não vai alterar as posições dos demais. <br>
+        <b>pessoa.splice(1,0, "adicionar1", "adicionar2");</b> splice adiciona o item na posição informada, depois informa se quer deletar algum valor da direita, depois informa o valor que vai adicionar. <br>
+        <br>
+        <span style="color: red;">
+            const lista1 = ["arroz","feijão","leite",macarrão]; <br>
+            const lista2 = ["suco","refrigerante","carne"]; <br>
+        </span>
+        <br>
+        <b>const superLista = lista1.concat(lista2);</b> vai concatenar 2 arrays. <br>
+        <b>const meiaLista1 = superLista.slice(3);</b> vai pegar somente os valores apartir da posição 3 do array superLista. <br>
+        <b>const meiaLista2 = superLista.slice(3, 5);</b> só vai pegar da posição 3 ao 5. <br>
+        <b>superLista.sort();</b> vai ordernar em ordem alfabetica. Se for números ele só vai contar a primeira casa numeral.<br>
+        <b>superLista.reverse();</b> vai inverter a ordem que estava anteriormente. <br>
+        <br>
+        <span style="color: red;">const numeros = [40,100,1,5,25,10];</span> <br>
+        <br>
+        <b>numeros.indexOf(25);</b> vai procurar a posição do valor 25 do array. <br>
+        <b>numeros.sort(function(a,b){return a - b});</b> dessa forma vai colocar todos os números na ordem crescente correta; <br>
+        <b>numeros.sort(function(a,b){return b - a});</b> dessa forma vai colocar todos os números na ordem decrescente correta;<br>
+        <br>
+        <b>
+            function maiorNumero(array){ <br>
+                return Math.max.apply(null,array); <br>
+            }
+        </b> <br>
+        <b>maiorNumero(numeros);</b> vai pegar o maior número do array (tem que fazer a função). <br>
+        <br>
+        <b>
+            function menorNumero(array){ <br>
+                return Math.min.apply(null,array); <br>
+            }
+        </b> <br>
+        <b>menorNumero(numeros);</b> vai pegar o menor número do array (tem que fazer a função). <br>
+        <br>
+        <br>
+        <b>function filtragem(value, index, array){ <br>
+            return value >20; <br>
+        } <br>
+        const maior20 = numeros.filter(filtragem); <br>
+        console.log(maior20);</b> vai mostrar somente números maiores que 20. <br>
+    </p>
+
+    <h3>Outros Métodos podem ser encontrados no link</h3>
+    <p><a href="https://www.w3schools.com/jsref/jsref_obj_array.asp">https://www.w3schools.com/jsref/jsref_obj_array.asp</a></p>
+
+</body>
+
+<script>
+    
+</script>
+<footer>
+</footer>
+
+</html>

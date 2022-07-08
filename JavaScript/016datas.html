@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Estudo sobre Datas</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../script.js"></script>
+</head>
+
+<header>
+<h1>Estudo sobre Datas</h1>
+<p>Descrição</p>
+</header>
+
+<nav>
+</nav>
+<a href="001JavaScript.html">Voltar</a>
+
+<body>
+    <h1>Datas</h1>
+    <p>Para trabalhar com data, usaremos um objeto especial para datas do JS que é o Date, e sempre que criarmos uma data usaremos o new Date(); </p>
+
+    <p>Comando <b>base para pegar a data</b>: <br>
+        let data = new Date(); <br>
+        console.log(data); <br>
+        resultado: vai informar a data e hora atual, <br>
+        Thu Jul 07 2022 15:09:37 GMT-0300 (Horário Padrão de Brasília)
+    </p>
+
+    <p>Comando para <b>pegar o ano</b>: <br>
+        let ano = data.getFullYear(); <br>
+        console.log(ano); <br>
+        resultado: 2022
+    </p>
+
+    <p>Comando para <b>pegar o mês</b>: <br>
+    let mes = data.getMonth(); <br>
+    console.log(mes); <br>
+    resultado: 06 <br>
+    <b>OBS</b>: o detalhe é que o comando age como um objeto, então o mês começa do 0 com Janeiro e termina em 11 com Dezembro. <br>
+    <br>
+    Para <b>informar o mês por extenso</b> precisamos fazer assim:  <br>
+    const mesesDoAno = ["Janeiro", "Fevereiro", "Março", "Abril","Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]; <br>
+    let mesExtenso = mesesDoAno[data.getMonth()]; <br>
+    resultado: Julho</p>
+    
+    <p>Comando para <b>pegar o dia do mês</b>: <br>
+    let diaMes = data.getDate(); <br>
+    console.log(diaMes); <br>
+    resultado: 7 (hj é dia 7)</p>
+
+    <p>Comando para <b>pegar dia da semana</b>: <br>
+    let diaSemana = data.getDay(); <br>
+    console.log(diaSemana); <br>
+    resultado: 4 (hj é quinta-feira) <br>
+    <b>OBS:</b> aqui temos a mesma questão do mês, para o JS começamos a semana no numero 0 com o Domingo e terminamos no dia 6 com o Sábado <br>
+    <br>
+    Para <b>pegar o dia da semana por extenso</b>: <br>
+    const diaDaSemana = ["Domingo","Segunda","Terça","Quarta","Quinta","Sexta","Sábado"] <br>
+    let diaSemanaExtenso = diaDaSemana[data.getDay()]; <br>
+    console.log(diaSemanaExtenso); <br>
+    resultado: Quinta</p>
+
+    <p>Comando para <b>pegar a hora</b>: <br>
+    let hora = data.getHours(); <br>
+    console.log(hora); <br>
+    resultado: 15 (agr são 3hrs pm)</p>
+
+    <p>Comando para <b>pegar os minutos</b>: <br>
+        let minutos = data.getMinutes(); <br>
+        console.log(minutos); <br>
+        resultado: 31 (agr são 03:31 pm)</p>
+
+    <p>Comando para <b>pegar os segundos</b>: <br>
+        let segundos = data.getSeconds(); <br>
+        console.log(segundos); <br>
+        resultado: 58 (agr são 03:32:58 pm)</p>
+
+    
+    <p>Comando para <b>pegar os milissegundos</b>: <br>
+        let milisegundos = data.getMilliseconds(); <br>
+        console.log(milisegundos); <br>
+        resultado: 879 (agr são 03:34:36.879 pm)</p>
+
+    <p>Comando para pegar a data no padrão brasileiro: <br>
+        let dataBR = data.toLocaleString('pt-BR'); <br>
+        console.log(dataBR); <br>
+        resultado: 07/07/2022 15:36:21</p>
+
+    <p>Comando para pegar data curta, sem horas, no padrão brasileiro: <br>
+        let dataBRCurta = data.toLocaleString('pt-BR',{dateStyle: 'short'}); <br>
+        console.log(dataBRCurta); <br>
+        resultado: 07/07/2022</p>
+
+    <p>Comando para pegar só as <b>horas no padrão brasileiro</b>: <br>
+        let dataBRHoras = data.toLocaleString('pt-BR',{timeStyle: 'short'}); <br>
+        console.log(dataBRHoras); <br>
+        resultado: 15:39</p>
+
+    <p><b>Outra forma de pegar a data no padrão BR</b> é pegando todos os valores separados e concatenar: <br>
+    d = new Date(); <br>
+    diaMes2 = d.getDate(); <br>
+    mes2 = d.getMonth(); <br>
+    ano2 = d.getFullYear(); <br>
+    <br>
+    let dataPadraoBR = diaMes2 + "/" + mes2 + "/" ano2; <br>
+    console.log(dataPdraoBR); <br>
+    resultado: 7/6/2022 <br>
+    <b>OBS</b>: aqui vamos encontrar 2 problemas <br>
+    <b>01</b> No dia menor que 10 ele não vai mostrar 2 casa numerais, ou seja dia 07 mostra 7, <br>
+    <b>02</b> No mês além de engolir o 0 ele vai mostrar 1 numero a menos por ser um objeto e começar da posição 0 e não da posição 1.</p>
+
+    <p><b>Para corrigir o problema acima</b>: <br>
+    d3 = new Date(); <br>
+    diaMes3 = d3.getDate(); <br>
+    mes3 = d3.getMonth() + 1; <br>
+    ano3 = d3.getFullYear(); <br>
+    <br>
+    function addZero(x) {return x&lt;10 ? '0'+x : ''+x}; <br>
+    <br>
+    let dataPadraoBR3 = addZero(diaMes3) + "/" + addZero(mes3) + "/" ano3; <br>
+    console.log(dataPadraoBR3); <br>
+    resultado: 07/06/2022 <br>
+    <b>OBS:</b> acrecentamos +1 na variavel mes3 e fizemos uma função que inclui o "0" antes do dia e mês.</p>
+
+    <p>Comando para <b>comparar datas - Maior ou Menor</b>: <br>
+    var hoje = new Date(); <br>
+    var vencimento = new Date(2022, 0, 15); <br>
+    <br>
+    if (hoje > vencimento){ <br>
+        console.log('Sua conta está vencida!'); <br>
+    } else { <br>
+        console.log('Ainda não venceu, tudo certo!'); <br>
+    } <br>
+    resultado: Sua conta está vencida! <br>
+    <b>OBS</b>: no vencimento devemos informar ano, mes e dia. Porém no formato do JS, com janeiro começando em 0.</p>
+
+    <p>Comando para <b>mostrar a diferença entre 2 datas</b>: <br>
+    var dataInicial = new Date(); <br>
+    var dataFinal = new Date(2022, 11, 31); <br>
+    var diferencaTempo = dataFinal.getTime() - dataInicial.getTime(); <br>
+    var diferencaDias = Math.ceil(diferencaTempo / (24 * 60 * 60 * 1000)); <br>
+    console.log(diferencaDias); <br>
+    resultado: 177 (faltam 177 dias para o ultimo dia do ano) <br>
+    <b>OBS</b>: <br>
+    <b>01</b> getTime é para pegar os milisegundos e sempre que vamos fazer calculo com data pegaremos os milisegundos. <br>
+    <b>02</b> (diferencaTempo / (24 * 60 * 60 * 1000) este é o calculo para converter os milisegundos em dias.</p>
+
+</body>
+
+<script>
+    let data = new Date();
+    console.log(data);
+
+    let ano = data.getFullYear();
+    console.log(ano);
+
+    let mes = data.getMonth();
+    console.log(mes);
+
+    const mesesDoAno = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];
+    let mesExtenso = mesesDoAno[data.getMonth()];
+    console.log(mesExtenso)
+
+    let diaMes = data.getDate();
+    console.log(diaMes);
+
+    let diaSemana = data.getDay();
+    console.log("hj é " +diaSemana);
+
+    const diaDaSemana = ["Domingo","Segunda","Terça","Quarta","Quinta","Sexta","Sábado"];
+    let diaSemanaExtenso = diaDaSemana[data.getDay()];
+    console.log(diaSemanaExtenso);
+
+    let hora = data.getHours();
+    console.log(hora);
+
+    let minutos = data.getMinutes(); 
+    console.log(minutos);
+
+    let segundos = data.getSeconds(); 
+    console.log(segundos);
+
+    let milisegundos = data.getMilliseconds();
+    console.log(milisegundos);
+
+    let dataBR = data.toLocaleString('pt-BR');
+    console.log(dataBR);
+
+    let dataBRCurta = data.toLocaleString('pt-BR',{dateStyle: 'short'}); 
+    console.log(dataBRCurta);
+
+    let dataBRHoras = data.toLocaleString('pt-BR',{timeStyle: 'short'});
+        console.log(dataBRHoras);
+
+    d = new Date();
+    diaMes2 = d.getDate();
+    mes2 = d.getMonth();
+    ano2 = d.getFullYear(); 
+    let dataPadraoBR = diaMes2 + "/" + mes2 + "/" + ano2;
+    console.log(dataPadraoBR)
+
+    d3 = new Date();
+        diaMes3 = d3.getDate();
+        mes3 = d3.getMonth() + 1;
+        ano3 = d3.getFullYear(); 
+        function addZero(x) {return x < 10 ? '0' + x : '' + x;}; 
+        let dataPadraoBR3 = addZero(diaMes3) + "/" + addZero(mes3) + "/" + ano3; 
+        console.log(dataPadraoBR3);
+
+
+    var hoje = new Date();
+    var vencimento = new Date(2022, 0, 15);
+    if (hoje > vencimento){
+        console.log('Sua conta está vencida!');
+    } else {
+        console.log('Ainda não venceu, tudo certo!');
+    }
+
+    var dataInicial = new Date();
+    var dataFinal = new Date(2022, 11, 31);
+    var diferencaTempo = dataFinal.getTime() - dataInicial.getTime();
+    var diferencaDias = Math.ceil(diferencaTempo / (24 * 60 * 60 * 1000));
+    console.log(diferencaDias);
+</script>
+<footer>
+</footer>
+
+</html>

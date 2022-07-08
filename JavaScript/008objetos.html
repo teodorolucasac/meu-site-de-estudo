@@ -68,7 +68,20 @@
     carro.buzina(); - vai chamar/invocar o método do objeto <br>
     console.log(carro.completo()); - vai passar (A marca é: ford e o modelo é: ka)</p>
 
+    <h2>Clonando Objetos</h2>
+    <p>Para clonar objetos podemos usar 2 métodos.</p>
 
+    <p>Primeiro: <br>
+    <b>
+        const carro2 = Object.assign({ <br>
+            portas: 5 portas<br>
+        },carro);
+    </b> <br> 
+    dessa forma você pode adicionar propriedades como portas.</p>
+    
+    <p>Segundo: <br>
+    <b>const carro3 = {...carro};</b> <br>
+    método mais simples e rápido, porém não é possível adicionar novas propriedades.</p>
 </body>
 
 <footer>
