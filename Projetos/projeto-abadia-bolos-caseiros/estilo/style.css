@@ -1,0 +1,223 @@
+@charset "UTF-8"
+
+@font-face {
+    font-family: 'beauty';
+    src: url('../fontes/beautydemo.ttf') format('truetype'), url('../fontes/beautydemo.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'sofiapro';
+    src: url('../fontes/sofiaproblack.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'segoe';
+    src: url('../fontes/segoesc.ttf') format('truetype');
+}
+
+:root {
+    --fonte01: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --fonte02: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --fonte03: 'beauty', cursive;
+    --fonte04: 'sofiapro', cursive;
+    --fonte05: 'segoesc', cursive;
+
+    --cor01: #49d1ffff;
+    --cor02: #ff9696ff;
+    --cor03: #ff4949ff;
+    --cor04: #401212ff;
+    --cor05: #ffeeaaff;
+    --cor06: #fff9e0ff;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+html, body {
+    min-height: 100vh;
+    background-color: var(--cor06);
+    font-family: var(--fonte02);
+}
+
+header {
+    background-color: var(--cor03);
+    padding-top: 10px;
+}
+
+header h1 {
+    font-family: var(--fonte04);
+    font-size: 2em;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+header nav {
+    background-color: var(--cor01);
+    padding: 12px;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.311);
+}
+
+header nav a {
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+    text-align: right center;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+div.titulo img {
+    display: block;
+    width: 400px;
+    margin: auto;
+    padding-top: 30px;
+}
+
+
+
+
+main {
+    text-align: center;
+
+}
+
+section.geral {
+
+}
+
+section {
+    display: inline-block;
+}
+
+section.scardapio {
+    background-color: var(--cor05);
+    width: 460px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 30px 0px;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid #00000082;
+    box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.452);
+    display: block;
+}
+
+section.scardapio div {
+    display: inline-block; 
+}
+
+p.esquerda {
+    text-align: left;
+}
+
+section.scardapio h2 {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section.scardapio h3 {
+    margin: 5px;
+    margin-bottom: 20px;
+}
+
+section.scardapio p, h3 {
+    margin-left: 5px;
+    margin-right: 5px;
+    line-height: 0.8em;
+    text-transform: capitalize;
+}
+
+
+
+
+
+
+div.geralcarrinho, div.geralcardapio {
+    position: ;
+}
+
+
+
+
+
+section.scarrinho {
+    background-color: var(--cor05);
+    width: 460px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 30px 0px;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid #00000082;
+    box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.452); 
+    display: block;
+}
+
+section.scarrinho div {
+    display: inline-block;
+}
+
+section.scarrinho h2 {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: px;
+}
+
+section.scarrinho article {
+    background-color: rgb(255, 255, 255);
+    width: 380px;
+    height: 70px;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.527);
+}
+
+
+section.scarrinho article > p {
+    font-size: 2.5em;
+    color: rgba(0, 0, 0, 0.225);
+}
+
+section.scarrinho article.botao {
+    background-color: rgb(1, 215, 1);
+    width: 180px;
+    height: 40px;
+    margin: auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 1px 2px rgba(0, 0, 0, 0.526);
+}
+
+section.scarrinho article.botao p {
+    font-family: var(--fonte01);
+    font-weight: 500;
+    color: black;
+    font-size: 1.5em;
+    margin: 10px;
+}
+
+section.scarrinho p {
+    font-size: 1.6em;
+}
+
+
+
+
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    margin-top: 30px;
+}
