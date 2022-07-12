@@ -13,6 +13,11 @@
 <title>Branches ou Ramificações</title>
 <link rel="stylesheet" href="../style.css">
 <script src="../script.js"></script>
+<style>
+  figure {
+    margin: 0px 0px 20px 20px;
+  }
+</style>
 </head>
 
 <header>
@@ -26,16 +31,72 @@
 
 <body>
   <h2>Branches ou Ramificações</h2>
-  <p>As branches funcionam como um caule de uma arvore, onde tem o ramo mais grosso, o principal e os demais galhos que nascem dele, os ramos</p>
-  <p>No GitHub o ramo principal chama-se <strong>Master</strong>.</p>
-
-  <p>Resumindo quando a gente dá o comando <b>commit</b> criamos um <b>versionamento</b> da nossa <b>Master</b> no nosso <b>repositório local</b>. E quando damos um <b>push</b>, enviamos o <b>versionamento</b> para nosso <b>origin</b> (repositório remoto / github).</p>
+  <p>As branches funcionam como um caule de uma arvore, onde temos o tronco, que é o principal (Master), e os demais galhos que nascem dele, que é os ramos (Branch)</p>
   
-  <p>PORÉM, commitar tudo na Master pode ser perigoso, pois se caso algo der muito errado estará tudo salvo no ramo principal, a Master e você pode estragar tudo. </p> <br>
+  <figure><img width="500px" src="imagens/banchs(1).png" alt=""></figure>
+
+  <p>Resumindo: quando a gente dá o comando <b>commit</b> criamos um <b>versionamento</b> da nossa <b>Master</b> no nosso <b>repositório local</b>. E quando damos um <b>push</b>, enviamos o <b>versionamento</b> para nosso <b>origin</b> (repositório remoto / github).</p>
+  
+  <p>PORÉM, commitar tudo na Master pode ser perigoso, pois se caso algo der muito errado estará tudo salvo no ramo principal, a Master, e você poderá estragar todo o projeto. </p>
     
-  <p>Por exemplo: Suponhamos que depois de 3 meses de trabalho o HTML e JS está a todo o vapor, sendo desenvolvido perfeitamente, mas sua equipe de CSS diz para você que precisa de retroceder o versionamento pois não conseguiu concluir o projeto da forma que esperava. Mas todo seu versionamento e todas as Features estão salvas na Master, a ramificação principal. Como retroceder apenas o CSS e deixar o HTML e JS intáctos? Não dá. Por isso criaremos uma Branch para cada ponto do seu site ser desenvolvido individualmente/separadamente.</p>
+  <p>Exemplo: Suponhamos que depois de 3 meses de trabalho o HTML e JS está a todo o vapor, sendo desenvolvido perfeitamente, mas sua equipe de CSS diz para você que precisa de retroceder o versionamento pois não conseguiu concluir o projeto da forma que esperava. Mas todo seu versionamento e todas as Features estão salvas na Master, a ramificação principal. Como retroceder apenas o CSS e deixar o HTML e JS intáctos? Não dá. Por isso criaremos uma Branch para cada ponto do seu site ser desenvolvido individualmente/separadamente.</p>
 
+  <h2>Como criar uma Branch</h2>
+  <p>Simples, basta seguir estes 2 passos:</p>
+  <figure>
+    <img width="600px" src="imagens/banchs(2).png" alt="">
+    <figcaption>No GitHub Desktop vá em Branch depois New branch e crie sua branch com o nome desejado.</figcaption>
+  </figure>
+  <figure>
+    <img width="600px" src="imagens/banchs(3).png" alt="">
+    <figcaption>Publique sua Branch no repositório remoto.</figcaption>
+  </figure>
+  <figure>
+    <img width="600px" src="imagens/banchs(4).png" alt="">
+    <figcaption>Sua Branch já está criada no repositório local e repositório remoto.</figcaption>
+  </figure>
   
+  <h2>Merge</h2>
+  <p>Merge é o nome que se dá para quando suas ramificações chegou em um ponto tudo perfeitamente e você quer integra-la no seu conteúdo principal.</p>
+
+  <p>Para fazer um Merge, basta seguir estes 3 passos:</p>
+
+  <figure>
+    <img width="500px" src="imagens/merge(1).png" alt="">
+    <figcaption>Na sua ramificação Master, vá em branch -> Merge into Current Branch...</figcaption>
+  </figure>
+  <figure>
+    <img width="500px" src="imagens/merge(2).png" alt="">
+    <figcaption>Selecione qual ramificação você quer fazer o Merge</figcaption>
+  </figure>
+  <figure>
+    <img width="500px" src="imagens/merge(3).png" alt="">
+    <figcaption>Por fim basta dar um push para o Origin</figcaption>
+  </figure>
+
+  <h2>Conflito de Branchs</h2>
+  <p>Caso duas branchs alterem o mesmo documento, elas irão dar um conflito que precisa ser concertado.</p>
+
+  <figure>
+    <img width="500px" src="imagens/conflitoBranch(1).png" alt="">
+    <figcaption>No segundo Merge se existir um conflito o GitHub já vai acursar. Mas pode tentar fazer o Merge mesmo assim...</figcaption>
+  </figure>
+  <figure>
+    <img width="500px" src="imagens/conflitoBranch(2).png" alt="">
+    <figcaption>Na próxima aba o GitHub já vai identificar o documento conflitante e permitir abrir o VSC para resolver. Clique em Open in Visual Studio Code</figcaption>
+  </figure>
+  <figure>
+    <img width="500px" src="imagens/conflitoBranch(3).png" alt="">
+    <figcaption>Abrindo o VSC vão ter os conflitos e as opções para decidir qual alteração prevalecerá, escolha uma das opções</figcaption>
+  </figure>
+  <figure>
+    <img width="500px" src="imagens/conflitoBranch(4).png" alt="">
+    <figcaption>Pronto, conflito solucionado e commit liberado</figcaption>
+  </figure>
+  <figure>
+    <img width="500px" src="imagens/conflitoBranch(5).png" alt="">
+    <figcaption>Para finalizar, basta dar um push pro repositório remoto.</figcaption>
+  </figure>
 
 </body>
 
