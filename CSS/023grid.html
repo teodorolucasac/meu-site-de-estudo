@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Estudos sobre Display Grid</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../script.js"></script>
+</head>
+
+<body>
+<header>
+<h1>Display Grid</h1>
+<p>Vamos aprender a dividir o contúdo em colunas com Display Grid</p>
+</header>
+
+<nav>
+</nav>
+<a href="001CSS.html">Voltar</a>
+
+<h2>display: grid;</h2>
+<p>Grid é um formato de display que trabalha os Elementos em forma de colunas (columns). Quando colocamos o display grid no Elemento pai, mudamos completamente o comportamento dos filhos e também do pai em relação aos filhos.</p>
+
+<p>Um elemento pai podem ter filhos com outros tipos de display ou em grid também, sem problemas.</p>
+
+<h2>grid-template-columns</h2>
+<p>Essa propriedade define quantos grid terá seu Elemento pai e qual o tamanho desse grid.</p>
+
+<h2>fr</h2>
+<p>fr é uma unidade de medida muito utilizada para definir o tamanho das columns do seu grid. Tendo em vista que, as unidades de medida em porcentagem como "vw" e o próprio "%" ignora as margins fazendo criar barras de rolagem na página. Já o "fr" age como se fosse "%" mas utilizada apenas o resto do espaço depois das margens.</p>
+
+<h2>gap</h2>
+<p>gap é uma propriedade utilizada para criar distância entre as grids, como se fossem margens. Lembrando que no gap a unidade fixa como "px" vão funcionar mais corretamente.</p>
+
+<h2>align-content</h2>
+<p>Propriedade que alinha na vertical</p>
+
+<h2>justify-content</h2>
+<p>Propriedade que alinha na horizontal</p>
+
+<h2>place-content</h2>
+<p>Propriedade que faz um shorhand para configurar o align e justify, nesta ordem.</p>
+
+<p>Valores: <br>
+<b>start</b>; alinha do início<br>
+<b>center</b>; alinha do centro<br>
+<b>end</b>; alinha do final<br>
+<b>stretch</b>; completa o alinhamento com padding<br>
+<b>space-between</b>; cria espaços iguais entre elementos mas não nas margens<br>
+<b>space-around</b>; cria espaço iguais entre os elementos e as margens<br>
+<b>space-evenly</b>; tenta distribuir mais igualmente os espaços entre elementos e as margens<br>
+</p>
+
+<h2>grid-column: 1/3;</h2>
+<p>Quando queremos colocar cada elemento em uma coluna específica, usamos a propriedade grid-column: ;</p>
+<p>Sendo certo que, o valor um número isolado significa qual coluna o elemento vai ficar. Exemplo: <b>grid-column: 3;</b> vai ficar na coluna 3</p>
+<p>Caso queira colocar em mais de uma coluna basta usar o "/" e passar o número das <b>LINHAS</b>, e não mais colunas. Exemplo: grid-column: 1/3; vai da linha 1 até a linha 3.</p>
+<p>O valor -1 significa ultima linha. Exemplo <b>grid-column: 1/-1;</b> este elemento vai da linha 1 até a última, independente do número de linhas.</p>
+<p>Se quisermos expandir passando o valor de colunas precisamos usar o valor de span. Exemplo: <b>grid-column: span 3;</b> vai expandir 3 colunas a partir da coluna que o elemento nasceu.</p>
+<p>Outro exemplo de span é. Exemplo: <b>grid-column: 1 / span 3;</b> vai começar na coluna 1 e expandir 3 colunas.</p>
+
+
+<h2>align-items e justify-items</h2>
+<p>Propriedade do Elemento Pai que alinha os itens dentro da coluna, ou seja de todos os itens juntos.</p>
+<p><b>align-items</b>: alinhamento vertical <br>
+<b>justify-items</b>: alinhamento horizontal <br>
+<b>place-items</b>: shorthand para vertical/horizontal</p>
+
+<h2>align-self e justify-self</h2>
+<p>Propriedade do Elemento Filho, e alinha os itens individualmente </p>
+<p><b>align-self</b>: alinhamento vertical <br>
+<b>justify-self</b>: alinhamento horizontal <br>
+<b>place-self</b>: shorthand para vertical/horizontal</p>
+
+<h2>grid-template-rows</h2>
+<p>
+  <b>grid-template-rows</b>: 100px auto; <br>
+  Define o tamanho das linhas.
+</p>
+
+<p>
+  <b>grid-auto-rows</b>: <br>
+  Linhas são adicionadas automaticamente com o valor de auto.
+</p>
+
+<p>
+  <b>grid-row</b>: 2 <br>
+  Define a linha do item, funciona da mesma forma que o grid-column.
+</p>
+
+<h2>Guia completo sobre Grid</h2>
+<p><strong>Para facilitar o entendimento vou deixar o link de 4 guias de grid aqui em baixo:</strong></p>
+<p>
+  <a href="https://www.origamid.com/projetos/grid/" target="_blank">https://www.origamid.com/projetos/grid/</a> <br>
+  <a href="https://www.origamid.com/projetos/css-grid-layout-guia-completo/" target="_blank">https://www.origamid.com/projetos/css-grid-layout-guia-completo/</a> <br>
+  <a href="https://grid.malven.co/" target="_blank">https://grid.malven.co/</a> <br>
+  <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">https://css-tricks.com/snippets/css/complete-guide-grid/</a>
+</p>
+</body>
+
+<footer>
+</footer>
+
+</html>
