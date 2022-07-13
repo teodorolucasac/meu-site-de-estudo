@@ -67,9 +67,28 @@
     .flexPai3 div{
         background-color: white;
         border: 1px solid black;
-        padding: 30px;
+        padding: 30px 0px;
         text-align: center;
         flex-grow: 1;
+    }
+
+    .flexPai5{
+        background-color: blue;
+        height: 300px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .flexPai5 div{
+        background-color: white;
+        border: 1px solid black;
+        padding: 30px 0px;
+        text-align: center;
+        flex-grow: 1;
+        flex-basis: 0;
     }
 
     .flexPai4{
@@ -154,14 +173,14 @@
     Exemplo sintaxe: <br>
     <b>flex-wrap: wrap;</b></p>
 
-    <h3>flex-flow: ;</h3>
+    <h2>flex-flow: ;</h2>
     <p>O <b>flex-wrap</b> e <b>flex-direction</b> podem fazer um shorthand utilizando a propriedade <b>flex-flow: ;</b> <br>
     Exemplo sintaxe: <br>
     <b>flex-flow: row wrap;</b></p>
 
 
-    <h2>Alinhamento flexbox</h2>
-    <h3>justify-content: flex-start;</h3>
+    <h2>Alinhamento coletivo</h2>
+    <h2>justify-content: flex-start;</h2>
     <p>O justify-content é uma propriedade que vai permitir o alinhamento dos elementos em <b>row / linha / horizontal</b>.</p>
     <p>Essa propriedade vem com o valor padrão :flex-start;, mas possui varios valores para se trabalhar como: <br>
     <B>:left;</B> esquerda <br>
@@ -172,7 +191,7 @@
     Obs: sempre na horizontal.
     </p>
 
-    <h3>align-items: stretch;</h3>
+    <h2>align-items: stretch;</h2>
     <p>A propriedade align-items vai permitir o alinhamento dos elementos flex em <b>column / coluna / vertical</b>.</p>
     <p>Essa propriedade vem com o valor padrão :stretch;, mas possui os valores: <br>
     <b>:stretch;</b> esticado (do cross start ao cross end)<br>
@@ -181,7 +200,7 @@
     <b>:center;</b> no centro do pai<br>
     Obs: sempre na vertical.</p>
 
-    <h3>align-content: ;</h3>
+    <h2>align-content: ;</h2>
     <p>A propriedade align-content desrespeita ao alinhamento de todo o conteúdo junto, diferente do align-items que trata do conteúdo individualmente.</p>
     <p>Essa propriedade vem com o valor padrão :space-between;, mas possui outros valores: <br>
         <b>:center;</b> centraliza<br>
@@ -204,26 +223,34 @@
         <div>10</div>
     </div>
 
-    <h2>flex-grow: ;</h2>
+
+    <h2>Alinhamento individual</h2>
+    <h2>flex-grow: 0;</h2>
     <p>A propriedade flex-grow, desrespeita ao crescimento do item child conforme o tamanho da tela.</p>
-    <p>Veja os valores da propriedade flex-grow: <br>
-    <b>flex-grow: 1;</b> crescimento uniforme deacordo com a largura do pai <br>
+    <p>Exemplo:<br>
+    <b>flex-grow: 1;</b> vai ajustar o padding ao tamanho tela apartir do conteúdo. Ou seja, note que o item 1 tem tamanho maior em relação aos outros, mas o padding é igual.<br>
     <b></b></p>
 
     <div class="flexPai3">
-        <div>1</div>
+        <div>11111111111111111111111</div>
         <div>2</div>
         <div>3</div>
         <div>4</div>
         <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-        <div>10</div>
     </div>
 
-    <h2>Propriedade flex:;</h2>
+    <h2>flex-basis: auto;</h2>
+    <p>O flex-basis auto é o padrão, se colocarmos 0 ele vai tentar ignorar o tamanho do conteúdo e ajustar o tamanho total do elemento</p>
+
+    <div class="flexPai5">
+        <div>11111111111111111111111</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+
+    <h2>flex: 1;</h2>
     <p>A propriedade flex permite trabalhar com valores responsivos individuais para cada elemento</p>
 
     <div class="flexPai4">
@@ -237,8 +264,13 @@
         <div style="flex:50%">8</div>
     </div>
 
-    <H1>Exercício</H1>
-    <p>Veja o exercício clicando no <a href="019.1exercicioFlexbox.html">link</a>.</p>
+    
+    <h2>flex-shrink: 0;</h2>
+    <p>O valor de flex-shrink 1 é o valor padrão, e ele sempre vai tentar quebrar o conteúdo para adaptar à tela. Se colocarmos o valor de 1 ele vai fazer o elemento atravessar a tela e não vai quebrar mais conteúdo.</p>
+
+
+    <h2>Exercício</h2>
+    <p>Veja o exercício clicando no<a href="020.1exercicioFlexbox.html">link.</a></p>
 </body>
 
 <footer>
