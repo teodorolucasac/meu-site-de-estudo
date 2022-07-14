@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Unidade de Medida</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../script.js"></script>
+<style>
+  .elementoPai{
+    height: 40px;
+    background-color: tomato;
+    width: 50vw;
+    display: block;
+  }
+
+  .elementoFilho{
+    background-color: lightblue;
+    display: block;
+  }
+
+  .elementoFilho p {
+    display: block;
+  }
+</style>
+</head>
+
+<body>
+<header>
+<h1>Estudos sobre Unidade de Medida</h1>
+<p></p>
+</header>
+
+<nav>
+</nav>
+<a href="001CSS.html">Voltar</a>
+
+<h2>Font-Size</h2>
+<p>
+  Essa é a propriedade que define o tamanho da font. <br><br>
+  <b>/* Valores Absolutos */</b> <br>
+  <b>cm</b>: centímentro <br>
+  <b>mm</b>: milímetro <br>
+  <b>in</b>: polegada <br>
+  <b>px</b>: pixel <br>
+  <b>pt</b>: ponto <br>
+  <b>pc</b>: paica <br>
+  <br>
+  <b>/* Valores Relativos */</b> <br>
+  <b>em</b>: relativo ao tamanho atual da font <br>
+  <b>ex</b>: altura X de uma font <br>
+  <b>rem</b>: relativo ao tamanho atual do root (configurado do html) <br>
+  <b>vw</b>: largura da View Width (0-100) <br>
+  <b>vh</b>: altura da View Height (0-100) <br>
+  <b>%</b>: porcentagem do elemento pai <br><br>
+
+  <b>OBS: Recomendação da W3C é sempre usar PX, EM ou REM, evitar outras unidades de medida de tamanho da font.</b> <br>
+  <br>
+  Mas por padrão iremos usar o <strong>REM</strong>, para caso alguma alteração no tamanho da font do elemento pai não altere o tamanho da font do elemento filho. <br>
+  <br>
+  Para saber mais sobre as propriedades e valores, confira no link: <br>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size" target="_blank">https://developer.mozilla.org/en-US/docs/Web/CSS/font-size</a>
+</p>
+
+<h2>View Height e View Width</h2>
+<p><b>Diferença de % e vw/vh</b>: Quando usamos vw/vh o tamanho da nossa tela será a referência. Quando usamos % o tamanho do elemento pai será a referência.</p>
+
+<p>Ou seja, se usarmos 100% de um elemento que o pai tenha 100vw realmente vamos atingir o 100vw. Mas se o pai tiver outro valor menor não vamos atingir a tela toda, vamos atingir apenas 100% do elemento pai.</p>
+
+<p>Quando usamos <b>width: 100vw;</b> e o elemento está com margin ou padding, o elemento vai estourar na tela.</p>
+
+<h2>Função calc()</h2>
+<p>Essa função de CSS permite fazer calculo de medidas, desta forma podemos inclusive misturar unidade. Exemplo:</p>
+
+<p>
+  div{ <br>
+    width: calc(100vw / 3); <br>
+  } <br>
+  obs: vai pegar 100vw e dividir por 3 (33,33%)
+</p>
+
+<p>
+  <b>misturando medidas</b> <br>
+  div{ <br>
+    width: calc(100vw - 100px); <br>
+  } <br>
+  obs: independente do tamanho da  tela vai retirar 100px
+</p>
+
+<h3>Veja aqui um guia com outras unidades:</h3>
+<p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units" target="_blank">https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units</a></p>
+
+</body>
+
+<footer>
+</footer>
+
+</html>

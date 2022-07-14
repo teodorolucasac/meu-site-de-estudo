@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Estudos sobre Navegação</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../script.js"></script>
+<style>
+  nav{
+    background-color: transparent;
+    color: black;
+  }
+
+  nav a {
+    color: black;
+  }
+  
+</style>
+</head>
+
+<body>
+<header>
+<h1>Estudos sobre Navegação</h1>
+</header>
+
+
+
+<nav>
+</nav>
+<a href="001HTML.html">Voltar</a>
+
+
+<h1>Navegação</h1>
+<p>No HTML a navegação (utilizadas para criar menus) é representada pela tag semântica <b>&lt;nav></b>. Seguido de tags <b>&lt;a></b> que serão os links. Desta forma já é possível criar nossos Menus.</p>
+<p>No entanto, normalmente usaremos também as tags <b>&lt;ul></b> seguido de <b>&lt;li></b> e depois &lt;a> para que nossos menus tenha uma estrutura de listas não ordenadas.</p>
+
+<p>Exemplo:</p>
+
+<nav><ul>
+  <li><a href="#">Link1</a></li>
+  <li><a href="/">Link2</a></li>
+  <li><a href="/">Link3</a></li>
+</ul></nav>
+
+<h2>Leitor de texto</h2>
+<P>Quando usamos listas o leitor de texto vai anúnciar o menu com mais detalhes e portanto mais acessibilidade, como quantidade de itens.</P>
+
+<p><b>Já houve diversas discuções para definir se a navegação deve ser utilizada com lista ou sem lista.</b> <br>
+Na conclusão foi constatado que com lista é uma melhor forma de utilizar a navegação, mas vejamos os pros e contras:</p>
+
+
+<h3>Navegação “Contra” em listas</h3>
+<p>
+  - Pelo menos um usuário de leitor de tela prefere a navegação sem listas, que foi a origem do artigo original. <br>
+  - Marcação mais simples. nav > aé mais fácil/menos que nav > ul > li > a. <br>
+  - Divs e spans podem ser tão bons, especialmente com funções ARIA
+</p>
+<h3>Navegação “Para” em listas</h3>
+<p>
+  - Anunciar o número de itens na lista pode ser útil <br>
+  - Benefício para estruturar em navegadores não CSS (captura de tela do Lynx ) <br>
+  - Padrão de longa data que não provou ser um grande problema <br>
+  - As listas são um “gancho” para leitores de tela (por exemplo, pressione L para listas) e exibem bem a hierarquia <br>
+  - Segurança: nada pode estar em listas, mas itens de lista, não para navegação
+</p>
+
+</body>
+
+<footer>
+</footer>
+
+</html>

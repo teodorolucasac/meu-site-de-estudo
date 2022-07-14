@@ -63,16 +63,19 @@
             <b>pc</b>: paica <br>
             <br>
             <b>/* Valores Relativos */</b> <br>
-            <b>em</b>: tamanho atual da font <br>
+            <b>em</b>: relativo ao tamanho atual da font <br>
             <b>ex</b>: altura X de uma font <br>
-            <b>rem</b>: altura X de uma font do root (configurado no body) <br>
-            <b>vw</b>: largura da View Width <br>
-            <b>vh</b>: altura da View Height <br>
-            <b>%</b>: porcentagem <br><br>
+            <b>rem</b>: relativo ao tamanho atual do root (configurado do html) <br>
+            <b>vw</b>: largura da View Width (0-100) <br>
+            <b>vh</b>: altura da View Height (0-100) <br>
+            <b>%</b>: porcentagem do elemento pai <br><br>
 
-            <b>OBS: Recomendação da W3C é sempre usar PX ou EM, evitar outras unidades de medida de tamanho da font.</b> <br>
-
-            Para saber mais sobre as propriedades e valores, confira no <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size">site do mozilla</a>.
+            <b>OBS: Recomendação da W3C é sempre usar PX, EM ou REM, evitar outras unidades de medida de tamanho da font.</b> <br>
+            <br>
+            Mas por padrão iremos usar o <strong>REM</strong>, para caso alguma alteração no tamanho da font do elemento pai não altere o tamanho da font do elemento filho. <br>
+            <br>
+            Para saber mais sobre as propriedades e valores, confira no link: <br>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size" target="_blank">https://developer.mozilla.org/en-US/docs/Web/CSS/font-size</a>
     </p>
 
     <h2>Font-Style</h2>
@@ -144,6 +147,7 @@
         - truetype-aat (Apple Advanced Typography) <br>
         - svg <br>
     </p>
+
     
 </body>
 
