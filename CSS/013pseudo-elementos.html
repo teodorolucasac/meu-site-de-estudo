@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Estudos sobre Pseudo-Elementos</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../script.js"></script>
+<style>
+  h1.h1::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 4px;
+  background: #caf;
+}
+
+li.li {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+li.li::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-image: linear-gradient(#caf, #fff);
+  border: 2px solid #caf;
+  margin-right: 10px;
+}
+</style>
+</head>
+
+<body>
+<header>
+<h1>Estudos sobre Pseudo-Elementos</h1>
+<p></p>
+</header>
+
+<nav>
+</nav>
+<a href="001CSS.html">Voltar</a>
+
+<h1>Pseudo-Elemento</h1>
+<p>Os mais importantes e mais usados pseudo-elements são o ::before e ::after. Eles criam elementos HTML com base no seletor.</p>
+
+<p><b>Uso prático:</b> São utilizados para decorarmos o conteúdo, com eles evitamos o uso de elementos desnecessários no HTML.</p>
+
+<h2>Valores</h2>
+<p>Todo Pseudo-Elemento precisa de um valor <b>content</b> e um valor de <b>display</b> para funcionar corretamente. Para criar um valor vazio basta usar as aspas. content: " ";</p>
+
+<h3>Veja o exemplo:</h3>
+<pre>
+  h1::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 4px;
+    background: #caf;
+  }
+  
+  li {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  li::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-image: linear-gradient(#caf, #fff);
+    border: 2px solid #caf;
+    margin-right: 10px;
+  }
+</pre>
+
+<h1 class="h1">Nossos Produtos</h1>
+<ul>
+  <li class="li">Sobre</li>
+  <li class="li">Produtos</li>
+  <li class="li">Contato</li>
+</ul>
+
+<h2>Outros exemplos de Deletores</h2>
+
+<p>
+  <b>::first-line</b>
+  Seleciona a primeira linha do conteúdo.
+</p>
+
+<p>
+  <b>::first-letter</b>
+  Seleciona a primeira letra do conteúdo.
+</p>
+</body>
+
+<footer>
+</footer>
+
+</html>
