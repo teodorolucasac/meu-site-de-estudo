@@ -10,7 +10,7 @@
 <meta name="keywords" content="html,css,js,javascript,estudo">
 <meta name="author" content="Teodoro Lucas">
 
-<title>Estudo sobre Semântica</title>
+<title>Estudos sobre Semântica</title>
 <link rel="stylesheet" href="../style.css">
 <script src="../script.js"></script>
 <style>
@@ -63,8 +63,8 @@
 </head>
 
 <header>
-    <h1>Título</h1>
-    <p>Descrição</p>
+    <h1>Estudos sobre Semântica</h1>
+    <p></p>
 </header>
 
 <nav>
@@ -74,10 +74,19 @@
 <body>
     <h1>Estudo sobre Semântica</h1>
     <p>No HTML podemos criar uma página de muitas formas diferentes como, só usando divs ou até mesmo usando tabelas. No entando isso dificulta a leitura, manutenção do código, edição, interpretação e ainda facilita a existencia de bugs</p>
-    <p>Com isso surgiu a marcação semântica no HTML5, que basicamente são <b>Tags</b> que não são usadas para gerar um conteúdo visível inicialmente, mas sim organizar e informar "dar nome aos bois" sobre o que representa aquela item, bloco, etc...</p>
+    <p>Com isso surgiu a marcação semântica no HTML5, que basicamente são <b>Tags</b> que não são usadas para gerar um conteúdo visível inicialmente, mas sim organizar e informar "dar nome aos bois" sobre o que representa aquele item, bloco, etc...</p>
 
     <p>Exemplo, no lugar de colocar uma tag <b>&ltdiv>&lt/div></b> para criar o cabeçalho, nos temos a tag <b>&ltheader>&lt/header></b> que faria praticamente a mesma coisa, mas informa e organiza, deixando explicito para o programador e a máquina interpretadora que aquilo é um cabeçalho.</p>
 
+    <h2>Em outras palavras:</h2>
+    <h3>Acessibilidade</h3>
+    <p>Leitores de tela (JAWS, NVDA, VoiceOver) utilizam as tags para a navegação e compreensão do conteúdo. Interfaces de voz estão cada vez mais presentes.</p>
+
+    <h3>Browsers e Funcionalidades</h3>
+    <p>Define um estilo padrão para o conteúdo, mesmo sem o CSS. Facilita a organização do conteúdo em browsers que oferecem modo leitura.</p>
+
+    <h3>Indexadores e Máquina</h3>
+    <p>Facilita o trabalho de indexadores como o robô do Google a identificar o conteúdo do seu site. (Especulação).</p>
    
     <section>
         <header class="topo">
@@ -105,33 +114,34 @@
     <p>Aqui vemos um exemplo separado em 3 partes: <br>01 - Cabeçalho, Título, Parágrafo, Menu Navegação e Links <br>
     02 - Corpo, Principal, Sessão, Divisão e Artigo <br>
     03 - Rodapé</p>
-    <strong>
-    &ltheader&gt <br>
-    &ensp;&ensp;&lth1&gt&lt/h1&gt<br>
-    &ensp;&ensp;&ltp&gt&lt/p&gt<br>
-    &ensp;&ensp;&ltnav&gt<br>
-    &ensp;&ensp;&ensp;&ensp; &lta href=""></a><br>
-    &ensp;&ensp;&ensp;&ensp; &lta href=""></a><br>
-    &ensp;&ensp;&lt/nav&gt<br>
-    &lt/header&gt<br>
-    <br>
-
-    &ltbody&gt<br>
-    &ensp;&ensp;&ltmain&gt<br>
-    &ensp;&ensp;&ensp;&ensp;&ltsection&gt<br>
-    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ltdiv&gt<br>
-    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ltarticle&gt<br>
-    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&lt/article&gt<br>
-    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&lt/div&gt<br>
-    &ensp;&ensp;&ensp;&ensp;&lt/section&gt<br>
-    &ensp;&ensp;&lt/main&gt<br>
-    &lt/body&gt<br>
-    <br>
-
-    &ltfooter&gt<br>
-    &lt/footer&gt<br>
-    <br>
-    </strong>
+    <p>
+        <strong>
+        &ltbody&gt<br>
+        &ltheader&gt <br>
+        &ensp;&ensp;&lth1&gt&lt/h1&gt<br>
+        &ensp;&ensp;&ltp&gt&lt/p&gt<br>
+        &ensp;&ensp;&ltnav&gt<br>
+        &ensp;&ensp;&ensp;&ensp; &lta href=""></a><br>
+        &ensp;&ensp;&ensp;&ensp; &lta href=""></a><br>
+        &ensp;&ensp;&lt/nav&gt<br>
+        &lt/header&gt<br>
+        <br>
+        
+        &ltmain&gt<br>
+        &ensp;&ensp;&ensp;&ensp;&ltsection&gt<br>
+        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ltdiv&gt<br>
+        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ltarticle&gt<br>
+        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&lt/article&gt<br>
+        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&lt/div&gt<br>
+        &ensp;&ensp;&ensp;&ensp;&lt/section&gt<br>
+        &lt/main&gt<br>
+        &lt/body&gt<br>
+        <br>
+        &ltfooter&gt<br>
+        &lt/footer&gt<br>
+        <br>
+        </strong>
+    </p>
 </body>
 
 <footer>
