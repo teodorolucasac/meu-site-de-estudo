@@ -2,87 +2,115 @@
 <html lang="pt-br">
 
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Esse é meu primeiro site!">
-<meta name="keywords" content="html,css,js,javascript,estudo">
-<meta name="author" content="Teodoro Lucas">
+    <meta name="description" content="Esse é meu primeiro site!">
+    <meta name="keywords" content="html,css,js,javascript,estudo">
+    <meta name="author" content="Teodoro Lucas">
 
-<title>Estudo sobre Responsividade</title>
-<link rel="stylesheet" href="../style.css">
-<script src="../script.js"></script>
-<style>
-    .cor{
-        
-        height: 100px;
-        position: relative;
-    }
-    .cor p{
-        text-align: center;
-        font-weight: bold;
-        position: absolute;
-        margin: 0px;
-        width: 100%;
-        
-        top: 50%;
-        left: 50%;
+    <title>Estudo sobre Responsividade</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js"></script>
+    <style>
+        .cor {
 
-        transform: translate(-50%, -50%);
-    }
+            height: 100px;
+            position: relative;
+        }
 
-    pre{
-        font-size: 1rem;
-        word-wrap: break-word;
-    }
+        .cor p {
+            text-align: center;
+            font-weight: bold;
+            position: absolute;
+            margin: 0px;
+            width: 100%;
 
-    /* Smartphones (600px para baixo) */
-@media only screen and (max-width: 600px) {
-    .cor{
-        background-color: blue;
-        color: white;
-    }
-}
+            top: 50%;
+            left: 50%;
 
-/* Dispositivos um pouco maiores, mas ainda pequenos (Pequenos Tablets e Smartphones + largos, 600px para cima) */
-@media only screen and (min-width: 600px) {
-    .cor{
-        background-color: red;
-        color: black;
-    }
-}
+            transform: translate(-50%, -50%);
+        }
 
-/*Dispostivos Médios (Tablets deitados, 768px para cima) */
-@media only screen and (min-width: 768px) {
-    .cor{
-        background-color: yellow;
-        color: black;
-    }
-}
+        pre {
+            font-size: 1rem;
+            word-wrap: break-word;
+        }
 
-/* Dispostivos Largos (laptops/desktops, 992px para cima) */
-@media only screen and (min-width: 992px) {
-    .cor{
-        background-color: green;
-        color: white;
-        
-    }
-}
 
-/* Super Largos (Telas maiores laptops, desktops e até TVs, 1200px para cima) */
-@media only screen and (min-width: 1200px) {
-    .cor{
-        background-color: violet;
-        color: black;
-    }
-}
-</style>
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .cover img {
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+        }
+
+        .texto {
+            align-self: center;
+        }
+
+        .texto p {
+            font-size: 2rem;
+        }
+
+
+        /* Smartphones (600px para baixo) */
+        @media only screen and (max-width: 600px) {
+            .cor {
+                background-color: blue;
+                color: white;
+            }
+        }
+
+        /* Dispositivos um pouco maiores, mas ainda pequenos (Pequenos Tablets e Smartphones + largos, 600px para cima) */
+        @media only screen and (min-width: 600px) {
+            .cor {
+                background-color: red;
+                color: black;
+            }
+        }
+
+        /*Dispostivos Médios (Tablets deitados, 768px para cima) */
+        @media only screen and (min-width: 768px) {
+            .cor {
+                background-color: yellow;
+                color: black;
+            }
+        }
+
+        /* Dispostivos Largos (laptops/desktops, 992px para cima) */
+        @media only screen and (min-width: 992px) {
+            .cor {
+                background-color: green;
+                color: white;
+
+            }
+        }
+
+        /* Super Largos (Telas maiores laptops, desktops e até TVs, 1200px para cima) */
+        @media only screen and (min-width: 1200px) {
+            .cor {
+                background-color: violet;
+                color: black;
+            }
+        }
+    </style>
 </head>
 
 <header>
-<h1>Estudo sobre Media Queries</h1>
-<p>Descrição</p>
+    <h1>Estudo sobre Media Queries</h1>
+    <p>Descrição</p>
 </header>
 
 <nav>
@@ -113,8 +141,9 @@
     <p>A meta tag viewport é essencial para garantir com que o HTML/CSS lide de forma correta com telas de alta densidade. Ela normaliza o PX do css.</p>
     <pre>   &lt;meta name="viewport" content="width=device-width, initial-scale=1"></pre> <br>
     <p><b>name="viewport"</b> nome da tag<br>
-    <b>content="width=device-width</b> ajusta o tamanho do conteúdo = a largura do dispositivo<br>
-    <b>initial-scale=1"</b> escala de zoom, "1" para padrão</p>
+        <b>content="width=device-width</b> ajusta o tamanho do conteúdo = a largura do dispositivo<br>
+        <b>initial-scale=1"</b> escala de zoom, "1" para padrão
+    </p>
 
     <h2>Media Queries</h2>
     <p>Media Queries (consultas de mídia) é um módulo de CSS que permite ajustar visualização do conteúdo a uma variedade de dispositivos/telas.</p>
@@ -131,29 +160,29 @@
     <h3>Sintaxe:</h3>
     <p><b>Exemplo 1</b>: <u>após 600px aplique fundo vermelho</u><br>
         @media only screen and (min-width: 600px) {<br>
-            div{<br>
-                background-color: red;<br>
-                color: black;<br>
-            }<br>
-        }<br> 
+        div{<br>
+        background-color: red;<br>
+        color: black;<br>
+        }<br>
+        }<br>
     </p>
 
     <p><b>Exemplo 2</b>: <u>após 600px até 768px, aplique fundo vermelho</u><br>
         @media screen and (max-width: 768px) and (min-width: 600px) {<br>
-    div{<br>
+        div{<br>
         background-color: red;<br>
         color: black;<br>
-    } <br>
-} <br>
+        } <br>
+        } <br>
     </p>
 
     <p><b>Exemplo 2</b>: <u>após 1000px ou abaixo de 5000, aplique fundo vermelho</u><br>
         @media screen and (min-width: 1000px), (max-width: 500px) {<br>
-    div{<br>
+        div{<br>
         background-color: red;<br>
         color: black;<br>
-    } <br>
-} <br>
+        } <br>
+        } <br>
     </p>
 
 
@@ -163,8 +192,69 @@
     <h2>@media print</h2>
     <p>Essa propriedade vai aplicar um valor quando o usuário for imprimir uma página. Caso ele só navegue normalmente não vai aparecer nada.</p>
 
-    <h2>Usando Media Queries</h2>
-    <p>Continua...</p>
+    <h2>Responsivo com Grid repeat(auto-fit)</h2>
+    <pre>
+        .minmax {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          }
+          
+        .galeria {
+            grid-template-columns: repeat(auto-fit, 150px);
+          }
+    </pre>
+    <p><b>auto-fit</b> vai criar o máximo de colunas respeitando o tamanho informado.</p>
+    <p>O valor informado só vai funcionar corretamente se for um valor <b>fixo</b> ou <b>min</b> ou <b>max</b> ou <b>minmax</b>.</p>
+
+
+    <h2>Object Fit</h2>
+    <p><b>object-fit</b> essa propriedade vai fazer com que uma imagem que tenha um height fixo não distorça.</p>
+    <p><b>object-position</b> vai referenciar onde será o corte da imagem.</p>
+
+    <p>Exemplo:</p>
+    <pre>
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+          }
+          
+          .cover img {
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+          }
+    </pre>
+
+    <div class="grid">
+        <div class="cover">
+            <img src="./imagem/bicicleta.jpg" alt="Bicicleta" />
+        </div>
+        <div class="texto">
+            <p>
+                A Nimbus Stark é a melhor Bikcraft já criada pela nossa equipe. Ela vem
+                equipada com os melhores acessórios, o que garante maior velocidade.
+            </p>
+            <p>
+                A Nimbus Stark é a melhor Bikcraft já criada pela nossa equipe. Ela vem
+                equipada com os melhores acessórios, o que garante maior velocidade.
+            </p>
+        </div>
+    </div>
+
+
+    <h2>max-width</h2>
+    
+        <h4>max-width</h4>
+        <p>O max-width determina um valor máximo de largura do elemento. Não deixe os elementos livres na tela, principal os textos.</p>
+
+        <h4>ch</h4>
+        <p>Unidade relacionada à largura do caractere 0 da tipografia.</p>
+        
+        <h4>Largura do texto</h4>
+        <p>Controlar o tamanho máximo da largura do texto é essencial para garantir uma boa leiturabilidade. Para corpo de texto entre 50-75 caracteres é o ponto ideal.</p>
+
+        <h4>margin: 0 auto;</h4>
+        <p>margin top e bottom 0. margin left e right auto (automática, define valores iguais com base no espaço em branco e alinha o conteúdo ao centro).</p>
 </body>
 
 <footer>
