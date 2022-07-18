@@ -243,18 +243,41 @@
 
 
     <h2>max-width</h2>
-    
-        <h4>max-width</h4>
-        <p>O max-width determina um valor máximo de largura do elemento. Não deixe os elementos livres na tela, principal os textos.</p>
 
-        <h4>ch</h4>
-        <p>Unidade relacionada à largura do caractere 0 da tipografia.</p>
-        
-        <h4>Largura do texto</h4>
-        <p>Controlar o tamanho máximo da largura do texto é essencial para garantir uma boa leiturabilidade. Para corpo de texto entre 50-75 caracteres é o ponto ideal.</p>
+    <h4>max-width</h4>
+    <p>O max-width determina um valor máximo de largura do elemento. Não deixe os elementos livres na tela, principal os textos.</p>
 
-        <h4>margin: 0 auto;</h4>
-        <p>margin top e bottom 0. margin left e right auto (automática, define valores iguais com base no espaço em branco e alinha o conteúdo ao centro).</p>
+    <h4>ch</h4>
+    <p>Unidade relacionada à largura do caractere 0 da tipografia.</p>
+
+    <h4>Largura do texto</h4>
+    <p>Controlar o tamanho máximo da largura do texto é essencial para garantir uma boa leiturabilidade. Para corpo de texto entre 50-75 caracteres é o ponto ideal.</p>
+
+    <h4>margin: 0 auto;</h4>
+    <p>margin top e bottom 0. margin left e right auto (automática, define valores iguais com base no espaço em branco e alinha o conteúdo ao centro).</p>
+
+
+    <h2>prefers-color-scheme</h2>
+    <p>A @media prefers-color-scheme irá executar o código css conforme a preferência de tema do usuário. Funciona da mesma forma que o @media querie com o max-width, porém agora em relação ao modo escuro (dark) ou claro (light)</p>
+    <p>
+        <pre>
+            @media (prefers-color-scheme: dark) {
+                :root {
+                  --fundo: #222;
+                  --texto-1: #eee;
+                  --texto-2: #bbb;
+                }
+              }
+              
+              @media (prefers-color-scheme: light) {
+                :root {
+                  --fundo: #fff;
+                  --texto-1: #111;
+                  --texto-2: #444;
+                }
+              }
+        </pre>
+    </p>
 </body>
 
 <footer>
