@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Esse é meu primeiro site!">
+  <meta name="keywords" content="html,css,js,javascript,estudo">
+  <meta name="author" content="Teodoro Lucas">
+
+  <title>Estudos sobre Fetch</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body {
+      margin-left: 10px;
+    }
+
+    label {
+      display: block;
+    }
+
+    input {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>LOGO</h1>
+
+    <nav>
+    </nav>
+    <a href="001JavaScript.html">Voltar</a>
+  </header>
+
+  <main>
+    <h1>FETCH API</h1>
+    <p>Permite fazermos requisições HTTP através do método fetch(). Este método retorna a resolução de uma Promise. Podemos então utilizar o then para interagirmos com a resposta, que é um objeto do tipo Response.</p>
+
+
+    <br>
+    <br>
+    <hr>
+    <p>Buscando informação do CEP</p>
+
+    <form id="buscaCep" action="">
+      <label for="cep">CEP</label>
+      <input type="text" name="cep" id="cep">
+      <input type="button" value="Buscar Cep" id="btnCep">
+    </form>
+    <div class="resultadoCep">
+
+    </div>
+    <br>
+    <br>
+    <hr>
+
+
+    <p>Buscando preço de compra do Bitcoin</p>
+    <div>
+      <h2>Preço BTC</h2>
+      <p class="btc"></p>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+
+    <p>Piadas aleatórias do Chuck Norris</p>
+    <div>
+      <p class="piada"></p>
+      <button class="proxima">Próxima</button>
+    </div>
+  </main>
+
+  <footer>
+  </footer>
+  <script>
+
+    //Busca CEP
+    const inputCep = document.getElementById('cep');
+    const btnCep = document.getElementById('btnCep');
+    const resultadoCep = document.querySelector('.resultadoCep');
+
+    btnCep.addEventListener('click', handleClick);
+
+    function handleClick(event) {
+      event.preventDefault();
+      const cep = inputCep.value;
+      buscaCep(cep);
+    }
+
+    function buscaCep(cep) {
+      fetch(`https://viacep.com.br/ws/${cep}/json/`)
+        .then(response => response.text())
+        .then(body => {
+          resultadoCep.innerText = body;
+        })
+    }
+
+
+    //Preço de compra do Bitcoin
+    const btcDisplay = document.querySelector('.btc');
+
+
+    function fetchBtc() {
+      fetch('https://blockchain.info/ticker')
+        .then(response => response.json())
+        .then(btcJson => {
+          btcDisplay.innerText = ('R$ ' + btcJson.BRL.buy).replace('.', ',')
+        })
+    }
+
+    setInterval(fetchBtc, 600000);
+
+    fetchBtc();
+
+
+    //Piadas aleatórias de Chuck Norris
+    const btnProxima = document.querySelector('.proxima');
+    const paragrafoPiada = document.querySelector('.piada');
+
+    function puxarPiada(){
+      fetch('https://api.chucknorris.io/jokes/random')
+      .then (r => r.json())
+      .then (piada => {
+        paragrafoPiada.innerText = piada.value;
+      })
+    }
+
+    btnProxima.addEventListener('click', puxarPiada);
+
+    puxarPiada();
+
+  </script>
+  <script src="../script.js"></script>
+</body>
+
+</html>
