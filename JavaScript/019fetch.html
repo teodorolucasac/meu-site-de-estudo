@@ -62,7 +62,8 @@
     <p>Buscando preço de compra do Bitcoin</p>
     <div>
       <h2>Preço BTC</h2>
-      <p class="btc"></p>
+      <p class="btcBRL"></p>
+      <p class="btcUSD"></p>
     </div>
 
     <br>
@@ -74,6 +75,12 @@
       <p class="piada"></p>
       <button class="proxima">Próxima</button>
     </div>
+
+    <br>
+    <br>
+    <hr>
+    <p>Saiba mais em:</p>
+    <p><a href="https://www.origamid.com/slide/javascript-completo-es6/#/0603-fetch/12" target="_blank">https://www.origamid.com/slide/javascript-completo-es6/#/0603-fetch/12</a></p>
   </main>
 
   <footer>
@@ -103,20 +110,31 @@
 
 
     //Preço de compra do Bitcoin
-    const btcDisplay = document.querySelector('.btc');
-
+    const btcDisplayBRL = document.querySelector('.btcBRL');
 
     function fetchBtc() {
       fetch('https://blockchain.info/ticker')
         .then(response => response.json())
         .then(btcJson => {
-          btcDisplay.innerText = ('R$ ' + btcJson.BRL.buy).replace('.', ',')
+          btcDisplayBRL.innerText = ('R$ ' + btcJson.BRL.buy).replace('.', ',')
+        })
+    }
+    const btcDisplayUSD = document.querySelector('.btcUSD');
+
+
+    function fetchBtc2() {
+      fetch('https://blockchain.info/ticker')
+        .then(response => response.json())
+        .then(btcJson => {
+          btcDisplayUSD.innerText = ('U$ ' + btcJson.USD.buy)
         })
     }
 
     setInterval(fetchBtc, 600000);
-
+    setInterval(fetchBtc2, 600000);
+  
     fetchBtc();
+    fetchBtc2();
 
 
     //Piadas aleatórias de Chuck Norris

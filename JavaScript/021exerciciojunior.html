@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Meu Site de Estudos</title>
+<link rel="stylesheet" href="../style.css">
+<style>
+  input{
+    margin-left: 10px;
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+  span{
+    padding: 5px;
+    border: 1px solid gray;
+    background-color: rgb(225, 225, 225);
+    display: inline-block;
+  }
+
+  table {
+        width: 60%;
+        border: 1px solid black;
+        text-align: center;
+        /* border-collapse: collapse; */
+    }
+    td, th {
+        border: 1px solid black;
+    }
+
+</style>
+</head>
+
+<body>
+<header>
+<h1>LOGO</h1>
+
+<nav>
+</nav>
+<a href="001JavaScript.html">Voltar</a>
+</header>
+
+<main>
+<h1>Exercício Junior</h1>
+<p>Receber dados da API em Json e alimentar tabela Front End.</p>
+</main>
+<br>
+<br>
+<hr>
+
+<section>
+  <form class="buscarApi">
+    <h2>Recebendo API Json única</h2>
+    <p>Digite aqui o número da requisição (array de 1 a 100)</p>
+    <input type="text" name="buscarArray" id="buscarArray">
+    <input type="button" value="Buscar" id="btnBuscar">
+  </form>
+    <div class="receberApi">
+      <p>Seu User ID é: <span class="receberUserID"></span></p>
+      <p>Seu ID é: <span class="receberID"></span></p>
+      <p>Title: <span class="receberTitle"></span></p>
+      <p>Body: <span class="receberBody"></span></p>
+    </div>
+</section>
+<br>
+<br>
+<hr>
+
+<section>
+  <h2>Recebendo API Json completa</h2>
+  <p>Digite aqui o número da requisição (array de 1 a 100)</p>
+  <table>
+    <thead>
+      <tr>
+        <th>UserId</th>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Body</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody_Info"></tbody>
+  </table>
+</section>
+<footer>
+</footer>
+
+<script>
+  const inputBuscar = document.getElementById('buscarArray')
+  const btnBuscar = document.getElementById('btnBuscar')
+  const receberApi = document.getElementById('receberApi')
+
+  const receberUserID = document.querySelector('.receberUserID')
+  const receberID = document.querySelector('.receberID')
+  const receberTitle = document.querySelector('.receberTitle')
+  const receberBody = document.querySelector('.receberBody')
+
+  btnBuscar.addEventListener('click', handleClick)
+
+  function handleClick(event){
+    event.preventDefault();
+    buscaInfo();
+  }
+
+  function buscaInfo(){
+    const valorArray = inputBuscar.value;
+    fetch(`https://jsonplaceholder.typicode.com/posts/${valorArray}`)
+    .then(r => r.json())
+    .then(infoJson => {
+      receberUserID.innerText = infoJson.userId
+      receberID.innerText = infoJson.id
+      receberTitle.innerText = infoJson.title
+      receberBody.innerText = infoJson.body
+    })
+  }
+
+  const apiCompletaJson = document.querySelector('.apiCompleta');
+  fetch('https://jsonplaceholder.typicode.com/posts')
+  .then(r => r.json())
+  .then(json => {
+    apiCompletaJson.innerHTML = json
+  })
+
+
+  const listInfo = async ()=> {
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+    const lista = await response.json();
+
+    let tableBody = ``;
+    lista.forEach((list, index) => {
+      tableBody+=`<tr>
+        <td>${list.userId}</td>
+        <td>${list.id}</td>
+        <td>${list.title}</td>
+        <td>${list.body}</td>
+      `;
+    });
+    tableBody_Info.innerHTML = tableBody
+  };
+
+  window.addEventListener("load", function (){
+    listInfo();
+  });
+
+  //document.getElementById('area9').innerHTML = "Rua: " +rua+ "<br> Cidade: " +cidade+ "<br> Estado: " +estado;
+</script>
+<script src="../script.js"></script>
+</body>
+
+</html>

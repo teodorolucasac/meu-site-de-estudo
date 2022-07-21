@@ -2,39 +2,97 @@
 <html lang="pt-br">
 
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Esse é meu primeiro site!">
-<meta name="keywords" content="html,css,js,javascript,estudo">
-<meta name="author" content="Teodoro Lucas">
+  <meta name="description" content="Esse é meu primeiro site!">
+  <meta name="keywords" content="html,css,js,javascript,estudo">
+  <meta name="author" content="Teodoro Lucas">
 
-<title>Estudos sobre promise</title>
-<link rel="stylesheet" href="../style.css">
+  <title>Estudos sobre promise</title>
+  <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
-<header>
-<h1>LOGO</h1>
+  <header>
+    <h1>LOGO</h1>
 
-<nav>
-</nav>
-<a href="001JavaScript.html">Voltar</a>
-</header>
+    <nav>
+    </nav>
+    <a href="001JavaScript.html">Voltar</a>
+  </header>
 
-<main>
-<h1>NEW PROMISE()</h1>
-<p>Promise é uma função construtora de promessas. Existem dois resultados possíveis de uma promessa, ela pode ser resolvida, com a execução do primeiro argumento, ou rejeitada se o segundo argumento for ativado.</p>
+  <main>
+    <h1>NEW PROMISE()</h1>
+    <p>Promise é uma função construtora de promessas. Existem dois resultados possíveis de uma promessa, ela pode ser resolvida, com a execução do primeiro argumento, ou rejeitada se o segundo argumento for ativado.</p>
 
-<P>Saiba mais:</P>
-<a href="https://www.origamid.com/slide/javascript-completo-es6/#/0602-promises/1" target="_blank">https://www.origamid.com/slide/javascript-completo-es6/#/0602-promises/1</a>
-</main>
+    <P>Saiba mais:</P>
+    <a href="https://www.origamid.com/slide/javascript-completo-es6/#/0602-promises/1" target="_blank">https://www.origamid.com/slide/javascript-completo-es6/#/0602-promises/1</a>
+  </main>
 
-<footer>
-</footer>
+  <section>
 
-<script src="../script.js"></script>
+  </section>
+
+  <footer>
+  </footer>
+  <script>
+    // const promesa = new Promise((resolver, rejeitar) => {
+    //   let condicao = true;
+    //   if (condicao) {
+    //     setTimeout (()=>{
+    //       resolver({nome:'Lucas', idade: 27});
+    //     }, 2000)
+    //   } else {
+    //     rejeitar(Erro('Um erro ocorreu na promise'))
+    //   }
+    // });
+
+    // const retorno = promesa
+    // .then(resolucao => {
+    //   console.log(resolucao);
+    //   resolucao.profissao = 'Programador';
+    //   return resolucao
+    // })
+    // .then(resolucao => {
+    //   console.log(resolucao)
+    // }, rejeitada => {
+    //   console.log(rejeitada)
+    // }).finally(() => {
+    //   console.log('Acabou')
+    // })
+
+    // console.log(retorno);
+    // console.log(promesa);
+
+    const login = new Promise((resolve) => {
+      setTimeout(()=>{
+        resolve('Usuário Logado')
+      }, 1000)
+    })
+
+    const dados = new Promise((resolve) => {
+      setTimeout(() => {
+        resolve('Dados Carregados')
+      }, 1500)
+    })
+
+    const carregouTudo = Promise.race([login, dados]);
+    
+
+    carregouTudo.then((resolucao) => {
+      console.log(resolucao);
+    })
+
+    const carregouTudo2 = Promise.all([login, dados]);
+    
+
+    carregouTudo2.then((resolucao) => {
+      console.log(resolucao);
+    })
+  </script>
+  <script src="../script.js"></script>
 </body>
 
 </html>
