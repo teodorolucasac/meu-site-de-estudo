@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Estudos sobre Prototype</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+<header>
+<h1>LOGO</h1>
+
+<nav>
+</nav>
+<a href="001JavaScript.html">Voltar</a>
+</header>
+
+<main>
+<h1>Prototype</h1>
+<p>Os metodos de cada objeto no Javascript são herdados através do Prototype, ou seja cada tipo de dado diferente (typeof) recebe metodos e propriedades diferentes herdadas nativamente</p>
+
+<p>Para acessar o tipo de dado (typeof) use:</p>
+<pre>
+    Object.getOwnPropertyNames(Array.prototype);
+
+
+</pre>
+
+
+<p>Para acessar o nome dos métodos herdados use:</p>
+<pre>
+    Object.getOwnPropertyNames(NodeList.prototype)
+    Object.getOwnPropertyNames(HTMLCollection.prototype)
+    Object.getOwnPropertyNames(Document.prototype)
+
+
+</pre>
+
+<p>Mais informações:</p>
+<a href="https://www.origamid.com/slide/javascript-completo-es6/#/0402-prototype/7">https://www.origamid.com/slide/javascript-completo-es6/#/0402-prototype/7</a>
+</main>
+
+<footer>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+
+</html>
