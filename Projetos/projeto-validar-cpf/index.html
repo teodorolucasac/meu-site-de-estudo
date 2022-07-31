@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Validar CPF</title>
+  <style>
+    section{
+      background-color: rgb(207, 207, 207); 
+      padding: 40px; 
+      margin: 20px;
+      max-width: 400px;
+      text-align: center;
+      box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.3);
+    }
+
+    label{
+      display: block;
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: bold;
+      margin: 10px 0 5px 0;
+    }
+
+    input{
+      min-width: 250px;
+      padding: 5px;
+      border: 2px solid black;
+      font-size: 1em;
+      box-sizing: border-box;
+    }
+
+    input.erro{
+      border-color: red;
+    }
+    input.valido{
+      border-color: green;
+    }
+
+    input::placeholder{
+      color: rgba(0,0,0,.4);
+    }
+    .erro-text{
+      display: none;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: .875rem;
+      color: red;
+    }
+    .erro-text.ativar{
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <h1>Validando CPF</h1>
+    <p>corrigindo os campos</p>
+    <p><a href="../001ProjetosEstudo.html">Voltar</a></p>
+    <form action="">
+      <label for="cpf">CPF</label>
+      <input type="text" name="cpf" id="cpf" placeholder="***.***.***-**">
+    </form>
+  </section>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
