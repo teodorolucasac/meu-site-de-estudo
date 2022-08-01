@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animais Fantásticos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="css/style.css">
     <script>
         document.documentElement.className += ' js';
@@ -29,9 +30,11 @@
                         <li><a href="investidores.html">Investidores</a></li>
                     </ul>
                 </li>
-                <li><a data-modal="abrir" href="login.html" target="_blank">Login →</a></li>
+                <li><a data-modal="abrir" href="login.html" target="_blank">Login <span class="arrow-black"></span></a></li>
+                <li><a href="../001ProjetosEstudo.html">Voltar</a></li>
             </ul>
         </nav>
+        
         <section class="grid-section animais" data-anime="scroll" id="animais">
             <h1 class="titulo">Animais Fantásticos</h1>
             <ul class="animais-lista" data-tab="menu">
@@ -119,10 +122,31 @@
             </dl>
         </section>
 
+        <section class="grid-section galeria" data-anime="scroll">
+            <ul class="custom-controls">
+                <li><img src="imagens/slide/foto1-thumb.jpg" alt=""></li>
+                <li><img src="imagens/slide/foto2-thumb.jpg" alt=""></li>
+                <li><img src="imagens/slide/foto3-thumb.jpg" alt=""></li>
+                <li><img src="imagens/slide/foto4-thumb.jpg" alt=""></li>
+                <li><img src="imagens/slide/foto5-thumb.jpg" alt=""></li>
+                <li><img src="imagens/slide/foto6-thumb.jpg" alt=""></li>
+            </ul>
+            <div class="slide-wrapper">
+                <ul class="slide">
+                    <li><img src="imagens/slide/foto1.jpg" alt=""></li>
+                    <li><img src="imagens/slide/foto2.jpg" alt=""></li>
+                    <li><img src="imagens/slide/foto3.jpg" alt=""></li>
+                    <li><img src="imagens/slide/foto4.jpg" alt=""></li>
+                    <li><img src="imagens/slide/foto5.jpg" alt=""></li>
+                    <li><img src="imagens/slide/foto6.jpg" alt=""></li>
+                </ul>
+            </div>
+        </section>
+
         <section class="grid-section numeros" data-anime="scroll">
             <h1 class="titulo">Números</h1>
             <div class="numeros-grid">
-                
+
             </div>
         </section>
 
@@ -148,7 +172,7 @@
 
     <section class="modal-container" data-modal="container">
         <div class="modal">
-            <button data-modal="fechar" class="fechar">X</button>
+            <button data-modal="fechar" class="fechar"></button>
             <form action="">
                 <label for="email">Email</label>
                 <input type="text" for="email" id="email">
