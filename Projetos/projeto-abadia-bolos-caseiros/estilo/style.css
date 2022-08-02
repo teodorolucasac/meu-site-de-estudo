@@ -1,4 +1,4 @@
-@charset "UTF-8"
+@charset "UTF-8";
 
 @font-face {
     font-family: 'beauty';
@@ -33,7 +33,7 @@
 * {
     margin: 0px;
     padding: 0px;
-    border: 0px;
+    box-sizing: border-box;
 }
 
 html, body {
@@ -81,15 +81,8 @@ div.titulo img {
 }
 
 
-
-
 main {
     text-align: center;
-
-}
-
-section.geral {
-
 }
 
 section {
@@ -135,16 +128,6 @@ section.scardapio p, h3 {
     line-height: 0.8em;
     text-transform: capitalize;
 }
-
-
-
-
-
-
-div.geralcarrinho, div.geralcardapio {
-    position: ;
-}
-
 
 
 
