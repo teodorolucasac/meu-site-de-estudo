@@ -20,17 +20,47 @@
 
 <nav>
 </nav>
-<a href="001HTML.html">Voltar</a>
+<a href="001GitEGitHub.html">Voltar</a>
 </header>
 
 <main>
 <h1>Comandos</h1>
 <p></p>
-</main>
+
+<h3>Recursos / Atalhos</h3>
+<p>
+  <b>tecla tab</b> = auto completa um possível argumento<br>
+</p>
+
+<h3>Logando GitHub no Git</h3>
+<p>
+<b>git config --global  user.name "SeuUserName"</b> = <br>
+<b>git config --global user.email "emaildogithub@gmail.com</b> = <br>
+<b>git config --list</b> = confere suas config inclusive o usuario e email<br>
+</p>
+
+<h3>Navegar</h3>
+<p>
+  <b>cd pastaNome</b> = avança uma a frente (pastaNome)<br>
+  <b>cd ..</b> = volta uma pasta atrás<br>
+  <b>C:\Program Files\Git</b> = avança varias pastas do caminho<br>
+  <b>mkdir NomePasta</b> = cria uma pasta (NomePasta)<br>
+  <b>touch NomeArquivo.js</b> = cria um arquivo<br>
+  <b>touch NomePasta/NomeArquivo2.js</b> = cria arquivo dentro de uma pasta específica<br>
+  <b>rm NomeArquivo</b> = remove um arquivo (NomeArquivo)<br>
+  <b>rm -r NomePasta</b> = remove uma pasta (NomePasta)<br>
+  <b>rm -rf NomePasta .git</b> = remove uma diretorio dentro da pasta "NomePasta"<br>
+  <b>rm -rf NomePasta</b> = remove a pasta "NomePasta" junto com diretorio git dentro dela<br>
+  <b>rmdir NomePasta</b> = remove diretorios vazios<br>
+  <b></b> = <br>
+</p>
+
 <h3>Salvar local e remoto 1ª vez:</h3>
 <p>
-  <b>git init</b> = inicia um repositório remoto na pasta atual <br>
-  <b>git add .</b> = joga os arquivos na area de Stage preparando para salvar <br>
+  <b>git init</b> = inicia/cria um repositório remoto na pasta atual <br>
+  <b>git add . (ou git add -A)</b> = joga TODOS os arquivos na area de Stage preparando para salvar <br>
+  <b>git add -u</b> = da update em um arquivo que já está no Stage<br>
+  <b>git add index.html</b> = joga apenas o arquivo html no stage <br>
   <b>git commit -m "Nome explicativo do Commit"</b> = cria um commit <br>
   <b>git branch -M main</b> = informa o nome da branch no commit <br>
   <b>git remote add origin https://github.com/teodorolucasac/Github-Nelio-Alves.git</b> = prepara para subir no repositório remoto <br>
@@ -43,9 +73,38 @@
   <b>git push</b>
 </p>
 
+<img src="imagens/criarRepositorio.png" width="70 0px" alt="comandos para criar repositório">
+
+<h3>Apagar commit mantendo as alterações</h3>
+<p>
+  <b>git reset --soft HEAD~1</b> = apaga commit sem retirar as alterações
+</p>
+
+<h3>Apagar commit apagando as alterações</h3>
+<p>
+  <b>git reset --hard códigoDoCommit</b> = apaga o commit e também apaga as alterações a partir do codigo do commit informado
+</p>
+
+<h3>Pull (inverso do push)</h3>
+<p>
+  <b>git pull origin main</b> = git pull NomeDoRemote NomeDaBranch
+</p>
+
+<h3>Pull/Push DESCARTANDO alteração do Github que não está no repositório remoto</h3>
+<p>
+  <b>git pull -f origin main</b> = git pull NomeDoRemote NomeDaBranch (trás da núvem destruindo commits posteriores local) <br>
+  <b>git push -f</b> = manda para núvem destruindo commits posteriores da núvem
+</p>
+
 <h3>Clonar projetos</h3>
 <p>
   <b>git clone https://github.com/teodorolucasac/Github-Nelio-Alves.git</b>
+</p>
+
+<h3>Apontar um repositorio remoto para outro repositorio remoto</h3>
+<p>
+  <b>git remote set-url origin URLdoRepositorioRemoto</b> <br>
+  <b>git push -u origin main</b>
 </p>
 
 <h3>Abrir VS Code</h3>
@@ -53,12 +112,43 @@
   <b>code .</b> = abre vscode na pasta atual <br>
 </p>
 
+<h3>GERAL</h3>
 <p>
-  clear <br>
-  git status <br>
-
+  <b>clear</b> = limpa a tela do git<br>
+  <b>git status</b> = status do versionamento da pasta atual<br>
+  <b>git log</b> = mostra histórico de versões<br>
+  <b>git log --oneline</b> = histórico de versões resumido <br>
+  <b>git reset</b> = Volta pro status anterior do git <br>
+  <b>ls</b> = mostra os arquivos da pasta<br>
+  <b>ls -all</b> = mostra todos arquivos da pasta, inclusive ocultos<br>
+  <b>git config --global core.autocrlf false</b> = impede o git de modificar as quebras de linhas<br>
+  <b>(aperta ESC) :q</b> = Sair do editor de texto Vim<br>
+  <b>git checkout código do commit</b> = volta para um commit anterior do código informado<br>
+  <b>git checkout NomeBranch</b> = volta para o ultimo commit da branch informada(exemplo: main)<br>
+  <b>git checkout HEAD~2</b> = volta para 2 commits anteriores do main<br>
+  <b>git reset</b> = retira as modificações do Stage<br>
+  <b>git clean -df</b> = limpa alguma modificação na branch 01/02<br>
+  <b>git checkout -- .</b> = limpa alguma modificação na branch 02/02<br>
 </p>
 
+<h3>Editor VIM</h3>
+
+<p>
+  <b>i</b> = habilitar o modo de edição <br>
+  <br>
+  <b>
+    &lt;ESC> <br>
+    :wq <br>
+    &lt;ENTER> </b> = Sair do VIM, salvando as alterações <br>
+    <br>
+  <b>
+    &lt;ESC> <br>
+    :q! <br>
+    &lt;ENTER> </b> Sair do VIM, descartando as alterações<br>
+</p>
+
+
+</main>
 <footer>
 </footer>
 
