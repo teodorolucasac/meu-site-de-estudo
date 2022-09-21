@@ -27,61 +27,75 @@
 <h1>Comandos</h1>
 <p></p>
 
-<h3>Recursos / Atalhos</h3>
+<h3>Logando/Sincronizando GitHub no Git</h3>
 <p>
-  <b>tecla tab</b> = auto completa um possível argumento<br>
+<b>git config --global  user.name "Seu User Name"</b> = Insere seu nome de usuário<br>
+<b>git config --global user.email "emaildogithub@gmail.com</b> = Insere seu email<br>
+<b>git config --list</b> = confere suas config, inclusive o usuario e email<br>
 </p>
 
-<h3>Logando GitHub no Git</h3>
+<h3>Navegar entre pastas</h3>
 <p>
-<b>git config --global  user.name "SeuUserName"</b> = <br>
-<b>git config --global user.email "emaildogithub@gmail.com</b> = <br>
-<b>git config --list</b> = confere suas config inclusive o usuario e email<br>
-</p>
-
-<h3>Navegar / Criar</h3>
-<p>
-  <b>cd pastaNome</b> = avança uma a frente (pastaNome)<br>
+  <b>cd pastaNome</b> = avança uma pasta a frente<br>
   <b>cd ..</b> = volta uma pasta atrás<br>
-  <b>C:\Program Files\Git</b> = avança varias pastas do caminho<br>
+  <b>cd C:\Program Files\Git</b> = avança todo o caminho<br>
   <b>dir</b> = lista todas as pastas do local <br>
-  <b>mkdir NomePasta</b> = cria uma pasta (NomePasta)<br>
-  <b>touch NomeArquivo.js</b> = cria um arquivo<br>
+</p>
+
+<h3>Criar pastas e arquivos</h3>
+<p>
+  <b>mkdir NomePasta</b> = cria uma pasta<br>
+  <b>touch NomeArquivo.js</b> = cria um arquivo com formato informado<br>
   <b>touch NomePasta/NomeArquivo2.js</b> = cria arquivo dentro de uma pasta específica<br>
+</p>
+
+<h3>Mover arquivos</h3>
+<p>
   <b>mv NomeDoArquivo /NomeDaPasta</b> = move um arquivo para dentro da pasta mencionada<br>
 </p>
-<br>
 
-<h3>Remover</h3>
+<h3>Remover arquivos e pastas</h3>
 <p>
-<b>rm NomeArquivo</b> = remove um arquivo (NomeArquivo)<br>
-<b>rm -r NomePasta</b> = remove uma pasta (NomePasta)<br>
+<b>rm NomeArquivo</b> = remove um arquivo<br>
+<b>rm -r NomePasta</b> = remove uma pasta<br>
 <b>rm -rf NomePasta .git</b> = remove uma diretorio dentro da pasta "NomePasta"<br>
 <b>rm -rf NomePasta</b> = remove a pasta "NomePasta" junto com diretorio git dentro dela<br>
-<b>rmdir NomePasta</b> = remove diretorios vazios<br>
-<b></b> = <br>
-<br>
+<b>rmdir NomePasta</b> = remove apenas diretorios vazios<br>
+</p>
 
 <h3>Salvar local e remoto 1ª vez:</h3>
 <p>
   <b>git init</b> = inicia/cria um repositório remoto na pasta atual <br>
-  <b>git remote add origin https://github.com/teodorolucasac/Github-Nelio-Alves.git</b> = prepara para subir no repositório remoto <br>
-  <b>git pull origin main</b> = descer arquivos do remoto para local (gitignore / readme) <br>
-  <b>git add . (ou git add -A)</b> = joga TODOS os arquivos na area de Stage preparando para salvar <br>
-  <b>*git add -u</b> = da update em um arquivo que já está no Stage<br>
-  <b>*git add index.html</b> = joga apenas o arquivo html no stage <br>
+  <b>git branch -M main</b> = altera a branch para main<br>
+  <br>
+  <b>git remote add origin https://github.com/teodorolucasac/Github-Curso.git</b> = vincula o repositório local ao remoto <br>
+  <b>git pull origin main</b> = desce os arquivos do remoto para local pela primeira vez (gitignore / readme) <br>
+  <br>
+  <b>git add . (ou git add -A)</b> = joga TODOS os arquivos modificados/criados para area de Stage <br>
+  <b>**git add -u</b> = da update em um arquivo que já está no Stage<br>
+  <b>**git add index.html</b> = joga apenas o arquivo html no stage <br>
+  <b>**git restore --staged nomeDoArquivo.txt ou c:/caminhoda/pasta01</b> = retira um arquivo ou pasta específica do Stage <br>
+  <br>
   <b>git commit -m "Nome explicativo do Commit"</b> = cria um commit <br>
-  <b>git branch -M main</b> = informa o nome da branch no commit <br>
-  <b>git push -u origin main</b> = faz o push para o repositório remoto
+  <b>git push -u origin main</b> = faz o push para o repositório remoto pela primeira vez <br>
 </p>
-<h3>Salvar local e remoto 2ª vez:</h3>
+
+<img src="imagens/criarRepositorio.png" width="500px" alt="comandos para criar repositório">
+
+<h3>Push e Pull pela 2ª vez:</h3>
 <p>
+  <b>git pull</b> <br>
+  <br>
   <b>git add .</b> <br>
   <b>git commit -m "Nome explicativo do Commit"</b> <br>
   <b>git push</b>
 </p>
 
-<img src="imagens/criarRepositorio.png" width="70 0px" alt="comandos para criar repositório">
+<h3>Pull/Push DESCARTANDO alteração do Github que não está no repositório remoto</h3>
+<p>
+  <b>git pull -f origin main</b> = git pull NomeDoRemote NomeDaBranch (trás da núvem destruindo commits posteriores local) <br>
+  <b>git push -f</b> = manda para núvem destruindo commits posteriores da núvem
+</p>
 
 <h3>Apagar commit mantendo as alterações</h3>
 <p>
@@ -93,20 +107,9 @@
   <b>git reset --hard códigoDoCommit</b> = apaga o commit e também apaga as alterações a partir do codigo do commit informado
 </p>
 
-<h3>Pull (inverso do push)</h3>
-<p>
-  <b>git pull origin main</b> = git pull NomeDoRemote NomeDaBranch
-</p>
-
-<h3>Pull/Push DESCARTANDO alteração do Github que não está no repositório remoto</h3>
-<p>
-  <b>git pull -f origin main</b> = git pull NomeDoRemote NomeDaBranch (trás da núvem destruindo commits posteriores local) <br>
-  <b>git push -f</b> = manda para núvem destruindo commits posteriores da núvem
-</p>
-
 <h3>Clonar projetos</h3>
 <p>
-  <b>git clone https://github.com/teodorolucasac/Github-Nelio-Alves.git</b>
+  <b>git clone https://github.com/teodorolucasac/Github-Nelio-Alves.git</b> = cria um clone do repositório remoto para pasta atual local <br>
 </p>
 
 <h3>Apontar um repositorio remoto para outro repositorio remoto</h3>
@@ -122,28 +125,30 @@
 
 <h3>GERAL</h3>
 <p>
+  <b>dir</b> = lista todas as pastas do local <br>
+  <b>ls</b> = mostra os arquivos da pasta<br>
+  <b>ls -all</b> = mostra todos arquivos da pasta, inclusive ocultos<br>
   <b>clear</b> = limpa a tela do git<br>
   <b>git status</b> = status do versionamento da pasta atual<br>
   <b>git log</b> = mostra histórico de versões<br>
   <b>git log --oneline</b> = histórico de versões resumido <br>
-  <b>git reset</b> = Volta pro status anterior do git <br>
-  <b>ls</b> = mostra os arquivos da pasta<br>
-  <b>ls -all</b> = mostra todos arquivos da pasta, inclusive ocultos<br>
+  <br>
   <b>git config --global core.autocrlf false</b> = impede o git de modificar as quebras de linhas<br>
+  <br>
   <b>(aperta ESC) :q</b> = Sair do editor de texto Vim<br>
-  <b>git checkout código do commit</b> = volta para um commit anterior do código informado<br>
-  <b>git checkout NomeBranch</b> = volta para o ultimo commit da branch informada(exemplo: main)<br>
+  <br>
+  <b>git checkout código-do-commit</b> = volta para um commit anterior do código informado<br>
+  <b>git checkout main</b> = volta para o ultimo commit da branch main (ou branch informada)<br>
   <b>git checkout HEAD~2</b> = volta para 2 commits anteriores do main<br>
+  <br>
   <b>git reset</b> = retira as modificações do Stage<br>
   <b>git restore --staged nomeDoArquivo.txt ou c:/caminhoda/pasta01</b> = retira um arquivo ou pasta específica do stage
+  <br>
   <b>git clean -df</b> = limpa alguma modificação na branch 01/02<br>
   <b>git checkout -- .</b> = limpa alguma modificação na branch 02/02<br>
-  <b>git checkout main</b> = muda da branch master (inicial do git) para main (padrão github) <br>
-  
 </p>
 
 <h3>Editor VIM</h3>
-
 <p>
   <b>i</b> = habilitar o modo de edição <br>
   <br>
@@ -156,6 +161,10 @@
     &lt;ESC> <br>
     :q! <br>
     &lt;ENTER> </b> Sair do VIM, descartando as alterações<br>
+    <br>
+    <b>CTRL + q</b> = Apenas sai do Vim <br>
+    <br>
+    <b>CTRL + c</b> = Sai de algum comandos
 </p>
 
 
