@@ -91,6 +91,7 @@ img {
   display: flex;
   justify-content: space-around;
   margin: 20px 0px;
+  padding: 0 40vw;
 }
 
 .arrow-nav button{
