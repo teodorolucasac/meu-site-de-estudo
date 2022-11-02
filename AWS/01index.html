@@ -20,6 +20,8 @@
 
 <nav style="text-align: left;">
   <a href="02IPv4.html">IPv4</a>
+  <a href="03terraform.html">IPv4</a>
+  <a href="04ansible.html">IPv4</a>
 </nav>
 <a href="../index.html">Voltar</a>
 </header>
@@ -54,9 +56,9 @@
 <p>Você precisa: 01- criar uma conta na AWS <br>
 02- Em VPC, criar sua VPC (salvo engano já vem com default) <br>
 03- Criar pelo menos 3 sub-nets (aba VPC), utilizando o mesma conexão de rede da sua VPC (CIDRs IPv4) <br>
-04- Criar um Security Group (aba EC2) (salvo engano já vem com default) <br>
-05- Criar uma Instance EC2 com as especificações da máquina, vincular ela no seu Security Group (ou criar SG novo e vincular ele na VPC também) <br>
-06- Criar um Elastic IP (aba EC2) caso a sua EC2 não tenha, você precisa disso pra usar o IP Público <br>
+04- Criar um Security Group (aba VPC ou EC2) (salvo engano já vem com default) <br>
+05- Criar um Elastic IP (aba VPC ou EC2) caso a sua não tenha, você precisa disso pra usar o IP Público na EC2 <br>
+06- Criar uma Instance EC2 com as especificações da máquina, vincular Elastic IP e Security Group (ou criar SG novo e vincular ele na VPC também) <br>
 07- Criar um Sub-Net Group (aba RDS), e vincular todas as suas 3 sub-nets <br>
 08- Criar um Database (RDS) vinculando seu Security Group e sua Sub-Net Group <br>
 09- Configurar os IPs inbound e outbound do seu Security Group para definir quem deve acessar sua EC2 ou Database.</p>
