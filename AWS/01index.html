@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Esse é meu primeiro site!">
+<meta name="keywords" content="html,css,js,javascript,estudo">
+<meta name="author" content="Teodoro Lucas">
+
+<title>Estudos AWS</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+<header>
+<h1>Meus Estudos Sobre AWS</h1>
+
+<nav style="text-align: left;">
+  <a href="02IPv4.html">IPv4</a>
+</nav>
+<a href="../index.html">Voltar</a>
+</header>
+
+<main>
+<h1>AWS - Amazon Web Service</h1>
+<p>AWS é uma plataforma de serviços de computação em nuvem oferecida pela Amazon.com. São dezenas ou centanas de serviços completos de datacenters. Os serviços são oferecidos em várias áreas geográficas e distribuídas pelo mundo.</p>
+
+<h2>VPC - Virtual Private Cloud</h2>
+<p>VPC é um serviço de computação em nuvem comercial que fornece aos usuários uma nuvem privada virtual. Básicamente um Agregado de Serviços em Núvem Privada.</p>
+
+<h2>EC2 - Elastic Compute Cloud</h2>
+<p>EC2 é uma parte central da plataforma de cloud computing da Amazon.com, Amazon Web Services. O EC2 permite que os usuários aluguem computadores virtuais nos quais rodam suas próprias aplicações</p>
+
+<h2>RDS - Relational Database Service</h2>
+<p>RDS é um serviço de banco de dados relacional distribuído da Amazon Web Services. É um serviço da web executado "na nuvem" projetado para simplificar a configuração, operação e escalonamento de um banco de dados relacional para uso em aplicativos.</p>
+
+<h2>S3 - Amazon Simple Storage Service</h2>
+<p>S3 é um serviço oferecido pela Amazon Web Services que fornece armazenamento de objetos por meio de uma interface de serviço da web. O Amazon S3 usa a mesma infraestrutura de armazenamento escalável que a Amazon.com usa para executar sua rede de comércio eletrônico.</p>
+
+<h2>IAM - Identity and Access Management</h2>
+<p>IAM é uma configuração de usuário, onde você pode especificar quem ou o que pode acessar serviços e recursos na AWS, gerenciar permissões refinadas de maneira centralizada e analisar o acesso para refinar as permissões na AWS.</p>
+
+<hr>
+
+<h2>O que é preciso para subir uma aplicação "full" AWS?</h2>
+<p>No caso, uma aplicação Spring com um Banco de Dados Relacional (MySQL). </p>
+
+<h3>Passo 1:</h3>
+<p>Primeiramente é preciso que a sua aplicação esteja rodando perfeitamente em testes localhost, conectando e se comportanto de forma correta ao banco de dados.</p>
+<h3>Passo 2:</h3>
+<p>Você precisa: 01- criar uma conta na AWS <br>
+02- Em VPC, criar sua VPC (salvo engano já vem com default) <br>
+03- Criar pelo menos 3 sub-nets (aba VPC), utilizando o mesma conexão de rede da sua VPC (CIDRs IPv4) <br>
+04- Criar um Security Group (aba EC2) (salvo engano já vem com default) <br>
+05- Criar uma Instance EC2 com as especificações da máquina, vincular ela no seu Security Group (ou criar SG novo e vincular ele na VPC também) <br>
+06- Criar um Elastic IP (aba EC2) caso a sua EC2 não tenha, você precisa disso pra usar o IP Público <br>
+07- Criar um Sub-Net Group (aba RDS), e vincular todas as suas 3 sub-nets <br>
+08- Criar um Database (RDS) vinculando seu Security Group e sua Sub-Net Group <br>
+09- Configurar os IPs inbound e outbound do seu Security Group para definir quem deve acessar sua EC2 ou Database.</p>
+
+</main>
+
+<footer>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+
+</html>

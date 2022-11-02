@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Esse é meu primeiro site!">
+  <meta name="keywords" content="html,css,js,javascript,estudo">
+  <meta name="author" content="Teodoro Lucas">
+
+  <title>Estudos IPV4</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    table {
+      margin: 10px;
+      box-sizing: border-box;
+      border: 1px solid black;
+      text-align: center;
+      border-collapse: collapse;
+    }
+
+    td,
+    th {
+      border: 1px solid black;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Meus Estudos Sobre IPV4</h1>
+
+    <nav>
+    </nav>
+    <a href="01index.html">Voltar</a>
+  </header>
+
+  <main>
+    <h1>IPv4 - Internet Protocol version 4</h1>
+    <p>IPv4 é um dos principais protocolos de padrões baseados em métodos de interconexão de redes na Internet, e foi a primeira versão implementada para a produção da ARPANET , em 1983. Ele ainda roteia a maior parte do tráfego da Internet de hoje, apesar da contínua implementação de um sucessor do protocolo, o IPv6.</p>
+    <p>O IPv4 deve ser único para cada conexão na mesma rede. Por exemplo, seu computador, video game, televisão e tudo que conecta na rede de internet da sua casa, deve ser registrado com um IPv4 único.</p>
+
+    <h2>Números Binários</h2>
+    <p>Para continuar a entender o IPv4, primeiro, vamos entender os números binários.</p>
+    <p>Nós seres humanos, conseguimos processar <b>informações analógicas</b> ou relativas, como um tom diferente da mesma cor. <br>
+      Já as máquinas lidam apenas com informações digitais, ou seja, dados que não podem assumir valores indefinidos. As memórias do computador por exemplo, armazenam somente BIT, que podem conter "0" ou "1".</p>
+    <p>Nosso sistema númerico é baseado no sistema numérico decimal, que contém 10 algarismos, de 0 á 9. No entando, o sistema numérico utilizado pelos computadores só utiliza "0" e "1", ou seja 2 algarismos, e por isso é chamado de binário.</p>
+    <p>E porque utilizar binário e não decimal nos computadores? Por conta de eficiencia. Quanto menor o número de algarismos na computação, mais rápido, confiável e eficiente se torna o hardware.</p>
+
+    <h3>Sistema Decimal</h3>
+    <p>Quando falamos 123, logo pensamos no que esse número representa. Mas por trás dele existe um significado matemático.</p>
+    <p>Na realidade o número 123 representa a seguinte expressão matemática: <br>
+      (1x10²)+(2x10¹)+(3x10⁰). Ou seja <br>
+      (1x10x10)+(2x10)+(3x1) = 123. Lembre-se que, todo número elevado a 1 é = a ele mesmo, e todo número elevado a 0 é = a 1.</p>
+    <p>Observe também que cada algarismo é multiplicado por uma potencia de 10, isso porque estamos falando do sistema decimal, e cada expoente referese a sua casa decimal.</p>
+
+    <h3>Sistema Binário</h3>
+    <p>Dá mesma forma que extraimos a expressão matemática do valor decimal, faremos com um valor binário.</p>
+    <p>O número 202 em binário se refere assim: 11001010, e representa a seguinte expressão matemática: <br>
+      (1x2⁷)+(1x2⁶)+(0x2⁵)+(0x2⁴)+(1x2³)+(0x2²)+(1x2¹)+(0x2⁰). Ou seja:<br>
+      (1x128)+(1x64)+(0)+(0)+(1x8)+(0)+(1x2)+(0) = 202</p>
+
+    <h3>Convertendo Decimal para Binário</h3>
+    <p>Há uma forma muito simples de converter um valor decimal para binário, vamos fazer isso para o número 252 veja:</p>
+    <p>Primeiro, crie uma tabela dividindo 128 por 2 até que chegue ao número 1. Veja um exemplo: </p>
+    <table>
+      <tr>
+        <th>128</th>
+        <th>64</th>
+        <th>32</th>
+        <th>16</th>
+        <th>8</th>
+        <th>4</th>
+        <th>2</th>
+        <th>1</th>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+    <br>
+    <p>Na tabela, marque 1 no número mais próximo de 252, nesse caso 128. Agora vá somando os números posteriores até chegar a 252 (sem passar). Por exemplo, 128+64=192, 192+32=224, 224+16=240, 240+8=248, 248+4=252. A cada número somado, acrescente um número 1 (um) e a cada número pulado, acrescente 0 (zero).</p>
+    <table>
+    <tr>
+      <th>128</th>
+      <th>64</th>
+      <th>32</th>
+      <th>16</th>
+      <th>8</th>
+      <th>4</th>
+      <th>2</th>
+      <th>1</th>
+    </tr>
+
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    </table>
+    <br>
+
+    <p>Vamos a outro exemplo, o número 11. Qual o maior número da tabela que representa 11 sem passar? 8 (adicione 1) <br>
+      Qual o maior número da tabela que somado a 8 se aproxima ou é igual a 11? 2 (adicione 1) <br>
+      Qual o maior número da tabela que somado a 10 (8+2) da 11? 1 (adicione 1) <br>
+      Ou seja 8+2+1=11.</p>
+    <table>
+      <tr>
+        <th>128</th>
+        <th>64</th>
+        <th>32</th>
+        <th>16</th>
+        <th>8</th>
+        <th>4</th>
+        <th>2</th>
+        <th>1</th>
+      </tr>
+      <tr>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1</td>
+        <td>1</td>
+      </tr>
+    </table>
+    <p>Assim chegamos à conclusão que 255 é o mesmo que: 11111111 (128+64+32+16+8+4+2+1=255), o maior valor binário com 8 bit (1 bit por coluna).</p>
+    <p>Dito tudo isso, agora podemos voltar a falar de IPv4, uffa.</p>
+
+    <h2>IPv4</h2>
+    <p>O IPv4 possui 32 bits, e são representados por 4 octetos, ou seja 4 blocos de 8 bits. Exemplo do mesmo IPv4:</p>
+    <p>Decimal: 192.168.1.12 <br>
+    Binário: 1100 0000 . 1010 1000 . 0000 0001 . 0000 1100</p>
+
+
+  </main>
+
+  <footer>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>
