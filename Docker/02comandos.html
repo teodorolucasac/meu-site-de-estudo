@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Esse é meu primeiro site!">
+  <meta name="keywords" content="html,css,js,javascript,estudo">
+  <meta name="author" content="Teodoro Lucas">
+
+  <title>Estudos Docker</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Comandos Docker / Linux</h1>
+
+    <nav>
+    </nav>
+    <a href="01index.html">Voltar</a>
+  </header>
+
+  <main>
+    <h1>Comandos Docker:</h1>
+    <h3></h3>
+    <p>
+      <b></b> - <br>
+    </p>
+    
+    <h3>Dockerfile</h3>
+    <p>
+      <b>FROM</b> - (imagem) especifica a imagem que o docker vai carregar, sistema operacional e plataforma (exemplo: node:12-alpine)<br>
+      <b>WORKDIR</b> - Setta o diretório onde o docker irá trabalhar<br>
+      <b>COPY</b> - Copia arquivos para a imagem<br>
+      <b>ADD</b> - Adiciona arquivos para a imagem (web site ou zip)<br>
+      <b>ENV</b> - Configurações do ambiente<br>
+      <b>RUN</b> - Instala as dependencias e executa a aplicação enquanto está construindo a imagem<br>
+      <b>CMD</b> - Executa algum arquivo depois que a imagem já está rodando<br>
+      <b>EXPOSE</b> - Coloca a porta que será usada<br>
+      <b>USER</b> - Se necessário, informa o usuário que usará a aplicação<br>
+      <b>ENTRYPOINT</b> - <br>
+    </p>
+
+
+    <h3>Geral Docker</h3>
+    <p>
+      <b>docker login</b> - vai fazer login no docker pelo terminal (se já estiver logado no docker desktop não pedirá credenciais)<br>
+      <b>[comando] --help</b> - vai listar as opções do comando<br>
+      <b>docker cp [arquivo origem] [arquivo destino]</b> - transfere do container pro local e do local pro container<br>
+      <b></b> - <br>
+    </p>
+    
+    <h3>Image Docker</h3>
+    <p>
+      <b>docker images</b> - mostra todas as imagens do seu docker<br>
+      <b>docker pull [nome da imagem]</b> - baixa uma imagem do DockerHub <br>
+      <b>docker build -t [nome da imagem] .</b> - cria uma imagem considerando o Dockerfile dentro do diretório do terminal<br>
+      <b>docker build -t [nome da image]:[numero da versão] .</b> - cria uma imagem com uma versão específica<br>
+      <b>docker image tag [nome da imagem:numero da versão] [nome da imagem:numero da versão]</b> - troca a tag/versão do da imagem<br>
+      <b>docker push [nome do repositório]/[nome da imagem:nome da versão]</b> - faz um pull para DockerHub<br>
+      <b></b> - <br>
+    </p>
+    
+    <h3>Container Docker</h3>
+    <p>
+      <b>docker ps</b> - mostra todos containers rodando<br>
+      <b>docker ps -a</b> - mostra todos os caintainers rodando e parados<br>
+      <b>docker run [nome da imagem]</b> - roda uma imagem da máquina ou do DockerHub em um container<br>
+      <b>docker run -it [nome da imagem]</b> - roda uma imagem da máquina ou do DockerHub no modo Interactive<br>
+      <b>docker run -d [nome da imagem:versão]</b> - sobe um container em background, liberando o terminal<br>
+      <b>docker run -d --name [nome do container] [nome da imagem:versão]</b> - sobe container com nome específico<br>
+      <b>docker run -d -p 80:3000 --name [container name] [nome da imagem:versão]</b> - inicia um container com porta de entrada do host:container<br>
+      <b>docker logs [container id]</b> - mostra os logs do container<br>
+      <b>docker exec [container name] ls</b> - executa comandos dentro do container sem acessar o container, no caso mostrou os arquivos<br>
+      <b>docker rm [container name ou id]</b> - remove um container<br>
+      <b>docker rm -f [container name ou id]</b> - remove um container de modo forçado<br>
+      <b>docker run -d -p [3000:3000] --name [kiwi] -v [app-dados:/app/dados] [app:v2]</b> - cria um container e insere um volume (backup) informando [nome do volume]:/[diretorio em que ficará no container] e tudo que ele armazenar neste diretório do container, fará um backup na máquina local<br>
+      <b></b> - <br>
+    </p>
+
+    <h3>Volume Docker</h3>
+    <p>
+      <b>docker volume create [nome do volume]</b> - cria um volume<br>
+      <b>docker volume inspect [nome do volume]</b> - verifica os dados do volume, inclusive seu diretório local<br>
+      <b></b> - <br>
+    </p>
+    
+    <h3>Docker-Compose</h3>
+    <p>
+      <b>docker-compose up</b> - executa seu arquivo docker-compose.yml e cria uma imagem apenas se ela não existir<br>
+      <b>docker-compose up --build</b> - executa seu arquivo docker-compose.yml e obrigatóriamente cria uma imagem<br>
+      <b>docker-compose -d</b> - executa seu arquivo docker-compose.yml em background<br>
+      <b>docker-compose ps</b> - lista os container em execução<br>
+      <b>docker-compose down</b> - stopa o container<br>
+      <b>docker exec -it -u root [container id] sh</b> - entra no container informado em modo interactive<br>
+      <b>docker-compose logs</b> - mostra todos os logs<br>
+      <b>docker-compose logs --help</b> - mostra as opções de logs<br>
+    </p>
+
+    <h3>YAML</h3>
+    <p>Data Serialization, muito utilizada para escrever configurações, através de instruções no qual um aplicativo lerá de cima para baixo.</p>
+
+    <h1>Comandos Linux:</h1>
+    <h3>Principais Linux</h3>
+    <p>
+      <b>ls</b> - lista todos os arquivos e diretórios do local<br>
+      <b>ls -1</b> - lista todos os arquivos e diretórios do local um em baixo do outro<br>
+      <b>ls -l</b> - lista todos os arquivos e diretórios do local mais detalhadamente<br>
+      <b>whoami</b> - mostra qual usuário você está usando<br>
+      <b>echo</b> - imprime uma mensagem na tela<br>
+      <b>echo $0</b> - mostra o diretório ou pasta que você está<br>
+      <b>pwd</b> - print working diretory, mostra em qual diretório você está<br>
+      <b>history</b> - mostra uma enumerado de últimos comandos utilizados no terminal<br>
+      <b>cd /[nome do diretório]</b> - (change diretory) move até o diretório descrito<br>
+      <b>cd ..</b> - volta um diretório<br>
+      <b>cd [tab 2x]</b> - lista as possíveis pastas para navegar<br>
+      <b>cd [nome do diretório parcialmente] + [tab]</b> - auto completa o nome do diretório para navegar<br>
+      <b>ls /[diretório]/[diretório]</b> - lista os arquivos e diretórios de uma pasta que você não está<br>
+      <b>cd ~</b> - entra dentro do diretório home do usuário root<br>
+      <b>cat [nome do arquivo]</b> - visualiza / imprime o conteúdo do arquivo<br>
+      <b>more [nome do arquivo]</b> - visualiza / imprime o conteúdo do arquivo por partes<br>
+      <b>cat [nome do arquivo] > [nome do arquivo]</b> - cria um novo arquivo com conteúdo do antigo, podendo passar mais de um arquivo para "cat"<br>
+      <b>echo [sua mensagem] > [nome do arquivo]</b> - cria um arquivo com a mensagem do echo<br>
+      <b>grep [nome da pesquisa] [nome do arquivo]</b> - (global regular expression print) pesquisa uma palavra dentro de um arquivo<br>
+      <b>grep -i -r [pesquisa] .</b> - pesquisa em todos os arquivos do diretório (-i ignora CaseSensitive) (-r procura dentro de subdirectory)<br>
+      <b>find</b> - mostra todos os diretórios, inclusive os ocultos<br>
+      <b>find -type f</b> - mostra todos os arquivos (files)<br>
+      <b>find -type d</b> - mostra todos os diretórios<br>
+      <b>find -type f -name "[nome]"</b> - mostra o arquivos com aquele nome (é case sensitive)<br>
+      <b>mkdir [nome pasta] ; cd [nome pasta] ; echo [mensagem]</b> - o ; faz executar vários comandos de uma vez sem parar nos erros<br>
+      <b>mkdir [nome pasta] && cd [nome pasta] && echo [mensagem]</b> - o && faz executar vários comandos de uma vez parando nos erros<br>
+      <b>ps</b> - mostra os processos rodando no linux<br>
+      <b>kill [process id]</b> - mata os processos que estão rodando no linux<br>
+      <b>useradd</b> - adiciona um usuário<br>
+      <b>usermod</b> - modifica um usuário<br>
+      <b>userdel</b> - deleta um usuário<br>
+      <b>useradd -m lucas</b> - criou um usuario com diretório home chamado de lucas<br>
+      <b>docker exec -it -u root 0ccc9387e271 bash</b> - acessa meu container linux pelo modo interactive com usuário root através do bash<br>
+      <b>groupadd [nome do grupo]</b> - cria um grupo de usuário<br>
+      <b>usermod -G docker lucas</b> - coloca o usuário "lucas" dentro do grupo "docker"<br>
+      <b></b> - <br>
+    </p>
+
+    <h3>Criar e Remover diretórios</h3>
+    <p>
+      <b>mkdir [nome do diretório]</b> - cria um diretório dentro do diretório em que você está<br>
+      <b>mv [nome do diretório] [novo nome]</b> - renomeia o nome do diretório<br>
+      <b>touch [nome do arquivo].[tipo do arquivo]</b> - (exemplo touch texto.txt) cria um arquivo<br>
+      <b>rm [nome do arquivo]</b> - remove um arquivo<br>
+      <b>rm -r [nome do diretório]</b> - remove diretório<br>
+      <b></b> - <br>
+    </p>
+
+    <h3>Instalar e Remover Packages (software)</h3>
+    <p>
+      <b>apt list</b> - mostra lista de softwares instalados no seu linux<br>
+      <b>apt update</b> - acessa o ubunto e faz download dos packages mais utilizados e mais atualizados <br>
+      <b>apt install [nome do software]</b> - instala um package (software)<br>
+      <b>apt remove [nome do software]</b> - desinstala um package (software)<br>
+      <b></b> - <br>
+      <b></b> - <br>
+    </p>
+
+    <h3>Sistema de Arquivos Linux</h3>
+    <p>
+      <b>/</b> - a barra significa que após ela virá um diretorio/pasta<br>
+      <b></b> - <br>
+      <b></b> - <br>
+    </p>
+  </main>
+
+  <footer>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>
